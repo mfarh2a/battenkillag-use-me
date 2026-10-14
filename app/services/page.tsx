@@ -1,0 +1,82 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "H-2A Services for Family Farms",
+  description: "Orra handles your H-2A job order, DOL labor certification, USCIS petition, consulate and travel coordination, and season compliance support, with one dedicated team member for your farm.",
+  alternates: { canonical: "/services" },
+};
+
+const rows = [
+  { step: "Job order and state workforce agency posting", who: "Us", note: "Drafted from your last season, then filed and tracked" },
+  { step: "Department of Labor application and any follow-up questions", who: "Us", note: "Filed in the DOL's online system" },
+  { step: "USCIS petition (Form I-129)", who: "Us", note: "An immigration attorney steps in on complex cases" },
+  { step: "Consulate appointments and visa forms", who: "Our partner", note: "Handled by our partner in Mexico" },
+  { step: "Recruiting new workers", who: "You", note: "Our partner can help if you need more people" },
+  { step: "Travel for your crew", who: "Our partner", note: "Booked for you; mostly flights for small groups" },
+  { step: "Housing and its inspection", who: "You and your state", note: "We help move a stalled inspection along" },
+  { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
+  { step: "Season compliance packet", who: "Us", note: "Sent digitally, with paper copies mailed" },
+  { step: "Department of Labor audits and site visits", who: "Us", note: "Phone support and written responses" },
+];
+
+export default function Services() {
+  return (
+    <>
+      <section className="section">
+        <div className="wrap stack-lg">
+          <div className="stack prose">
+            <p className="eyebrow">Services</p>
+            <h1>Everything it takes to bring your crew in</h1>
+            <p className="lead muted" style={{ fontSize: "var(--step-1)" }}>{site.positioning}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="wrap stack-lg">
+          <div className="stack prose">
+            <h2>Who does what</h2>
+            <p className="muted">You stay the employer. We handle the filings and the agencies, and our partners handle the work in Mexico.</p>
+          </div>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr><th style={{ width: "42%" }}>Step</th><th style={{ width: "18%" }}>Who does it</th><th>Notes</th></tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.step}>
+                    <td>{r.step}</td>
+                    <td className={`who ${r.who === "Us" ? "who-us" : ""}`}>{r.who}</td>
+                    <td className="muted">{r.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap grid-2">
+          <div className="card">
+            <h2 style={{ fontSize: "var(--step-2)" }}>Pricing</h2>
+            <p>We provide a reliable, low-cost service for the farming families we work with. Tell us your start date and crew size, and we will send a quote for your farm.</p>
+            <p><Link href="/contact" className="btn btn-primary">Request a quote</Link></p>
+          </div>
+          <div className="card">
+            <h2 style={{ fontSize: "var(--step-2)" }}>What we don&apos;t do</h2>
+            <ul className="stack" style={{ paddingLeft: "1.2rem", margin: 0 }}>
+              <li>We don&apos;t employ your workers. You stay the employer of record.</li>
+              <li>We don&apos;t run payroll or provide housing.</li>
+              <li>We never charge workers anything. Every fee is paid by the farm.</li>
+              <li>We are not a law firm. An immigration attorney steps in when a case needs one.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
