@@ -15,7 +15,7 @@ export default function PromoBanner() {
       <div className="wrap promo-row">
         <p>
           <strong>Free download:</strong> the H-2A audit-ready checklist.
-          <span className="promo-extra"> See every record DOL can ask for.</span>
+          <span className="promo-extra"> Have confidence before your next DOL audit.</span>
         </p>
         <Link href={`${TARGET}#checklist`} className="promo-link">Get the checklist</Link>
       </div>
