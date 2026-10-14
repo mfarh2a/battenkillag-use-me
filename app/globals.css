@@ -344,3 +344,16 @@ textarea { min-height: 8rem; resize: vertical; }
 .photo-card { width: 100%; aspect-ratio: 3 / 2; border-radius: var(--radius); border: 1px solid var(--line); max-width: 100%; }
 .split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
 @media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
+
+/* Promo banner */
+.promo-banner { background: var(--night); color: #fff; font-size: var(--step--1); }
+.promo-row { display: flex; align-items: center; justify-content: center; gap: 0.5rem 1.25rem; flex-wrap: wrap; padding-block: 0.6rem; text-align: center; }
+.promo-row p { margin: 0; }
+.promo-row strong { color: var(--straw-soft); }
+.promo-link {
+  color: var(--night); background: var(--straw-soft); font-weight: 700; text-decoration: none;
+  padding: 0.3rem 0.8rem; border-radius: 999px; white-space: nowrap;
+}
+.promo-link:hover, .promo-link:focus-visible { background: #fff; color: var(--night); }
+@media (max-width: 560px) { .promo-extra { display: none; } }
+.nowrap { white-space: nowrap; }

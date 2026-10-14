@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import PromoBanner from "@/components/PromoBanner";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <a href="#main" className="skip-link">Skip to content</a>
+        <PromoBanner />
         <Header />
         <main id="main">{children}</main>
         <Footer />

@@ -76,7 +76,11 @@ export default async function Home() {
         <div className="wrap hero-grid">
           <div className="stack-lg">
             <p className="eyebrow">H-2A for farming families</p>
-            <h1>{site.headline}</h1>
+            <h1>
+              {site.headline.split("H-2A").map((part, i, arr) => (
+                <span key={i}>{part}{i < arr.length - 1 && <span className="nowrap">H-2A</span>}</span>
+              ))}
+            </h1>
             <p className="subline">{site.subline}</p>
             <p className="lead">{site.positioning}</p>
             <div className="btn-row">
