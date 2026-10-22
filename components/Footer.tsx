@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="footer-small">
-          © {year} {site.name}. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link>
+          © {year} {site.legalName}. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link>
         </p>
       </div>
     </footer>

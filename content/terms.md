@@ -4,7 +4,7 @@
 
 Last updated: [Date]
 
-These terms cover your use of the Orra website and customer portal. Our H-2A services are covered by the separate service agreement you sign with us.
+These terms cover your use of the website and customer portal of Orra Ag Services LLC ("Orra," "we" or "us"). Our H-2A services are covered by the separate service agreement you sign with us.
 
 ## Using this site
 
@@ -27,4 +27,4 @@ Invoices are due on the date shown. You can pay online through our payment proce
 
 ## Contact
 
-Orra, H2a@orra.com, 123-456-7890.
+Orra Ag Services LLC, H2a@orra.com, 123-456-7890.

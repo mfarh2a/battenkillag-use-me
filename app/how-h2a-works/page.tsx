@@ -32,12 +32,12 @@ const steps = [
   {
     title: "Consulate visits in Mexico",
     when: "After USCIS approves",
-    body: "Our partner in Mexico helps your workers fill out their visa forms and schedules their consulate appointments. Timing depends on the consulate, so we watch it closely and keep you posted.",
+    body: "We coordinate your crew's consulate appointments with our partner company in Mexico, which assists your workers with their visa forms there. Timing depends on the consulate, so we watch it closely and keep you posted.",
   },
   {
     title: "Travel and arrival",
     when: "Right before your start date",
-    body: "Travel is booked for your crew, usually flights for small groups. We tell you up front what you pay for travel and when, so there are no surprises.",
+    body: "We coordinate your crew's travel to your farm with our partner company in Mexico, usually flights for small groups. You see every travel charge on your invoice, so there are no surprises. Once your crew arrives, housing and daily transportation at the farm are yours to provide.",
   },
   {
     title: "During the season",
@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: "Can you help me find workers?",
-    a: "Most of our farms bring back workers they already know. If you need more people, our partner in Mexico can help recruit.",
+    a: "Most of our farms bring back workers they already know. We don't recruit workers ourselves, but we've built relationships with reputable companies that do, and we'll introduce you.",
   },
   {
     q: "What if I already use another agency?",

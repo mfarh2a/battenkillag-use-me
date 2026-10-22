@@ -11,6 +11,7 @@ const siteUrl =
 
 export const site = {
   name: "Orra",
+  legalName: "Orra Ag Services LLC",
   url: siteUrl.replace(/\/$/, ""),
   phone: "123-456-7890",
   email: "H2a@orra.com",

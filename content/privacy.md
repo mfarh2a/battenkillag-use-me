@@ -4,7 +4,7 @@
 
 Last updated: [Date]
 
-Orra ("we") helps farms with the H-2A program. This page explains what information we collect and how we use it.
+Orra Ag Services LLC ("Orra" or "we") helps farms with the H-2A program. This page explains what information we collect and how we use it.
 
 ## What we collect
 

@@ -1,7 +1,7 @@
 export const homeFaqs = [
   {
     q: "What does an H-2A agent do?",
-    a: "An H-2A agent prepares and files the paperwork that lets a farm hire seasonal workers from other countries: the job order, the Department of Labor application and the USCIS petition. The farm stays the employer. Orra also coordinates consulate visits and travel through our partner in Mexico, and supports you on compliance during the season.",
+    a: "An H-2A agent prepares and files the paperwork that lets a farm hire seasonal workers from other countries: the job order, the Department of Labor application and the USCIS petition. The farm stays the employer. Orra also coordinates consulate visits and travel with our partner company in Mexico, and supports you on compliance during the season. We don't recruit or employ workers.",
   },
   {
     q: "Who will I work with?",

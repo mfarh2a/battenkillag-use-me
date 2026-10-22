@@ -12,10 +12,11 @@ const rows = [
   { step: "Job order and state workforce agency posting", who: "Us", note: "Drafted from your last season, then filed and tracked" },
   { step: "Department of Labor application and any follow-up questions", who: "Us", note: "Filed in the DOL's online system" },
   { step: "USCIS petition (Form I-129)", who: "Us", note: "An immigration attorney steps in on complex cases" },
-  { step: "Consulate appointments and visa forms", who: "Our partner", note: "Handled by our partner in Mexico" },
-  { step: "Recruiting new workers", who: "You", note: "Our partner can help if you need more people" },
-  { step: "Travel for your crew", who: "Our partner", note: "Booked for you; mostly flights for small groups" },
-  { step: "Housing and its inspection", who: "You and your state", note: "We help move a stalled inspection along" },
+  { step: "Consulate appointments and visa forms", who: "Us", note: "Coordinated by us; your workers are assisted in Mexico by our partner company" },
+  { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to reputable companies that do" },
+  { step: "Travel to your farm", who: "Us", note: "Coordinated by us with our partner company in Mexico; mostly flights for small groups" },
+  { step: "Housing and its inspection", who: "You and your state", note: "We schedule the inspection early and help move a stalled one along" },
+  { step: "Transportation at your farm", who: "You", note: "Daily rides to the field and the store; we explain what H-2A requires" },
   { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
   { step: "Season compliance packet", who: "Us", note: "Sent digitally, with paper copies mailed" },
   { step: "Department of Labor audits and site visits", who: "Us", note: "Phone support and written responses" },
@@ -38,7 +39,7 @@ export default function Services() {
         <div className="wrap stack-lg">
           <div className="stack prose">
             <h2>Who does what</h2>
-            <p className="muted">You stay the employer. We handle the filings and the agencies, and our partners handle the work in Mexico.</p>
+            <p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies, and we coordinate your crew's consulate visits and travel with our partner company in Mexico.</p>
           </div>
           <div className="table-wrap">
             <table>
@@ -60,20 +61,41 @@ export default function Services() {
       </section>
 
       <section className="section">
-        <div className="wrap grid-2">
-          <div className="card">
+        <div className="wrap stack-lg">
+          <div className="stack prose">
+            <h2>What we do, and what we don&apos;t</h2>
+            <p className="muted">We&apos;re your H-2A agent: we handle the paperwork, the deadlines and the coordination. The farm stays the employer of its crew.</p>
+          </div>
+          <div className="grid-2">
+            <div className="card">
+              <h3>What we do</h3>
+              <ul className="check-list">
+                <li>Prepare and file your job order, Department of Labor application and USCIS petition</li>
+                <li>Track every deadline and answer agency questions for you</li>
+                <li>Coordinate consulate appointments and travel for your crew through our partner company in Mexico, which assists your workers there. You get one invoice from us, with every charge listed</li>
+                <li>Keep your season records organized and help if the Department of Labor audits you</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>What we don&apos;t do</h3>
+              <ul className="stack" style={{ paddingLeft: "1.2rem", margin: 0 }}>
+                <li>We don&apos;t recruit, hire, supply or employ workers. You stay the employer, and most farms bring back the crew they already know. If you need new workers, we&apos;ve built relationships with many reputable companies that can help, and we&apos;re happy to introduce you.</li>
+                <li>We don&apos;t provide housing or drive workers in the U.S. Housing and transportation at your farm stay with you, and we help you meet the requirements.</li>
+                <li>We don&apos;t run payroll.</li>
+                <li>We never charge workers anything. Every fee is paid by the farm.</li>
+                <li>We&apos;re not a law firm. An immigration attorney steps in when a case needs one.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="wrap">
+          <div className="card stack prose">
             <h2 style={{ fontSize: "var(--step-2)" }}>Pricing</h2>
             <p>We provide a reliable, low-cost service for the farming families we work with. Tell us your start date and crew size, and we will send a quote for your farm.</p>
             <p><Link href="/contact" className="btn btn-primary">Request a quote</Link></p>
-          </div>
-          <div className="card">
-            <h2 style={{ fontSize: "var(--step-2)" }}>What we don&apos;t do</h2>
-            <ul className="stack" style={{ paddingLeft: "1.2rem", margin: 0 }}>
-              <li>We don&apos;t employ your workers. You stay the employer of record.</li>
-              <li>We don&apos;t run payroll or provide housing.</li>
-              <li>We never charge workers anything. Every fee is paid by the farm.</li>
-              <li>We are not a law firm. An immigration attorney steps in when a case needs one.</li>
-            </ul>
           </div>
         </div>
       </section>
