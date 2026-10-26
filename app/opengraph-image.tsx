@@ -1,10 +1,13 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const alt = "Battenkill Ag: reliable, low-cost H-2A for farming families";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OgImage() {
+  const logo = "data:image/svg+xml;base64," + readFileSync(join(process.cwd(), "public/brand/battenkill-ag-logo.svg")).toString("base64");
   return new ImageResponse(
     (
       <div
@@ -19,10 +22,10 @@ export default function OgImage() {
           color: "#3b2a16",
         }}
       >
-        <div style={{ fontSize: 40, fontWeight: 700, color: "#b8553a", letterSpacing: 2 }}>BATTENKILL AG</div>
+        <img src={logo} width={386} height={90} alt="" />
         <div style={{ fontSize: 76, fontWeight: 700, marginTop: 24, lineHeight: 1.1 }}>Reliable, low-cost H-2A for farming families.</div>
         <div style={{ fontSize: 34, marginTop: 28, color: "#5e5446" }}>
-          One person on your side all season.
+          A dedicated team by your side all season.
         </div>
         <div style={{ display: "flex", marginTop: 48, height: 12, width: 320, background: "#a0a824", borderRadius: 6 }} />
       </div>

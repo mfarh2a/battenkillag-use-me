@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs><clipPath id="f"><rect x="0" y="31" width="100" height="69"/></clipPath>
+  <clipPath id="h"><rect x="0" y="0" width="100" height="28"/></clipPath></defs>
+  <g clip-path="url(#h)">
+    <path fill="#FFFFFF" d="M30 28 C40 14 50 10 60 14 C66 16 70 22 74 28 Z"/>
+    <path fill="#FFFFFF" d="M0 28 L0 12 C10 4 22 4 32 12 C40 18 46 18 54 12 C66 3 84 2 100 10 L100 28 Z"/>
+  </g>
+  <g clip-path="url(#f)">
+    <rect x="0" y="31" width="100" height="69" fill="#FFFFFF"/>
+    <g fill="#253645">
+      <polygon points="50,-60 -150.0,140 -140.0,140"/>
+      <polygon points="50,-60 -113.6,140 -103.6,140"/>
+      <polygon points="50,-60 -77.3,140 -67.3,140"/>
+      <polygon points="50,-60 -40.9,140 -30.9,140"/>
+      <polygon points="50,-60 -4.5,140 5.5,140"/>
+      <polygon points="50,-60 31.8,140 41.8,140"/>
+      <polygon points="50,-60 68.2,140 78.2,140"/>
+      <polygon points="50,-60 104.5,140 114.5,140"/>
+      <polygon points="50,-60 140.9,140 150.9,140"/>
+      <polygon points="50,-60 177.3,140 187.3,140"/>
+      <polygon points="50,-60 213.6,140 223.6,140"/>
+    </g>
+    <path fill="#FFFFFF" stroke="#253645" stroke-width="2.4" stroke-linejoin="round"
+      d="M51 30 C44 40 39 47 44 55 C49 63 47 71 30 80 C18 86 6 90 -2 92 L-2 102 L24 102 C42 95 63 85 63 71 C63 60 55 53 56 45 C57 39 59 35 58 30 Z"/>
+  </g>
+</svg>

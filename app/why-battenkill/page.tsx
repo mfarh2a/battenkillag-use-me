@@ -38,7 +38,7 @@ export default function WhyBattenkill() {
           <p className="lead">
             Family farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
             possible, but small farms often pay too much for it and get too little attention. Battenkill Ag exists to give farming
-            families reliable, low-cost H-2A service, with one person on their side all season.
+            families reliable, low-cost H-2A service, with a dedicated team by their side all season.
           </p>
         </div>
       </section>

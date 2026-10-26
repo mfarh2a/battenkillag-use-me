@@ -83,6 +83,9 @@ p { margin: 0; }
   top: 0;
   z-index: 10;
 }
+.brand img { display: block; height: 45px; width: auto; }
+.footer-logo { display: block; align-self: flex-start; height: 48px; width: auto; margin-bottom: 0.25rem; }
+@media (max-width: 420px) { .brand img { height: 38px; } }
 .header-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.25rem; }
 .brand {
   font-family: var(--font-display);

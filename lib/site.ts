@@ -12,9 +12,9 @@ export const site = {
   email: "max@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
   headline: "Reliable, low-cost H-2A for farming families.",
-  subline: "One person on your side all season, so your crew is here when your season starts.",
+  subline: "A dedicated team by your side all season that helps employers navigate the complexities of H-2A.",
   positioning:
-    "Family farms run on a crew that comes back season after season. Battenkill Ag handles the H-2A work behind that crew, at a price that works for a family farm, with one team member who knows your farm by name.",
+    "Family farms run on a crew that comes back season after season. Battenkill Ag helps those families file for H-2A contracts with a dedicated team member and exceptional customer service at a price that makes sense.",
   description:
     "Battenkill Ag provides reliable, low-cost H-2A service for farming families. One dedicated team member guides you through the job order, DOL and USCIS filings, consulate and travel, and season compliance.",
   lastReviewed: "2026-10-13",
