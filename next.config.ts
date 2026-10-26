@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
-const redirectsList = [{ source: "/about", destination: "/why-orra", permanent: true }];
+const redirectsList = [
+  { source: "/about", destination: "/why-battenkill", permanent: true },
+  { source: "/why-orra", destination: "/why-battenkill", permanent: true },
+];
 const nextConfig: NextConfig = {
   // Public domain USDA photos are served through Vercel's image optimizer.
   images: { remotePatterns: [{ protocol: "https", hostname: "live.staticflickr.com" }] },

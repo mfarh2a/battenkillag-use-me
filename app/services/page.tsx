@@ -4,22 +4,22 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "H-2A Services for Family Farms",
-  description: "Orra handles your H-2A job order, DOL labor certification, USCIS petition, consulate and travel coordination, and season compliance support, with one dedicated team member for your farm.",
+  description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition, consulate and travel coordination, and season compliance support, with one dedicated team member for your farm.",
   alternates: { canonical: "/services" },
 };
 
 const rows = [
-  { step: "Job order and state workforce agency posting", who: "Us", note: "Drafted from your last season, then filed and tracked" },
-  { step: "Department of Labor application and any follow-up questions", who: "Us", note: "Filed in the DOL's online system" },
-  { step: "USCIS petition (Form I-129)", who: "Us", note: "An immigration attorney steps in on complex cases" },
-  { step: "Consulate appointments and visa forms", who: "Us", note: "Coordinated by us; your workers are assisted in Mexico by our partner company" },
+  { step: "Job order and state workforce agency posting", who: "Battenkill", note: "Drafted from your last season, then filed and tracked" },
+  { step: "Department of Labor application and any follow-up questions", who: "Battenkill", note: "Filed in the DOL's online system" },
+  { step: "USCIS petition (Form I-129)", who: "Battenkill", note: "An immigration attorney steps in on complex cases" },
+  { step: "Consulate appointments and visa forms", who: "Battenkill", note: "Coordinated by us; your workers are assisted in Mexico by our partner company" },
   { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to reputable companies that do" },
-  { step: "Travel to your farm", who: "Us", note: "Coordinated by us with our partner company in Mexico; mostly flights for small groups" },
+  { step: "Travel to your farm", who: "Battenkill", note: "Coordinated by us with our partner company in Mexico; mostly flights for small groups" },
   { step: "Housing and its inspection", who: "You and your state", note: "We schedule the inspection early and help move a stalled one along" },
   { step: "Transportation at your farm", who: "You", note: "Daily rides to the field and the store; we explain what H-2A requires" },
   { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
-  { step: "Season compliance packet", who: "Us", note: "Sent digitally, with paper copies mailed" },
-  { step: "Department of Labor audits and site visits", who: "Us", note: "Phone support and written responses" },
+  { step: "Season compliance packet", who: "Battenkill", note: "Sent digitally, with paper copies mailed" },
+  { step: "Department of Labor audits and site visits", who: "Battenkill", note: "Phone support and written responses" },
 ];
 
 export default function Services() {
@@ -50,7 +50,7 @@ export default function Services() {
                 {rows.map((r) => (
                   <tr key={r.step}>
                     <td>{r.step}</td>
-                    <td className={`who ${r.who === "Us" ? "who-us" : ""}`}>{r.who}</td>
+                    <td className={`who ${r.who === "Battenkill" ? "who-us" : ""}`}>{r.who}</td>
                     <td className="muted">{r.note}</td>
                   </tr>
                 ))}

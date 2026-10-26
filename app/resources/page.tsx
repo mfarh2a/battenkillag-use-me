@@ -64,7 +64,7 @@ export default async function Resources() {
         <div className="wrap stack-lg">
           <div className="stack prose">
             <h2>Rather have someone handle it?</h2>
-            <p>Orra files your H-2A paperwork, tracks every deadline and keeps your season records organized. Tell us your start date and crew size for a quote.</p>
+            <p>Battenkill Ag files your H-2A paperwork, tracks every deadline and keeps your season records organized. Tell us your start date and crew size for a quote.</p>
           </div>
           <div className="btn-row">
             <Link href="/contact" className="btn btn-primary">Request a quote</Link>

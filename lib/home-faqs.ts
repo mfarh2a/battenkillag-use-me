@@ -1,7 +1,7 @@
 export const homeFaqs = [
   {
     q: "What does an H-2A agent do?",
-    a: "An H-2A agent prepares and files the paperwork that lets a farm hire seasonal workers from other countries: the job order, the Department of Labor application and the USCIS petition. The farm stays the employer. Orra also coordinates consulate visits and travel with our partner company in Mexico, and supports you on compliance during the season. We don't recruit or employ workers.",
+    a: "An H-2A agent prepares and files the paperwork that lets a farm hire seasonal workers from other countries: the job order, the Department of Labor application and the USCIS petition. The farm stays the employer. Battenkill Ag also coordinates consulate visits and travel with our partner company in Mexico, and supports you on compliance during the season. We don't recruit or employ workers.",
   },
   {
     q: "Who will I work with?",
@@ -9,7 +9,7 @@ export const homeFaqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Orra provides a reliable, low-cost service for farming families. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
+    a: "Battenkill Ag provides a reliable, low-cost service for farming families. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
   },
   {
     q: "How far ahead do I need to start?",
@@ -21,6 +21,6 @@ export const homeFaqs = [
   },
   {
     q: "Do you work with farms that only need a few workers?",
-    a: "Yes. Orra was built for family farms, including farms that bring in a small crew each season.",
+    a: "Yes. Battenkill Ag was built for family farms, including farms that bring in a small crew each season.",
   },
 ];

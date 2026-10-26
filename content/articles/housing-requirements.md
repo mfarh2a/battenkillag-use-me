@@ -51,4 +51,4 @@ You must provide family housing if that is the normal practice in your area and 
 - photos of the housing at move-in
 - any notices to the state about changes
 
-Orra helps you schedule your inspection on time and keeps the records in your season file. [Talk to us](/contact).
+Battenkill Ag helps you schedule your inspection on time and keeps the records in your season file. [Talk to us](/contact).

@@ -162,7 +162,7 @@ export default async function Home() {
             <p className="eyebrow">Less paperwork, less worry</p>
             <h2>Records that are ready before anyone asks</h2>
             <p className="muted">
-              H-2A comes with a lot of rules and a lot of records. Every Orra customer gets a digital filing cabinet that
+              H-2A comes with a lot of rules and a lot of records. Every Battenkill Ag customer gets a digital filing cabinet that
               tracks them automatically, organized by requirement. We remind you before deadlines and help you respond
               quickly and completely if the Department of Labor asks.
             </p>
@@ -241,7 +241,7 @@ export default async function Home() {
           </div>
           <div className="btn-row">
             <Link href="/contact" className="btn btn-primary">Request a quote</Link>
-            <Link href="/why-orra" className="btn btn-ghost">Why Orra</Link>
+            <Link href="/why-battenkill" className="btn btn-ghost">Why Battenkill</Link>
           </div>
         </div>
       </section>

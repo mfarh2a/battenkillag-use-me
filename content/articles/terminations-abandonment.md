@@ -53,4 +53,4 @@ If fire, weather or another act of God ends the work early and DOL agrees, you p
 - [ ] warnings and discipline records
 - [ ] transfer paperwork for workers coming or going
 
-Orra starts a 2-working-day countdown the moment you tell us a worker left, and sends the notices on time. [Talk to us](/contact).
+Battenkill Ag starts a 2-working-day countdown the moment you tell us a worker left, and sends the notices on time. [Talk to us](/contact).

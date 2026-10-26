@@ -4,7 +4,7 @@
 
 Last updated: [Date]
 
-Orra Ag Services LLC ("Orra" or "we") helps farms with the H-2A program. This page explains what information we collect and how we use it.
+Battenkill Ag Services, LLC ("Battenkill Ag" or "we") helps farms with the H-2A program. This page explains what information we collect and how we use it.
 
 ## What we collect
 
@@ -24,7 +24,7 @@ We do not sell your information.
 
 ## Text messages
 
-If you opt in, we send text messages about invoices that are coming due, from Orra at [business texting number]. Message frequency varies, usually no more than a few messages per invoice. Message and data rates may apply. Reply STOP to opt out at any time, or HELP for help. We do not share your mobile number or opt-in consent with anyone for marketing.
+If you opt in, we send text messages about invoices that are coming due, from Battenkill Ag at [business texting number]. Message frequency varies, usually no more than a few messages per invoice. Message and data rates may apply. Reply STOP to opt out at any time, or HELP for help. We do not share your mobile number or opt-in consent with anyone for marketing.
 
 ## How we protect it
 
@@ -36,4 +36,4 @@ We keep customer documents for at least [retention period] after each season end
 
 ## Contact
 
-Questions about your information: H2a@orra.com or 123-456-7890.
+Questions about your information: max@battenkillag.com or 281-900-0779.

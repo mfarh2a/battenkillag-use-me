@@ -45,4 +45,4 @@ On August 27, 2026, a federal court in the Eastern District of California ruled 
 - **Raise pay if the rate goes up mid-contract.** You must match a higher AEWR for the rest of the contract. If it goes down, you cannot cut pay below your job order.
 - **Keep clean payroll records.** If back pay is ever ordered, accurate records make it simple to calculate.
 
-Orra tracks wage notices for every farm we serve and tells you when a change affects your contract. [Talk to us](/contact).
+Battenkill Ag tracks wage notices for every farm we serve and tells you when a change affects your contract. [Talk to us](/contact).

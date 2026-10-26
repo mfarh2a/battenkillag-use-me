@@ -3,8 +3,8 @@ import ContactForm from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact Orra for an H-2A Quote",
-  description: "Tell us your start date and how many workers you need. Orra will send an H-2A quote for your farm.",
+  title: "Contact Battenkill Ag for an H-2A Quote",
+  description: "Tell us your start date and how many workers you need. Battenkill Ag will send an H-2A quote for your farm.",
   alternates: { canonical: "/contact" },
 };
 

@@ -51,4 +51,4 @@ Who pays which fee, and when visa and travel costs are reimbursed, follows speci
 
 Agencies charge for preparing and filing your paperwork, coordinating the consulate and travel, and supporting you through the season.
 
-Orra provides a reliable, low-cost service for the farming families we work with. [Request a quote](/contact) for your farm.
+Battenkill Ag provides a reliable, low-cost service for the farming families we work with. [Request a quote](/contact) for your farm.

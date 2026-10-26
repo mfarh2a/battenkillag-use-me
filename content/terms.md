@@ -4,7 +4,7 @@
 
 Last updated: [Date]
 
-These terms cover your use of the website and customer portal of Orra Ag Services LLC ("Orra," "we" or "us"). Our H-2A services are covered by the separate service agreement you sign with us.
+These terms cover your use of the website and customer portal of Battenkill Ag Services, LLC ("Battenkill Ag," "we" or "us"). Our H-2A services are covered by the separate service agreement you sign with us.
 
 ## Using this site
 
@@ -14,11 +14,11 @@ These terms cover your use of the website and customer portal of Orra Ag Service
 
 ## Text message terms
 
-- **Program:** Orra invoice reminders.
+- **Program:** Battenkill Ag invoice reminders.
 - **What you get:** texts about invoices that are coming due or past due.
 - **How often:** varies, usually no more than three texts per invoice.
 - **Cost:** message and data rates may apply.
-- **Opt out:** reply STOP at any time. Reply HELP for help, or contact H2a@orra.com.
+- **Opt out:** reply STOP at any time. Reply HELP for help, or contact max@battenkillag.com.
 - Carriers are not responsible for delayed or undelivered messages.
 
 ## Payments
@@ -27,4 +27,4 @@ Invoices are due on the date shown. You can pay online through our payment proce
 
 ## Contact
 
-Orra Ag Services LLC, H2a@orra.com, 123-456-7890.
+Battenkill Ag Services, LLC, max@battenkillag.com, 281-900-0779.

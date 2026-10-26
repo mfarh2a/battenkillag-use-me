@@ -47,4 +47,4 @@ You must provide **free transportation** between employer-provided housing and t
 - the pay statement showing the reimbursement
 - return travel records at the end of the season
 
-Orra calculates each worker's 50% date and sends you a reimbursement schedule before it arrives. [Talk to us](/contact).
+Battenkill Ag calculates each worker's 50% date and sends you a reimbursement schedule before it arrives. [Talk to us](/contact).

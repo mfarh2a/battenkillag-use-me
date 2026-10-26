@@ -131,7 +131,7 @@ export default async function ArticlePage({ params }: Props) {
             )}
 
             <p className="notice prose">
-              Orra is an H-2A agent, not a law firm. This guide is general information, not legal advice. Rules change, so
+              Battenkill Ag is an H-2A agent, not a law firm. This guide is general information, not legal advice. Rules change, so
               check the linked regulations or talk to an immigration attorney about your situation. Last reviewed{" "}
               {formatDate(a.updated)}.
             </p>

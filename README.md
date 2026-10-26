@@ -7,7 +7,7 @@ Phase 1: the public website. The customer portal comes in later phases.
 | To change | Edit this file |
 | --- | --- |
 | Company name, phone, email, mailing address, headline | `lib/site.ts` |
-| The Why Orra page | `app/why-orra/page.tsx` |
+| The Why Battenkill page | `app/why-battenkill/page.tsx` |
 | The guides | `content/articles/` (one file per guide) |
 | Privacy policy | `content/privacy.md` |
 | Terms of use | `content/terms.md` |

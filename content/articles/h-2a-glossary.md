@@ -15,7 +15,7 @@ H-2A has its own vocabulary. Here are the terms you will see most, in plain Engl
 
 **Adverse Effect Wage Rate (AEWR).** The minimum hourly wage DOL sets for H-2A jobs by state and job type. You pay the highest of the AEWR and other required rates. See [AEWR explained](/resources/aewr-explained).
 
-**Agent.** A business that prepares and files H-2A paperwork for a farm. The farm stays the employer. Orra is an agent.
+**Agent.** A business that prepares and files H-2A paperwork for a farm. The farm stays the employer. Battenkill Ag is an agent.
 
 **Certification.** DOL's approval of your application. It starts the 3-year clock for keeping records.
 

@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 // 4. Sends the file back so the download starts right away, even if email isn't set up yet.
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
-const FILE_NAME = "Orra-H2A-Audit-Checklist.xlsx";
+const FILE_NAME = "Battenkill-Ag-H2A-Audit-Checklist.xlsx";
 
 function clean(value: unknown, max: number): string {
   return typeof value === "string" ? value.trim().slice(0, max) : "";
@@ -65,11 +65,11 @@ export async function POST(req: Request) {
       from,
       to: [email],
       reply_to: to || undefined,
-      subject: "Your H-2A audit-ready checklist from Orra",
+      subject: "Your H-2A audit-ready checklist from Battenkill Ag",
       html: `<p>Hi ${first},</p>
 <p>Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
-<p>Every Orra customer gets a digital filing cabinet that tracks these records automatically, organized by requirement. If you would like a quote for next season, just reply to this email.</p>
-<p>The Orra team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
+<p>Every Battenkill Ag customer gets a digital filing cabinet that tracks these records automatically, organized by requirement. If you would like a quote for next season, just reply to this email.</p>
+<p>The Battenkill Ag team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
 <p style="color:#777;font-size:12px">General information, not legal advice.</p>`,
       attachments: [{ filename: FILE_NAME, content: base64 }],
     });

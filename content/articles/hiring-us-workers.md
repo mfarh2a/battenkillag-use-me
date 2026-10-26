@@ -51,4 +51,4 @@ You cannot have laid off U.S. workers in the same job and area within 60 days of
 - [ ] resumes and contact details for applicants
 - [ ] the final recruitment report
 
-Keep the applicant log open until your 50% date. Orra tracks that date for you and keeps the log in your season file. [Talk to us](/contact).
+Keep the applicant log open until your 50% date. Battenkill Ag tracks that date for you and keeps the log in your season file. [Talk to us](/contact).
