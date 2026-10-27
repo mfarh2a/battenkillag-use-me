@@ -19,12 +19,12 @@ const outcomes = [
 ];
 
 const yourPerson = [
-  { when: "About 4 months out", what: "Calls you to plan dates, crew size, jobs and housing, starting from last season if you have one." },
-  { when: "During filing", what: "Files your job order and applications, and texts you as each approval comes through." },
-  { when: "If something stalls", what: "Tells you the same day, explains it in straightforward terms, and tells you what happens next." },
-  { when: "Before arrival", what: "Lets you know when visas clear and when your crew is on the way." },
-  { when: "During the season", what: "Answers your questions, keeps your records organized, and starts the 2-day notice clock if a worker leaves." },
-  { when: "If DOL calls", what: "Pulls your season file together and helps you respond." },
+  { when: "About 4 months out", what: "Seasonal planning for dates, crew size, housing and job order preparation." },
+  { when: "During filing", what: "Job order and application filing, with text updates as each approval comes through." },
+  { when: "If something stalls", what: "Same-day notice, a clear explanation and the next steps." },
+  { when: "Before arrival", what: "Visa approval and crew travel updates." },
+  { when: "During the season", what: "Ongoing support, organized records and 2-day notice tracking if a worker leaves." },
+  { when: "If DOL calls", what: "Season file preparation and audit response support." },
 ];
 
 const crew = [
