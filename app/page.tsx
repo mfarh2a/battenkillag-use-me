@@ -73,7 +73,6 @@ export default async function Home() {
           </div>
           <div className="hero-media">
             <Photo name="orchardSunrise" className="hero-photo" priority sizes="(max-width: 820px) 100vw, 45vw" />
-            <p className="hero-badge"><strong>One dedicated team member</strong><span>from planning to harvest</span></p>
           </div>
         </div>
       </section>
