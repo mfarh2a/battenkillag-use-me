@@ -18,7 +18,7 @@ const rows = [
   { step: "Housing and its inspection", who: "You and your state", note: "We schedule the inspection early and help move a stalled one along" },
   { step: "Transportation at your farm", who: "You", note: "Daily rides to the field and the store; we explain what H-2A requires" },
   { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
-  { step: "Season compliance packet", who: "Battenkill", note: "Sent digitally, with paper copies mailed" },
+  { step: "Season compliance packet", who: "Battenkill", note: "Digitally sent and accessible. Paper copies available upon request." },
   { step: "Department of Labor audits and site visits", who: "Battenkill", note: "Phone support and written responses" },
 ];
 
