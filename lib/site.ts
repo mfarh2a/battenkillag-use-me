@@ -2,7 +2,7 @@
 // Anything in [square brackets] is a placeholder waiting for Max's real information.
 
 // The site's public address. Set NEXT_PUBLIC_SITE_URL in Vercel to override (for example on a preview site).
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://battenkillag.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.battenkillag.com";
 
 export const site = {
   name: "Battenkill Ag",
