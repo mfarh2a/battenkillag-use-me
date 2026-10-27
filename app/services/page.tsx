@@ -94,7 +94,7 @@ export default function Services() {
         <div className="wrap">
           <div className="card stack prose">
             <h2 style={{ fontSize: "var(--step-2)" }}>Pricing</h2>
-            <p>We provide a reliable, low-cost service for the farming families we work with. Tell us your start date and crew size, and we will send a quote for your farm.</p>
+            <p>We provide reliable, exceptional service for the farming families we work with, with clear pricing and every charge itemized. Tell us your start date and crew size, and we will send a quote for your farm.</p>
             <p><Link href="/contact" className="btn btn-primary">Request a quote</Link></p>
           </div>
         </div>

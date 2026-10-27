@@ -140,7 +140,7 @@ export default async function ArticlePage({ params }: Props) {
           <aside className="article-aside stack">
             <div className="card stack">
               <h2 className="aside-title">Want this handled for you?</h2>
-              <p className="muted">Reliable, low-cost service with a dedicated team by your side all season.</p>
+              <p className="muted">Reliable, exceptional service with a dedicated team by your side all season.</p>
               <Link href="/contact" className="btn btn-primary">Request a quote</Link>
             </div>
             <div className="card stack">

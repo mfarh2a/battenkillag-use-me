@@ -9,7 +9,7 @@ export const homeFaqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Battenkill Ag provides a reliable, low-cost service for farming families. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
+    a: "Battenkill Ag provides reliable, exceptional service for farming families, with clear pricing and every charge itemized. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
   },
   {
     q: "How far ahead do I need to start?",

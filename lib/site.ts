@@ -11,12 +11,12 @@ export const site = {
   phone: "281-900-0779",
   email: "max@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
-  headline: "Reliable, low-cost H-2A for farming families.",
+  headline: "Reliable, exceptional H-2A service for farming families.",
   subline: "A dedicated team by your side all season that helps employers navigate the complexities of H-2A.",
   positioning:
-    "Family farms run on a crew that comes back season after season. Battenkill Ag helps those families file for H-2A contracts with a dedicated team member and exceptional customer service at a price that makes sense.",
+    "Family farms run on a crew that comes back season after season. Battenkill Ag helps those families file for H-2A contracts with a dedicated team member and exceptional customer service, with clear pricing and every charge itemized.",
   description:
-    "Battenkill Ag provides reliable, low-cost H-2A service for farming families. One dedicated team member guides you through the job order, DOL and USCIS filings and season compliance, with optional consulate and travel coordination through several partner companies.",
+    "Battenkill Ag provides reliable, exceptional H-2A service for farming families. One dedicated team member guides you through the job order, DOL and USCIS filings and season compliance, with optional consulate and travel coordination through several partner companies.",
   lastReviewed: "2026-10-13",
 };
 
