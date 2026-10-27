@@ -51,7 +51,7 @@ const services = [
   { title: "Job order and state posting", body: "Written, filed with your state and tracked through inspection." },
   { title: "Department of Labor application", body: "Filed, with U.S. recruitment documented and any questions answered on time." },
   { title: "USCIS petition", body: "Your Form I-129 for named or unnamed workers." },
-  { title: "Consulate and travel", body: "Optional consulate and travel services through several partner companies in Mexico." },
+  { title: "Consulate and travel", body: "Optional: consulate appointments and travel to your farm, coordinated by us with several partner companies in Mexico." },
   { title: "Season compliance", body: "A clear compliance packet, deadline reminders and help if DOL calls." },
 ];
 

@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "H-2A Services for Family Farms",
-  description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition and season compliance support, with optional consulate and travel services through partner companies, with one dedicated team member for your farm.",
+  description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition and season compliance support, with optional consulate and travel coordination, with one dedicated team member for your farm.",
   alternates: { canonical: "/services" },
 };
 
@@ -12,9 +12,9 @@ const rows = [
   { step: "Job order and state workforce agency posting", who: "Battenkill", note: "Drafted from your last season, then filed and tracked" },
   { step: "Department of Labor application and any follow-up questions", who: "Battenkill", note: "Filed in the DOL's online system" },
   { step: "USCIS petition (Form I-129)", who: "Battenkill", note: "An immigration attorney steps in on complex cases" },
-  { step: "Consulate appointments and visa forms", who: "Optional", note: "Available through several partner companies in Mexico" },
+  { step: "Consulate appointments and visa forms", who: "Optional", note: "Optional; coordinated by us with several partner companies in Mexico, which assist your workers there" },
   { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to several reputable companies that do" },
-  { step: "Travel to your farm", who: "Optional", note: "Available through several partner companies; mostly flights for small groups" },
+  { step: "Travel to your farm", who: "Optional", note: "Optional; coordinated by us with several partner companies; mostly flights for small groups" },
   { step: "Housing and its inspection", who: "You and your state", note: "We schedule the inspection early and help move a stalled one along" },
   { step: "Transportation at your farm", who: "You", note: "Daily rides to the field and the store; we explain what H-2A requires" },
   { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
@@ -39,7 +39,7 @@ export default function Services() {
         <div className="wrap stack-lg">
           <div className="stack prose">
             <h2>Who does what</h2>
-            <p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies. Consulate and travel services are optional, through several partner companies.</p>
+            <p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies. We can also coordinate your crew's consulate visits and travel with several partner companies in Mexico, if you choose.</p>
           </div>
           <div className="table-wrap">
             <table>
@@ -72,7 +72,7 @@ export default function Services() {
               <ul className="check-list">
                 <li>Prepare and file your job order, Department of Labor application and USCIS petition</li>
                 <li>Track every deadline and answer agency questions for you</li>
-                <li>Optional consulate and travel services through several partner companies in Mexico. You get one invoice from us, with every charge listed</li>
+                <li>Optional: we coordinate consulate appointments and travel for your crew with several partner companies in Mexico, which assist your workers there. You get one invoice from us, with every charge listed</li>
                 <li>Keep your season records organized and help if the Department of Labor audits you</li>
               </ul>
             </div>

@@ -32,12 +32,12 @@ const steps = [
   {
     title: "Consulate visits in Mexico",
     when: "After USCIS approves",
-    body: "Consulate services are optional and available through several partner companies in Mexico. Timing depends on the consulate, so we watch it closely and keep you posted.",
+    body: "If you choose, we coordinate your crew's consulate appointments with several partner companies in Mexico, which assist your workers with their visa forms there. Timing depends on the consulate, so we watch it closely and keep you posted.",
   },
   {
     title: "Travel and arrival",
     when: "Right before your start date",
-    body: "Travel services are optional and available through several partner companies, usually flights for small groups. You see every travel charge on your invoice, so there are no surprises. Once your crew arrives, housing and daily transportation at the farm are yours to provide.",
+    body: "If you choose, we coordinate your crew's travel to your farm with several partner companies, usually flights for small groups. You see every travel charge on your invoice, so there are no surprises. Once your crew arrives, housing and daily transportation at the farm are yours to provide.",
   },
   {
     title: "During the season",
