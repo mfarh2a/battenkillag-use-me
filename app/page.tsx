@@ -56,7 +56,7 @@ export default async function Home() {
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
       <section className="hero">
-        <div className="wrap hero-grid hero-solo">
+        <div className="wrap hero-grid">
           <div className="stack-lg">
             <p className="eyebrow">H-2A for farming families</p>
             <h1>
@@ -71,10 +71,12 @@ export default async function Home() {
               <Link href="/how-h2a-works" className="btn btn-ghost">How H-2A works</Link>
             </div>
           </div>
+          <div className="hero-media">
+            <Photo name="orchardSunrise" className="hero-photo" priority sizes="(max-width: 820px) 100vw, 45vw" />
+            <p className="hero-badge"><strong>One dedicated team member</strong><span>from planning to harvest</span></p>
+          </div>
         </div>
       </section>
-
-      <Photo name="orchardSunrise" className="photo-band" priority sizes="100vw" />
 
       <section className="trust-strip" aria-label="What you get">
         <div className="wrap trust-grid">
