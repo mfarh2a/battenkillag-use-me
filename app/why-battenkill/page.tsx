@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Photo from "@/components/Photo";
@@ -55,9 +56,12 @@ export default function WhyBattenkill() {
               Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Battenkill River.
             </p>
             <p className="muted">
-              I got my own start later, working on a pig and chicken farm in Texas while I was in school. I worked with employers
-              across the U.S. to grow one of the largest H-2A agencies in the country and was a member of the U.S. Apple NextGen
-              program.
+              I got my own start later, working on a pig and chicken farm in Texas while I was at Texas A&amp;M. I worked with
+              employers across the U.S. to grow one of the largest H-2A agencies in the country and was a member of the U.S.
+              Apple NextGen program.
+            </p>
+            <p className="muted">
+              I&apos;ve also visited Washington, D.C. several times to advocate for growers on farm labor issues.
             </p>
             <p className="muted">
               I started Battenkill Ag to give family farms reliable, personal H-2A service. I look forward to continuing to
@@ -65,7 +69,17 @@ export default function WhyBattenkill() {
             </p>
             <p><strong>Max Farrell</strong>, Owner</p>
           </div>
-          <Photo name="battenkillRiver" className="photo-card" />
+          <div className="about-collage">
+            <div className="about-collage-tall">
+              <Image src="/images/dc-meeting.jpg" alt="Max Farrell speaking with lawmakers' staff in Washington, D.C. about farm labor" fill sizes="(max-width: 820px) 50vw, 22vw" style={{ objectFit: "cover", objectPosition: "35% 30%" }} />
+            </div>
+            <div>
+              <Image src="/images/dc-group-1.jpg" alt="Max with a group of growers on Capitol Hill" fill sizes="(max-width: 820px) 50vw, 22vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div>
+              <Image src="/images/dc-group-2.jpg" alt="Max meeting with growers and congressional staff in Washington, D.C." fill sizes="(max-width: 820px) 50vw, 22vw" style={{ objectFit: "cover" }} />
+            </div>
+          </div>
         </div>
       </section>
 
