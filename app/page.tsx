@@ -128,7 +128,7 @@ export default async function Home() {
             <p className="eyebrow">Less paperwork, less worry</p>
             <h2>Records that are ready before anyone asks</h2>
             <p className="muted">
-              H-2A comes with a lot of rules and a lot of records. Every Battenkill Ag customer gets a digital filing cabinet that
+              H-2A comes with a lot of rules and a lot of records. Customers can add a digital filing cabinet that
               tracks them automatically, organized by requirement. We remind you before deadlines and help you respond
               quickly and completely if the Department of Labor asks.
             </p>
@@ -136,7 +136,7 @@ export default async function Home() {
           </div>
           <div className="stack">
           <Photo name="cranberryHarvest" className="photo-card" />
-          <ul className="check-list card">
+          <ul className="check-list records-list">
             <li>Job order, applications and approvals in one place</li>
             <li>Housing, vehicle and workers&apos; comp records tracked</li>
             <li>Pay and hours records checked against what H-2A requires</li>
