@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export const alt = "Battenkill Ag: reliable, exceptional H-2A service for farming families";
+export const alt = "Battenkill Ag: reliable H-2A service for farming families";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,7 +23,7 @@ export default function OgImage() {
         }}
       >
         <img src={logo} width={386} height={90} alt="" />
-        <div style={{ fontSize: 76, fontWeight: 700, marginTop: 24, lineHeight: 1.1 }}>Reliable, exceptional H-2A service for farming families.</div>
+        <div style={{ fontSize: 76, fontWeight: 700, marginTop: 24, lineHeight: 1.1 }}>Reliable H-2A service for farming families.</div>
         <div style={{ fontSize: 34, marginTop: 28, color: "#5e5446" }}>
           A dedicated team by your side all season.
         </div>

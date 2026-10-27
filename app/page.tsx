@@ -7,7 +7,7 @@ import JsonLd, { faqSchema } from "@/components/JsonLd";
 import Photo from "@/components/Photo";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name} | Reliable, Exceptional H-2A Service for Farming Families` },
+  title: { absolute: `${site.name} | Reliable H-2A Service for Farming Families` },
   description: site.description,
   alternates: { canonical: "/" },
 };
