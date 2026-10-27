@@ -55,9 +55,9 @@ export default function WhyBattenkill() {
               Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Battenkill River.
             </p>
             <p className="muted">
-              I got my own start later, working on a pig and chicken farm in Texas while I was in school. After that, I worked
-              with employers across the U.S. to grow one of the largest H-2A agencies in the country. I was also a member of
-              the U.S. Apple NextGen program.
+              I got my own start later, working on a pig and chicken farm in Texas while I was in school. I worked with employers
+              across the U.S. to grow one of the largest H-2A agencies in the country and was a member of the U.S. Apple NextGen
+              program.
             </p>
             <p className="muted">
               I started Battenkill Ag to give family farms reliable, personal H-2A service. I look forward to continuing to
