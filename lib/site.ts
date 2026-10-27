@@ -11,7 +11,7 @@ export const site = {
   phone: "512-540-4533",
   email: "max@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
-  headline: "Reliable H-2A service for farming families.",
+  headline: "Reliable H-2A service for farming families",
   subline: "A dedicated team by your side all season that helps employers navigate the complexities of H-2A.",
   positioning:
     "Family farms run on a crew that comes back season after season. Battenkill Ag helps those families file for H-2A contracts with a dedicated team member and exceptional customer service, with transparent pricing at an affordable rate for family farms.",
