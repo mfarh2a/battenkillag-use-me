@@ -16,11 +16,11 @@ const beliefs = [
   },
   {
     title: "Transparent, affordable pricing",
-    body: "You know what you'll pay before the season starts, at a rate that works for family farms. Exceptional service shouldn't be reserved for the biggest growers.",
+    body: "You know what you'll pay before the season starts, at a rate that works for family farms. Good service and a fair price go together here.",
   },
   {
-    title: "You should know who to call",
-    body: "One team member handles your farm from planning to the end of the season. No support queue, no starting over with someone new.",
+    title: "You always know who to call",
+    body: "One team member handles your farm from planning to the end of the season. They know your farm, your crew and your history, so you never have to explain things twice.",
   },
   {
     title: "No surprises",
@@ -37,8 +37,8 @@ export default function WhyBattenkill() {
           <h1>Why we exist</h1>
           <p className="lead">
             Family farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
-            possible, but small farms often pay too much for it and get too little attention. Battenkill Ag exists to give farming
-            families reliable, exceptional H-2A service, with a dedicated team by their side all season.
+            possible. Battenkill Ag exists to give farming families reliable, exceptional H-2A service at a fair price, with a
+            dedicated team by their side all season.
           </p>
         </div>
       </section>
