@@ -72,7 +72,7 @@ export default function Services() {
               <ul className="check-list">
                 <li>Prepare and file your job order, Department of Labor application and USCIS petition</li>
                 <li>Track every deadline and answer agency questions for you</li>
-                <li>Optional: we coordinate consulate appointments and travel for your crew with several partner companies in Mexico, which assist your workers there. You get one invoice from us, with every charge listed</li>
+                <li>Optional: we coordinate consulate appointments and travel for your crew with several partner companies in Mexico, which assist your workers there.</li>
                 <li>Keep your season records organized and help if the Department of Labor audits you</li>
               </ul>
             </div>
@@ -94,7 +94,7 @@ export default function Services() {
         <div className="wrap">
           <div className="card stack prose">
             <h2 style={{ fontSize: "var(--step-2)" }}>Pricing</h2>
-            <p>We provide reliable, exceptional service for the farming families we work with, with clear pricing and every charge itemized. Tell us your start date and crew size, and we will send a quote for your farm.</p>
+            <p>We provide reliable, exceptional service for the farming families we work with, with transparent pricing at an affordable rate for family farms. Tell us your start date and crew size, and we will send a quote for your farm.</p>
             <p><Link href="/contact" className="btn btn-primary">Request a quote</Link></p>
           </div>
         </div>

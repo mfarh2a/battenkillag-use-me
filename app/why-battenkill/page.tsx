@@ -15,8 +15,8 @@ const beliefs = [
     body: "A farm bringing in a small crew needs its workers on time just as much as a large operation. Size should not decide how quickly your questions get answered.",
   },
   {
-    title: "Clear pricing, real value",
-    body: "Every charge is itemized on your invoice, so you know exactly what you pay for. Exceptional service shouldn't be reserved for the biggest growers.",
+    title: "Transparent, affordable pricing",
+    body: "You know what you'll pay before the season starts, at a rate that works for family farms. Exceptional service shouldn't be reserved for the biggest growers.",
   },
   {
     title: "You should know who to call",

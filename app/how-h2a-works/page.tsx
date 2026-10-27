@@ -37,7 +37,7 @@ const steps = [
   {
     title: "Travel and arrival",
     when: "Right before your start date",
-    body: "If you choose, we coordinate your crew's travel to your farm with several partner companies, usually flights for small groups. You see every travel charge on your invoice, so there are no surprises. Once your crew arrives, housing and daily transportation at the farm are yours to provide.",
+    body: "If you choose, we coordinate your crew's travel to your farm with several partner companies, usually flights for small groups. Once your crew arrives, housing and daily transportation at the farm are yours to provide.",
   },
   {
     title: "During the season",
