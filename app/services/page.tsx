@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "H-2A Services for Family Farms",
-  description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition, consulate and travel coordination, and season compliance support, with one dedicated team member for your farm.",
+  description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition and season compliance support, with optional consulate and travel services through partner companies, with one dedicated team member for your farm.",
   alternates: { canonical: "/services" },
 };
 

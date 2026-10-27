@@ -16,7 +16,7 @@ export const site = {
   positioning:
     "Family farms run on a crew that comes back season after season. Battenkill Ag helps those families file for H-2A contracts with a dedicated team member and exceptional customer service at a price that makes sense.",
   description:
-    "Battenkill Ag provides reliable, low-cost H-2A service for farming families. One dedicated team member guides you through the job order, DOL and USCIS filings, consulate and travel, and season compliance.",
+    "Battenkill Ag provides reliable, low-cost H-2A service for farming families. One dedicated team member guides you through the job order, DOL and USCIS filings and season compliance, with optional consulate and travel services through partner companies.",
   lastReviewed: "2026-10-13",
 };
 

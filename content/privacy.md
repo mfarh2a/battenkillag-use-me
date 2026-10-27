@@ -31,7 +31,7 @@ We do not sell your information. We share it only:
 
 - **with government agencies,** such as the U.S. Department of Labor, state workforce agencies, USCIS and the U.S. Department of State, as needed to file your applications
 - **with service providers** who help us operate, such as hosting, payment processing, e-signature, email and text messaging, only for that purpose
-- **with consular and logistics partners** you have engaged us to coordinate, limited to what they need to do that work
+- **with consular and travel partner companies** you choose to use, limited to what they need to do that work
 - **when required by law,** or to respond to lawful requests, audits or investigations
 - **in a business transfer,** such as a merger or sale of assets, subject to this Policy
 
