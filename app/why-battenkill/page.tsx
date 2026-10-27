@@ -45,24 +45,27 @@ export default function WhyBattenkill() {
 
       <Photo name="valleySunrise" className="photo-band" priority sizes="100vw" />
 
-      <section className="section">
-        <div className="wrap stack prose">
-          <p className="eyebrow">About us</p>
-          <h2>Who we are</h2>
-          <p className="muted">
-            Both sides of my family have worked in agriculture for generations. My mom&apos;s family ran a vegetable stand in
-            Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Battenkill.
-          </p>
-          <p className="muted">
-            I got my own start later, working on a pig and chicken farm in Texas while I was in school. After that, I joined
-            one of the largest H-2A agencies in the country as a sales leader. I was also a member of the U.S. Apple NextGen
-            program.
-          </p>
-          <p className="muted">
-            I started Battenkill Ag to give family farms reliable, personal H-2A service. I look forward to continuing to
-            serve the ag community.
-          </p>
-          <p><strong>Max Farrell</strong>, Owner</p>
+      <section className="section section-alt">
+        <div className="wrap split">
+          <div className="stack prose">
+            <p className="eyebrow">About us</p>
+            <h2>Who we are</h2>
+            <p className="muted">
+              Both sides of my family have worked in agriculture for generations. My mom&apos;s family ran a vegetable stand in
+              Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Batten Kill River.
+            </p>
+            <p className="muted">
+              I got my own start later, working on a pig and chicken farm in Texas while I was in school. After that, I joined
+              one of the largest H-2A agencies in the country as a sales leader. I was also a member of the U.S. Apple NextGen
+              program.
+            </p>
+            <p className="muted">
+              I started Battenkill Ag to give family farms reliable, personal H-2A service. I look forward to continuing to
+              serve the ag community.
+            </p>
+            <p><strong>Max Farrell</strong>, Owner</p>
+          </div>
+          <Photo name="orchardAerial" className="photo-card" />
         </div>
       </section>
 
