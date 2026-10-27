@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const beliefs = [
   {
     title: "Family farms deserve the same service",
-    body: "A farm bringing in a small crew needs its workers on time just as much as a large operation. Size should not decide how quickly your questions get answered.",
+    body: "A farm bringing in a small crew needs its workers on time just as much as a large operation. Every farm we work with gets quick answers and the same attention, whatever the crew size.",
   },
   {
     title: "Transparent, affordable pricing",
