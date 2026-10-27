@@ -5,7 +5,7 @@ import { getAllArticles } from "@/lib/articles";
 import JsonLd from "@/components/JsonLd";
 
 const description =
-  "Free H-2A guides for farms: timeline, costs, AEWR, the three-fourths guarantee, housing, travel reimbursement, pay records, audits and more. Written in plain English.";
+  "Free H-2A guides for farms: timeline, costs, AEWR, the three-fourths guarantee, housing, travel reimbursement, pay records, audits and more. Written in straightforward terms.";
 
 export const metadata: Metadata = {
   title: "H-2A Resources and Compliance Guides",
@@ -33,7 +33,7 @@ export default async function Resources() {
           <p className="eyebrow">Resources</p>
           <h1>H-2A guides for family farms</h1>
           <p className="lead">
-            Plain-English answers to the questions farms ask us most: what H-2A costs, when to file, what you owe your
+            Straightforward answers to the questions farms ask us most: what H-2A costs, when to file, what you owe your
             crew, and what records keep you ready for an audit. Each guide links to the regulation it comes from.
           </p>
         </div>

@@ -1,6 +1,6 @@
 ---
 title: "H-2A Glossary: Terms Every Farm Should Know"
-description: "Plain-English definitions of AEWR, date of need, job order, FLAG, notice of deficiency, corresponding worker and other H-2A terms."
+description: "Straightforward definitions of AEWR, date of need, job order, FLAG, notice of deficiency, corresponding worker and other H-2A terms."
 category: getting-started
 date: "2026-10-13"
 keywords: ["H-2A glossary", "H-2A terms", "what is AEWR", "what is a job order H-2A", "H-2A definitions"]
@@ -11,7 +11,7 @@ faqs:
     a: "FLAG is the Department of Labor's online system where H-2A job orders and applications are filed and where DOL sends notices."
 ---
 
-H-2A has its own vocabulary. Here are the terms you will see most, in plain English.
+H-2A has its own vocabulary. Here are the terms you will see most, in straightforward terms.
 
 **Adverse Effect Wage Rate (AEWR).** The minimum hourly wage DOL sets for H-2A jobs by state and job type. You pay the highest of the AEWR and other required rates. See [AEWR explained](/resources/aewr-explained).
 

@@ -21,7 +21,7 @@ const outcomes = [
 const yourPerson = [
   { when: "About 4 months out", what: "Calls you to plan dates, crew size, jobs and housing, starting from last season if you have one." },
   { when: "During filing", what: "Files your job order and applications, and texts you as each approval comes through." },
-  { when: "If something stalls", what: "Tells you the same day, explains it in plain English, and tells you what happens next." },
+  { when: "If something stalls", what: "Tells you the same day, explains it in straightforward terms, and tells you what happens next." },
   { when: "Before arrival", what: "Lets you know when visas clear and when your crew is on the way." },
   { when: "During the season", what: "Answers your questions, keeps your records organized, and starts the 2-day notice clock if a worker leaves." },
   { when: "If DOL calls", what: "Pulls your season file together and helps you respond." },
@@ -51,7 +51,7 @@ const services = [
   { title: "Job order and state posting", body: "Written, filed with your state and tracked through inspection." },
   { title: "Department of Labor application", body: "Filed, with U.S. recruitment documented and any questions answered on time." },
   { title: "USCIS petition", body: "Your Form I-129 for named or unnamed workers." },
-  { title: "Consulate and travel", body: "Consulate appointments and travel to your farm, coordinated by us with our partner company in Mexico." },
+  { title: "Consulate and travel", body: "Optional consulate and travel services through several partner companies in Mexico." },
   { title: "Season compliance", body: "A clear compliance packet, deadline reminders and help if DOL calls." },
 ];
 
@@ -204,7 +204,7 @@ export default async function Home() {
           <div className="stack prose">
             <p className="eyebrow">Free guides</p>
             <h2>Know the rules before your season starts</h2>
-            <p className="muted">Plain-English guides on timing, cost, wages, housing and audits, each linked to the regulation behind it.</p>
+            <p className="muted">Straightforward guides on timing, cost, wages, housing and audits, each linked to the regulation behind it.</p>
           </div>
           <div className="grid-3">
             {articles.map((a) => (
