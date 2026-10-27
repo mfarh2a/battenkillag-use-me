@@ -48,19 +48,19 @@ export default function WhyBattenkill() {
       <section className="section">
         <div className="wrap stack prose">
           <p className="eyebrow">About us</p>
-          <h2>Rooted in farm country</h2>
+          <h2>Who we are</h2>
           <p className="muted">
-            Both sides of my family have worked in agriculture for generations. My mom&apos;s family ran a local vegetable
-            stand in Eagle Bridge, New York, and my uncle owned a corn farm in Greenwich, right along the Battenkill.
+            Both sides of my family have worked in agriculture for generations. My mom&apos;s family ran a vegetable stand in
+            Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Battenkill.
           </p>
           <p className="muted">
-            My own hands-on start came later, working on a pig and chicken farm in Texas while I was in school. From there I
-            joined one of the largest H-2A agencies in the country as a sales leader, helping farms of every size bring in
-            their seasonal crews. I was also a member of the U.S. Apple NextGen program.
+            I got my own start later, working on a pig and chicken farm in Texas while I was in school. After that, I joined
+            one of the largest H-2A agencies in the country as a sales leader. I was also a member of the U.S. Apple NextGen
+            program.
           </p>
           <p className="muted">
-            I started Battenkill Ag to give family farms the kind of reliable, personal H-2A service I would want for my own
-            family, and I look forward to continuing to serve the ag community.
+            I started Battenkill Ag to give family farms reliable, personal H-2A service. I look forward to continuing to
+            serve the ag community.
           </p>
           <p><strong>Max Farrell</strong>, Owner</p>
         </div>
