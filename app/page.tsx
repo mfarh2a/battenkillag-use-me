@@ -89,7 +89,7 @@ export default async function Home() {
             </div>
           </div>
           <aside className="season-card" aria-labelledby="person-title">
-            <h2 id="person-title">Your team, all season</h2>
+            <h2 id="person-title">What we handle, start to finish</h2>
             <ul className="season-list">
               {yourPerson.map((s) => (
                 <li key={s.when}>
