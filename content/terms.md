@@ -36,7 +36,7 @@ You agree not to:
 
 ## 7. Fees and payment
 
-Fees for H-2A services are set out in your Agent Agreement and invoices. Invoices are due on the date shown. Online payments are handled by our third-party payment processor and are subject to its terms. We do not see or store your full card or bank account numbers. Government filing fees and visa costs are paid by the employer and cannot be refunded once submitted.
+Fees for H-2A services are set out in your Agent Agreement and invoices. Invoices are due on the date shown. You can pay online or by check; check mailing instructions are on your invoice. Online payments are handled by our third-party payment processor and are subject to its terms. We do not see or store your full card or bank account numbers. Government filing fees and visa costs are paid by the employer and cannot be refunded once submitted.
 
 ## 8. Text message terms
 

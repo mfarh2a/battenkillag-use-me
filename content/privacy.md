@@ -11,7 +11,7 @@ Battenkill Ag Services, LLC ("Battenkill Ag," "we," "us" or "our") helps farms w
 - **Checklist download:** your name, email and, if you choose, your farm name.
 - **Contact form and quote requests:** your name, farm name, email, phone, state and what you tell us about your season.
 - **Customers:** account login details, business information such as farm location, crops, job details, wages, housing and payroll records, and documents you upload to the portal. These documents may include personal information about workers, such as names, dates of birth, passport details and employment records.
-- **Payments:** handled by our third-party payment processor. We do not see or store your full card or bank account numbers.
+- **Payments:** we accept online payments and checks. Online payments are handled by our third-party payment processor. We do not see or store your full card or bank account numbers.
 
 **Information collected automatically:** IP address, browser and device type, pages visited and similar usage data, collected through cookies and analytics tools.
 
