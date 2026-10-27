@@ -5,6 +5,7 @@ import { getAllArticles } from "@/lib/articles";
 import { homeFaqs } from "@/lib/home-faqs";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import Photo from "@/components/Photo";
+import SeasonTimeline from "@/components/SeasonTimeline";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.name} | Reliable H-2A Service for Farming Families` },
@@ -16,15 +17,6 @@ const outcomes = [
   { title: "Your crew on your date", body: "We start early and watch every step, so workers arrive when your season starts." },
   { title: "A dedicated team member who knows your farm", body: "The same team member from your first call to the end of your season." },
   { title: "Paperwork off your plate", body: "Filings, deadlines and agency questions handled, so you can run the farm." },
-];
-
-const yourPerson = [
-  { when: "About 4 months out", what: "Seasonal planning for dates, crew size, housing and job order preparation." },
-  { when: "During filing", what: "Job order and application filing, with text updates as each approval comes through." },
-  { when: "If something stalls", what: "Same-day notice, a clear explanation and the next steps." },
-  { when: "Before arrival", what: "Visa approval and crew travel updates." },
-  { when: "During the season", what: "Ongoing support, organized records and 2-day notice tracking if a worker leaves." },
-  { when: "If DOL calls", what: "Season file preparation and audit response support." },
 ];
 
 const crew = [
@@ -46,15 +38,6 @@ const crew = [
   },
 ];
 
-const services = [
-  { title: "Season planning", body: "Dates, crew size, jobs and housing, set with you." },
-  { title: "Job order and state posting", body: "Written, filed with your state and tracked through inspection." },
-  { title: "Department of Labor application", body: "Filed, with U.S. recruitment documented and any questions answered on time." },
-  { title: "USCIS petition", body: "Your Form I-129 for named or unnamed workers." },
-  { title: "Consulate and travel", body: "Optional: consulate appointments and travel to your farm, coordinated by us with several partner companies in Mexico." },
-  { title: "Season compliance", body: "A clear compliance packet, deadline reminders and help if DOL calls." },
-];
-
 const industries = [
   { title: "Fruit and vegetables", body: "Planting, harvest and packing for specialty crops." },
   { title: "Orchards and vineyards", body: "Apples, stone fruit, berries and grapes, from pruning to picking." },
@@ -73,7 +56,7 @@ export default async function Home() {
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
       <section className="hero">
-        <div className="wrap hero-grid">
+        <div className="wrap hero-grid hero-solo">
           <div className="stack-lg">
             <p className="eyebrow">H-2A for farming families</p>
             <h1>
@@ -88,17 +71,6 @@ export default async function Home() {
               <Link href="/how-h2a-works" className="btn btn-ghost">How H-2A works</Link>
             </div>
           </div>
-          <aside className="season-card" aria-labelledby="person-title">
-            <h2 id="person-title">What we handle, start to finish</h2>
-            <ul className="season-list">
-              {yourPerson.map((s) => (
-                <li key={s.when}>
-                  <span className="when">{s.when}</span>
-                  <span>{s.what}</span>
-                </li>
-              ))}
-            </ul>
-          </aside>
         </div>
       </section>
 
@@ -143,15 +115,7 @@ export default async function Home() {
             <h2>H-2A, start to finish</h2>
             <p className="muted">You run the farm and stay the employer. We handle the filings, the deadlines and the back and forth with the agencies.</p>
           </div>
-          <div className="grid-3">
-            {services.map((h, i) => (
-              <div className="card service-card" key={h.title}>
-                <span className="service-num" aria-hidden="true">{i + 1}</span>
-                <h3>{h.title}</h3>
-                <p className="muted">{h.body}</p>
-              </div>
-            ))}
-          </div>
+          <SeasonTimeline />
           <p><Link href="/services">See everything we do, and what stays with you</Link></p>
         </div>
       </section>
