@@ -52,7 +52,7 @@ export default function WhyBattenkill() {
             <h2>Who we are</h2>
             <p className="muted">
               Both sides of my family have worked in agriculture for generations. My mom&apos;s family ran a vegetable stand in
-              Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Batten Kill River.
+              Eagle Bridge, New York. My uncle owned a corn farm in Greenwich, right along the Battenkill River.
             </p>
             <p className="muted">
               I got my own start later, working on a pig and chicken farm in Texas while I was in school. After that, I joined
@@ -65,7 +65,7 @@ export default function WhyBattenkill() {
             </p>
             <p><strong>Max Farrell</strong>, Owner</p>
           </div>
-          <Photo name="orchardAerial" className="photo-card" />
+          <Photo name="battenkillRiver" className="photo-card" />
         </div>
       </section>
 

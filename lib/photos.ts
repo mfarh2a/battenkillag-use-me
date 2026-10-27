@@ -31,6 +31,13 @@ export const photos = {
     height: 576,
     source: "https://www.flickr.com/photos/usdagov/49431751221/",
   },
+  battenkillRiver: {
+    src: "/images/battenkill-river.jpg",
+    alt: "The Battenkill River in fall, with wooded hills along the bank",
+    width: 1179,
+    height: 786,
+    source: "Max Farrell's own photo",
+  },
 } as const;
 
 export type PhotoKey = keyof typeof photos;
