@@ -7,7 +7,7 @@ export default function Header() {
     <header className="site-header">
       <div className="wrap header-row">
         <Link href="/" className="brand" aria-label={`${site.legalName} home`}>
-          <img src="/brand/battenkill-ag-logo.svg" alt={site.legalName} width={193} height={45} />
+          <img src="/brand/battenkill-ag-logo.svg" alt={site.legalName} width={191} height={45} />
         </Link>
         <nav className="nav" aria-label="Main">
           {nav.map((item) => (
