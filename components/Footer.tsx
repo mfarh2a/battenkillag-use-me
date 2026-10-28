@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="stack">
             <img src="/brand/battenkill-ag-logo-white.svg" alt={site.legalName} width={206} height={48} className="footer-logo" />
-            <p>{site.headline} {site.subline}</p>
+            <p>{site.headline}. {site.subline}</p>
           </div>
           <div>
             <h3>Pages</h3>
