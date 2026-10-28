@@ -12,7 +12,7 @@ export const site = {
   email: "max@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
   headline: "Reliable H-2A service for farming families",
-  subline: "A dedicated team by your side all season that helps employers navigate the complexities of H-2A.",
+  subline: "A dedicated team by your side all season helping employers navigate the complexities of H-2A.",
   positioning:
     "Family farms run on a crew that comes back season after season. Battenkill Ag helps employers file for H-2A contracts, with exceptional customer service and transparent, affordable pricing.",
   description:
