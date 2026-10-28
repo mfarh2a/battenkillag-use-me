@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { site } from "@/lib/site";
+import { sendToCrm } from "@/lib/crm";
 
 // Free audit checklist download.
 // 1. Checks the visitor's name and email.
@@ -50,6 +51,8 @@ export async function POST(req: Request) {
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: "Please enter your name and a valid email." }, { status: 400 });
   }
+
+  await sendToCrm({ source: "newsletter", name, email, farm });
 
   const file = await readFile(path.join(process.cwd(), "content", "downloads", FILE_NAME));
   const base64 = file.toString("base64");

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { site } from "@/lib/site";
+import { sendToCrm } from "@/lib/crm";
 
 // Sends contact form requests to Max by email through Resend.
 // Needs RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL set in Vercel.
@@ -35,6 +36,11 @@ export async function POST(req: Request) {
   if (!f.name || !f.farm || !f.state || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) {
     return NextResponse.json({ error: "Please fill in your name, farm, state and a valid email." }, { status: 400 });
   }
+
+  await sendToCrm({
+    source: "contact", name: f.name, email: f.email, farm: f.farm, phone: f.phone, state: f.state,
+    workers: f.workers, startMonth: f.startMonth, current: f.current, message: f.message,
+  });
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
