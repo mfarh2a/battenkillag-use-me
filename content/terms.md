@@ -18,7 +18,7 @@ We cannot promise that any government agency will approve an application or peti
 
 ## 4. Accounts
 
-You must be at least 18 to use the customer portal. You agree to give accurate information and keep it current. Keep your portal login private and tell us right away at max@battenkillag.com if you think someone else has used it. You are responsible for activity under your account.
+You must be at least 18 to use the customer portal. You agree to give accurate information and keep it current. Keep your portal login private and tell us right away at sales@battenkillag.com if you think someone else has used it. You are responsible for activity under your account.
 
 ## 5. Documents you upload
 
@@ -44,7 +44,7 @@ Fees for H-2A services are set out in your Agent Agreement and invoices. Invoice
 - **What you get:** texts about invoices that are coming due or past due.
 - **How often:** varies, usually no more than three texts per invoice.
 - **Cost:** message and data rates may apply.
-- **Opt out:** reply STOP at any time. Reply HELP for help, or contact max@battenkillag.com.
+- **Opt out:** reply STOP at any time. Reply HELP for help, or contact sales@battenkillag.com.
 - Consent to receive texts is not a condition of buying any service.
 - Carriers are not responsible for delayed or undelivered messages.
 
@@ -91,4 +91,4 @@ We may update these Terms from time to time. We will post the new version with a
 ## 19. Contact
 
 Battenkill Ag Services, LLC
-max@battenkillag.com
+sales@battenkillag.com

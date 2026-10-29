@@ -67,4 +67,4 @@ We may update this Policy and will post the new version with an updated effectiv
 ## 12. Contact
 Battenkill Ag Services, LLC
 
-max@battenkillag.com
+sales@battenkillag.com

@@ -69,4 +69,4 @@ We may update this Policy and will post the new version with a new effective dat
 
 ## 11. Contact
 
-Questions about your information: max@battenkillag.com
+Questions about your information: sales@battenkillag.com

@@ -13,7 +13,7 @@ Battenkill Ag provides H-2A agent services only under a separate, signed H-2A Ag
 Battenkill Ag is not a law firm and does not provide legal advice. Battenkill Ag is not a farm labor contractor. It does not recruit, hire, employ, house, transport or supervise workers. Each grower remains the sole employer of its workers and is solely responsible for complying with the terms of its job order and all applicable laws. Information on the website, including checklists, guides and blog posts, is general information only. It is not legal, tax or immigration advice and may not reflect current law.
 
 ## 4. Eligibility and accounts
-You must be at least 18 years old and able to form a binding contract to use the portal. You agree to provide accurate information and keep it up to date. You are responsible for keeping your login credentials confidential and for all activity under your account. Notify us immediately at max@battenkillag.com if you believe your account has been compromised.
+You must be at least 18 years old and able to form a binding contract to use the portal. You agree to provide accurate information and keep it up to date. You are responsible for keeping your login credentials confidential and for all activity under your account. Notify us immediately at sales@battenkillag.com if you believe your account has been compromised.
 
 ## 5. Documents you upload
 You keep ownership of the documents and information you upload to the portal ("Customer Content"). You grant Battenkill Ag a limited license to store, copy, process and submit Customer Content as needed to provide the Services and to perform under your Agent Agreement, including filing with government agencies. You represent that you have the right to upload Customer Content, including any personal information about workers or other people, and that it is accurate to the best of your knowledge.
@@ -63,4 +63,4 @@ We may update these Terms from time to time. We will post the updated Terms with
 ## 18. Contact
 Battenkill Ag Services, LLC
 
-max@battenkillag.com
+sales@battenkillag.com
