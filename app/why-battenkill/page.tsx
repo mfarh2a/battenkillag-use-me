@@ -52,8 +52,7 @@ export default function WhyBattenkill() {
             <h2>Who we are</h2>
             <p className="muted">
               Our team is made up of people who already work in agriculture. We come from families that have farmed in
-              upstate New York for generations, including along the Battenkill River, and we have worked on livestock
-              farms ourselves.
+              upstate New York for generations along the Battenkill River.
             </p>
             <p className="muted">
               Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the
