@@ -42,7 +42,7 @@ DOL can ask for a long list of records, and most farms do not know what is on it
 
 [[checklist-form]]
 
-**Already a Battenkill Ag customer?** Customers can add a digital filing cabinet that tracks these records automatically, organized by requirement, so an audit response starts from a complete folder.
+**Already a Battenkill Ag customer?** Every customer gets a digital filing cabinet to keep track of important documents, deadlines and billing, with these records organized by requirement, so an audit response starts from a complete folder.
 
 ## If a letter arrives
 
@@ -51,4 +51,4 @@ DOL can ask for a long list of records, and most farms do not know what is on it
 3. Talk to your agent or an immigration attorney before responding.
 4. Never ignore a request. Not responding is one of the fastest ways to be barred from the program.
 
-Want the records kept for you? Battenkill Ag customers can add a digital filing cabinet that tracks them automatically. [Request a quote](/contact).
+Want the records kept for you? Every Battenkill Ag customer gets a digital filing cabinet to keep track of important documents, deadlines and billing. [Get in touch](/contact).

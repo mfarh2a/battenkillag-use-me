@@ -71,7 +71,7 @@ export async function POST(req: Request) {
       subject: "Your H-2A audit-ready checklist from Battenkill Ag",
       html: `<p>Hi ${first},</p>
 <p>Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
-<p>Battenkill Ag customers can add a digital filing cabinet that tracks these records automatically, organized by requirement. The workbook links each record to a plain-English guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like a quote for next season, just reply to this email.</p>
+<p>Every Battenkill Ag customer gets a digital filing cabinet to keep track of important documents, deadlines and billing, with these records organized by requirement. The workbook links each record to a plain-English guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like to talk about next season, just reply to this email.</p>
 <p>The Battenkill Ag team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
 <p style="color:#777;font-size:12px">General information, not legal advice.</p>`,
       attachments: [{ filename: FILE_NAME, content: base64 }],

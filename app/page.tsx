@@ -127,8 +127,8 @@ export default async function Home() {
             <p className="eyebrow">Less paperwork, less worry</p>
             <h2>Records that are ready before anyone asks</h2>
             <p className="muted">
-              H-2A comes with a lot of rules and a lot of records. Customers can add a digital filing cabinet that
-              tracks them automatically, organized by requirement. We remind you before deadlines and help you respond
+              H-2A comes with a lot of rules and a lot of records. Every customer gets a digital filing cabinet to keep track of
+              important documents, deadlines and billing, organized by requirement. We remind you before deadlines and help you respond
               quickly and completely if the Department of Labor asks.
             </p>
             <p><Link href="/resources/h-2a-audit-prep#checklist">Get the free audit checklist</Link></p>
