@@ -56,9 +56,9 @@ export default function WhyBattenkill() {
               farms ourselves.
             </p>
             <p className="muted">
-              Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the country, taken
-              part in the U.S. Apple NextGen program, and traveled to Washington, D.C. to advocate for growers on farm
-              labor issues.
+              Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the country. We stay
+              actively involved in agricultural associations and have traveled to Washington, D.C. to advocate for growers
+              on farm labor issues.
             </p>
             <p className="muted">
               We started Battenkill Ag to give family farms reliable H-2A service from people who understand the work.
