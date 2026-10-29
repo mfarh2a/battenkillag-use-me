@@ -17,6 +17,7 @@ export default function Footer() {
               {nav.map((item) => (
                 <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
               ))}
+              <li><Link href="/partners">Become a partner</Link></li>
               <li><Link href="/login">Customer login</Link></li>
             </ul>
           </div>
