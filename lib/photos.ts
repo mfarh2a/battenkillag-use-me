@@ -36,7 +36,7 @@ export const photos = {
     alt: "The Battenkill River in fall, with wooded hills along the bank",
     width: 1179,
     height: 786,
-    source: "Max Farrell's own photo",
+    source: "Owner's own photo",
   },
 } as const;
 
