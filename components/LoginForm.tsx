@@ -23,7 +23,7 @@ export default function LoginForm() {
       </div>
       {tried && (
         <div className="form-status err full" role="alert">
-          Online login is on the way. For now, call {site.phone} or email {site.email} and we will help right away.
+          User not found. Check your email and password and try again.
         </div>
       )}
       <div className="full">
