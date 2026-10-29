@@ -55,8 +55,8 @@ export default function WhyBattenkill() {
               upstate New York for generations along the Battenkill River.
             </p>
             <p className="muted">
-              Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the
-              country before going into business ourselves. We stay
+              Our team previously helped employers across the U.S. while growing one of the largest H-2A agencies
+              in the country, before going into business ourselves. We stay
               actively involved in agricultural associations and have traveled to Washington, D.C. to advocate for growers
               on farm labor issues.
             </p>
