@@ -56,7 +56,8 @@ export default function WhyBattenkill() {
               farms ourselves.
             </p>
             <p className="muted">
-              Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the country. We stay
+              Our team has helped employers across the U.S. grow one of the largest H-2A agencies in the
+              country before going into business ourselves. We stay
               actively involved in agricultural associations and have traveled to Washington, D.C. to advocate for growers
               on farm labor issues.
             </p>
