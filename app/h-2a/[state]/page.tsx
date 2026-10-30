@@ -153,7 +153,10 @@ export default async function StatePage({ params }: Props) {
                       {c.url && <p><a href={c.url} target="_blank" rel="noopener">Official {s.name} H-2A page</a></p>}
                     </>
                   ) : (
-                    <p>Contact the foreign labor certification unit at {s.name}&apos;s state workforce agency to request your pre-occupancy inspection. The state coordinates the inspection directly with you, and we help you prepare and keep the process on track.</p>
+                    <>
+                      <p>Contact the foreign labor certification unit at {s.name}&apos;s state workforce agency to request your pre-occupancy inspection. The state coordinates the inspection directly with you, and we help you prepare and keep the process on track.</p>
+                      <p>Find {s.name}&apos;s H-2A contact on the Department of Labor&apos;s <a href="https://www.dol.gov/agencies/eta/foreign-labor/contact" target="_blank" rel="noopener">state contacts page</a>.</p>
+                    </>
                   )}
                   <p className="muted">Contacts change. Confirm with the state before you schedule.</p>
                 </div>
