@@ -25,6 +25,7 @@ export const nav = [
   { href: "/how-h2a-works", label: "How H-2A works" },
   { href: "/resources", label: "Resources" },
   { href: "/why-battenkill", label: "Why Battenkill" },
+  { href: "/plan-your-season", label: "Plan your season" },
   { href: "/contact", label: "Contact" },
 ];
 

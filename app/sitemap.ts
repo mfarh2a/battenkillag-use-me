@@ -4,7 +4,7 @@ import { getAllArticles } from "@/lib/articles";
 import { states } from "@/lib/states";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const pages = ["", "/services", "/how-h2a-works", "/resources", "/why-battenkill", "/contact", "/partners", "/h-2a", "/privacy", "/terms"];
+  const pages = ["", "/services", "/how-h2a-works", "/resources", "/why-battenkill", "/contact", "/partners", "/h-2a", "/plan-your-season", "/privacy", "/terms"];
   const articles = await getAllArticles();
   return [
     ...pages.map((p) => ({

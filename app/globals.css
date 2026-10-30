@@ -469,3 +469,25 @@ textarea { min-height: 8rem; resize: vertical; }
 .state-index { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.4rem 1.5rem; }
 .state-index li { display: flex; justify-content: space-between; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
 .state-index .muted { font-size: var(--step--1); font-variant-numeric: tabular-nums; }
+
+/* Plan your season */
+.planner { display: grid; gap: 2rem; }
+.planner-form { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: end; }
+.planner-form .field { min-width: 14rem; }
+.plan-group h2 { margin-bottom: 0.75rem; }
+.plan-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.plan-list > li { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 1.5rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+.plan-list > li.late .plan-date strong { text-decoration: line-through; color: var(--muted); }
+.plan-date { display: flex; flex-direction: column; gap: 0.2rem; font-variant-numeric: tabular-nums; }
+.plan-date span { color: var(--muted); font-size: var(--step--1); }
+.plan-body h3 { margin: 0 0 0.3rem; font-size: var(--step-1); }
+.plan-body p { margin: 0; }
+.plan-records { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.3rem; }
+.plan-records label { display: flex; flex-direction: row; justify-content: flex-start; gap: 0.5rem; align-items: flex-start; cursor: pointer; font-weight: 400; text-align: left; }
+.plan-records input[type=checkbox] { width: 1rem; height: 1rem; min-width: 1rem; flex: 0 0 auto; padding: 0; margin: 0.3rem 0 0; accent-color: var(--field); }
+.plan-note { font-size: var(--step--1); }
+@media (max-width: 720px) { .plan-list > li { grid-template-columns: 1fr; gap: 0.4rem; } }
+@media print {
+  .promo-banner, header, footer, .planner-form button, #checklist, .cta-band, .skip-link { display: none !important; }
+  .plan-list > li { break-inside: avoid; }
+}

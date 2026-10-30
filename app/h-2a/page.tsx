@@ -23,7 +23,6 @@ export default function StatesIndex() {
           {states.map((s) => (
             <li key={s.slug}>
               <Link href={`/h-2a/${s.slug}`}>{s.name}</Link>
-              <span className="muted">{s.filings.toLocaleString()} applications</span>
             </li>
           ))}
         </ul>
