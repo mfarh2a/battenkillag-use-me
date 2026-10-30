@@ -32,11 +32,11 @@ export const photos = {
     source: "https://www.flickr.com/photos/usdagov/49431751221/",
   },
   fieldCrew: {
-    src: "https://live.staticflickr.com/5477/10460513345_3e05a23d0e_b.jpg",
-    alt: "A farm crew hand-picking sweet potatoes on a family farm",
+    src: "https://live.staticflickr.com/7414/10546481726_51a88ee668_b.jpg",
+    alt: "A farm crew hand-harvesting sweet potatoes in the field on a family farm",
     width: 1024,
-    height: 683,
-    source: "https://www.flickr.com/photos/usdagov/10460513345/ (USDA photo by Lance Cheung, CC BY 2.0: credit shown on the page)",
+    height: 664,
+    source: "https://www.flickr.com/photos/usdagov/10546481726/ (public domain)",
   },
   battenkillRiver: {
     src: "/images/battenkill-river.jpg",

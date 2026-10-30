@@ -64,11 +64,6 @@ export default function SeasonPlanner() {
   }, [start, endDate]);
 
   const today = new Date();
-  const until = (d: Date) => {
-    const n = Math.round((d.getTime() - today.getTime()) / DAY);
-    if (n === 0) return "today";
-    return n > 0 ? `in ${n} days` : `${-n} days ago`;
-  };
 
   const Section = ({ title, items }: { title: string; items: Item[] }) => (
     <section className="plan-group">
@@ -80,7 +75,6 @@ export default function SeasonPlanner() {
             <li key={it.title} className={late ? "late" : ""}>
               <div className="plan-date">
                 <strong>{it.ongoing ? `From ${it.date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}` : fmt(it.date)}</strong>
-                {!it.ongoing && <span>{until(it.date)}</span>}
               </div>
               <div className="plan-body">
                 <h3>{it.title}</h3>
@@ -105,7 +99,6 @@ export default function SeasonPlanner() {
       <div className="planner-top card">
         <figure className="planner-photo">
           <Photo name="fieldCrew" className="planner-photo-img" sizes="(max-width: 820px) 100vw, 40vw" />
-          <figcaption>USDA photo by Lance Cheung, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></figcaption>
         </figure>
         <form className="planner-form" onSubmit={(e) => e.preventDefault()}>
           <div className="field">
