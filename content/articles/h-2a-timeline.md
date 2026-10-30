@@ -15,6 +15,8 @@ faqs:
 
 Every H-2A deadline is counted back from one date: your **date of need**, the first day you need workers on the farm. Miss a step and your crew can arrive late, or not at all. Here is how a season comes together.
 
+**Want these dates for your own farm?** Enter your start and end dates in our [Plan your season](/plan-your-season) tool to get every deadline and the records to keep at each step.
+
 ## The H-2A calendar at a glance
 
 | When | What happens |

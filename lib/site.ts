@@ -21,12 +21,12 @@ export const site = {
 };
 
 export const nav = [
-  { href: "/services", label: "Services" },
   { href: "/how-h2a-works", label: "How H-2A works" },
-  { href: "/resources", label: "Resources" },
+  { href: "/services", label: "Services" },
   { href: "/why-battenkill", label: "Why Battenkill" },
   { href: "/plan-your-season", label: "Plan your season" },
   { href: "/contact", label: "Contact" },
+  { href: "/resources", label: "Resources" },
 ];
 
 export const categories = [

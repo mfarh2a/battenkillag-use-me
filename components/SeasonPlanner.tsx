@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Photo from "@/components/Photo";
 
 type Item = { date: Date; title: string; detail: string; records?: string[]; rule?: string; ongoing?: boolean };
 
@@ -15,15 +16,24 @@ function nextSpring() {
   const y = now.getMonth() >= 2 ? now.getFullYear() + 1 : now.getFullYear();
   return `${y}-03-15`;
 }
+function plusMonths(isoDate: string, m: number) {
+  const d = new Date(`${isoDate}T12:00:00`);
+  if (isNaN(d.getTime())) return isoDate;
+  d.setMonth(d.getMonth() + m);
+  return d.toISOString().slice(0, 10);
+}
 
 export default function SeasonPlanner() {
   const [start, setStart] = useState(nextSpring());
-  const [months, setMonths] = useState(6);
+  const [endDate, setEndDate] = useState(plusMonths(nextSpring(), 6));
+  const [endTouched, setEndTouched] = useState(false);
+  const onStart = (v: string) => { setStart(v); if (!endTouched || endDate <= v) setEndDate(plusMonths(v, 6)); };
 
   const plan = useMemo(() => {
     const s = new Date(`${start}T12:00:00`);
     if (isNaN(s.getTime())) return null;
-    const end = new Date(s); end.setMonth(end.getMonth() + months);
+    let end = new Date(`${endDate}T12:00:00`);
+    if (isNaN(end.getTime()) || end <= s) { end = new Date(s); end.setMonth(end.getMonth() + 6); }
     const half = new Date((s.getTime() + end.getTime()) / 2);
     const cert = add(s, -30);
     const keepUntil = new Date(cert); keepUntil.setFullYear(keepUntil.getFullYear() + 3);
@@ -48,8 +58,8 @@ export default function SeasonPlanner() {
       { date: end, title: "Contract ends", detail: "Check the three-fourths guarantee, pay final wages and provide or pay for return travel for workers who complete the contract.", records: ["Three-fourths guarantee calculation", "Final pay records", "Outbound travel records"], rule: "122" },
       { date: keepUntil, title: "Keep records until at least this date", detail: "Keep every H-2A record for 3 years from your certification date. DOL can audit any time in that window.", rule: "167" },
     ];
-    return { before, during, after, end };
-  }, [start, months]);
+    return { before, during, after, end, s, half, cert, keepUntil };
+  }, [start, endDate]);
 
   const today = new Date();
   const until = (d: Date) => {
@@ -90,21 +100,38 @@ export default function SeasonPlanner() {
 
   return (
     <div className="planner">
-      <form className="planner-form card" onSubmit={(e) => e.preventDefault()}>
-        <div className="field">
-          <label htmlFor="plan-start">When does your crew start?</label>
-          <input id="plan-start" type="date" value={start} onChange={(e) => setStart(e.target.value)} min={iso(new Date())} />
-        </div>
-        <div className="field">
-          <label htmlFor="plan-months">How long is your season?</label>
-          <select id="plan-months" value={months} onChange={(e) => setMonths(Number(e.target.value))}>
-            {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((m) => <option key={m} value={m}>{m} months</option>)}
-          </select>
-        </div>
-        <button type="button" className="btn btn-ghost" onClick={() => window.print()}>Print this plan</button>
-      </form>
+      <div className="planner-top card">
+        <figure className="planner-photo">
+          <Photo name="fieldCrew" className="planner-photo-img" sizes="(max-width: 820px) 100vw, 40vw" />
+          <figcaption>USDA photo by Lance Cheung, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></figcaption>
+        </figure>
+        <form className="planner-form" onSubmit={(e) => e.preventDefault()}>
+          <div className="field">
+            <label htmlFor="plan-start">When does your crew start?</label>
+            <input id="plan-start" type="date" value={start} onChange={(e) => onStart(e.target.value)} min={iso(new Date())} />
+          </div>
+          <div className="field">
+            <label htmlFor="plan-end">When does your season end?</label>
+            <input id="plan-end" type="date" value={endDate} min={start} onChange={(e) => { setEndDate(e.target.value); setEndTouched(true); }} />
+          </div>
+          <button type="button" className="btn btn-ghost" onClick={() => window.print()}>Print this plan</button>
+        </form>
+      </div>
       {plan ? (
         <>
+          <div className="print-only plan-print-head">
+            <p className="pp-brand">Battenkill Ag Services · H-2A season plan</p>
+            <h2>Season: {fmt(plan.s)} to {fmt(plan.end)}</h2>
+            <dl className="pp-keys">
+              <div><dt>Submit job order</dt><dd>{fmt(add(plan.s, -75))} to {fmt(add(plan.s, -60))}</dd></div>
+              <div><dt>File DOL application by</dt><dd>{fmt(add(plan.s, -45))}</dd></div>
+              <div><dt>Expected DOL decision</dt><dd>{fmt(plan.cert)}</dd></div>
+              <div><dt>Crew arrives</dt><dd>{fmt(plan.s)}</dd></div>
+              <div><dt>Halfway point</dt><dd>{fmt(plan.half)}</dd></div>
+              <div><dt>Keep records until</dt><dd>{fmt(plan.keepUntil)}</dd></div>
+            </dl>
+            <p className="pp-contact">Questions? Battenkill Ag · 512-540-4533 · sales@battenkillag.com · battenkillag.com</p>
+          </div>
           <Section title="Before your crew arrives" items={plan.before} />
           <Section title="During the season" items={plan.during} />
           <Section title="After the season" items={plan.after} />
