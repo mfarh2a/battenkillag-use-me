@@ -13,7 +13,7 @@ const rows = [
   { step: "Department of Labor application and any follow-up questions", who: "Battenkill", note: "Filed in the DOL's online system" },
   { step: "USCIS petition (Form I-129)", who: "Battenkill", note: "Prepared and filed for your named or unnamed workers" },
   { step: "Consulate appointments and visa forms", who: "Optional", note: "Optional; coordinated by us with several partner companies in Mexico, which assist your workers there" },
-  { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to several reputable companies that do" },
+  { step: "Recruiting new workers", who: "Optional", note: "Optional; we introduce you to several reputable companies that recruit" },
   { step: "Travel to your farm", who: "Optional", note: "Optional; coordinated by us with several partner companies; mostly flights for small groups" },
   { step: "Housing and its inspection", who: "You and your SWA", note: "Schedule the inspection early to prevent delays" },
   { step: "Season compliance packet", who: "Battenkill", note: "Digitally sent and accessible. Paper copies available upon request." },
