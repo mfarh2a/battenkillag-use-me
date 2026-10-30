@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/site";
+import contactsData from "@/content/state-contacts.json";
+
+type Contact = { office: string; phone?: string; email?: string; url?: string; note?: string };
+const contacts = contactsData as Record<string, Contact>;
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import { MONTHS, SOURCE, getState, listJoin, monthsBefore, stateFaqs, states } from "@/lib/states";
 
@@ -135,6 +139,26 @@ export default async function StatePage({ params }: Props) {
             <p>
               Your job order goes to {s.name}&apos;s state workforce agency (SWA), which posts the job for U.S. workers and arranges your housing inspection. The inspection has to be done before the Department of Labor can certify your application, so schedule it early.
             </p>
+            {(() => {
+              const c = contacts[s.abbr];
+              return (
+                <div className="card stack">
+                  <h3>Schedule your housing inspection</h3>
+                  {c ? (
+                    <>
+                      <p><strong>{c.office}</strong></p>
+                      {c.phone && <p>Phone: <a href={`tel:${c.phone.replace(/[^0-9]/g, "")}`}>{c.phone}</a></p>}
+                      {c.email && <p>Email: <a href={`mailto:${c.email}`}>{c.email}</a></p>}
+                      {c.note && <p>{c.note}</p>}
+                      {c.url && <p><a href={c.url} target="_blank" rel="noopener">Official {s.name} H-2A page</a></p>}
+                    </>
+                  ) : (
+                    <p>Contact the foreign labor certification unit at {s.name}&apos;s state workforce agency to request your pre-occupancy inspection. Battenkill Ag customers don&apos;t have to track this down; we set it up with the state for you.</p>
+                  )}
+                  <p className="muted">Contacts change. Confirm with the state before you schedule.</p>
+                </div>
+              );
+            })()}
           </div>
           <div className="stack prose">
             <h2>How Battenkill Ag helps</h2>
