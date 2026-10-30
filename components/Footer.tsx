@@ -2,7 +2,6 @@ import Link from "next/link";
 import { nav, site } from "@/lib/site";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer className="site-footer">
       <div className="wrap">
@@ -41,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="footer-small">
-          © {year} {site.legalName}. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link>
+          © {site.legalName}. <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link>
         </p>
       </div>
     </footer>
