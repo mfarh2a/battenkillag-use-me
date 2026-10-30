@@ -16,8 +16,6 @@ const rows = [
   { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to several reputable companies that do" },
   { step: "Travel to your farm", who: "Optional", note: "Optional; coordinated by us with several partner companies; mostly flights for small groups" },
   { step: "Housing and its inspection", who: "You and your SWA", note: "Schedule the inspection early to prevent delays" },
-  { step: "Transportation at your farm", who: "You", note: "Daily rides to the field and the store; we explain what H-2A requires" },
-  { step: "Payroll and wage records", who: "You", note: "We can point you to a payroll partner" },
   { step: "Season compliance packet", who: "Battenkill", note: "Digitally sent and accessible. Paper copies available upon request." },
   { step: "Department of Labor audits and site visits", who: "Battenkill", note: "Phone support and written responses" },
 ];
