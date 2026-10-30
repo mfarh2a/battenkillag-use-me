@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const rows = [
   { step: "Job order and state workforce agency posting", who: "Battenkill", note: "Drafted from your last season, then filed and tracked" },
   { step: "Department of Labor application and any follow-up questions", who: "Battenkill", note: "Filed in the DOL's online system" },
-  { step: "USCIS petition (Form I-129)", who: "Battenkill", note: "An immigration attorney steps in on complex cases" },
+  { step: "USCIS petition (Form I-129)", who: "Battenkill", note: "Prepared and filed for your named or unnamed workers" },
   { step: "Consulate appointments and visa forms", who: "Optional", note: "Optional; coordinated by us with several partner companies in Mexico, which assist your workers there" },
   { step: "Recruiting new workers", who: "You", note: "We don't recruit, but we can introduce you to several reputable companies that do" },
   { step: "Travel to your farm", who: "Optional", note: "Optional; coordinated by us with several partner companies; mostly flights for small groups" },
