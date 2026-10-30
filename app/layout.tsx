@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import { states } from "@/lib/states";
 import PromoBanner from "@/components/PromoBanner";
 import { site } from "@/lib/site";
 
@@ -43,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             url: site.url,
             description: site.description,
             slogan: site.headline,
-            areaServed: { "@type": "Country", name: "United States" },
+            areaServed: states.map((st) => ({ "@type": "State", name: st.name })),
+            email: site.email,
+            telephone: site.phone,
             knowsAbout: ["H-2A visa program", "agricultural labor certification", "AEWR", "farm labor compliance"],
             serviceType: "H-2A visa agent services for agricultural employers",
           }}

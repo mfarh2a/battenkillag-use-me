@@ -1,0 +1,2198 @@
+[
+ {
+  "slug": "alabama",
+  "abbr": "AL",
+  "name": "Alabama",
+  "filings": 239,
+  "workers": 2623,
+  "employers": 160,
+  "flcShare": 0.038,
+  "smallEmployers": 136,
+  "growerEmployers": 156,
+  "medianCrew": 5,
+  "topMonths": [
+   "February",
+   "March",
+   "January"
+  ],
+  "months": [
+   0.172,
+   0.364,
+   0.222,
+   0.046,
+   0.013,
+   0.021,
+   0.017,
+   0.042,
+   0.042,
+   0.013,
+   0.021,
+   0.029
+  ],
+  "crops": [
+   "greenhouse and nursery",
+   "mixed and specialty crops",
+   "nursery stock and Christmas trees",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Mobile",
+   "Baldwin",
+   "Chilton",
+   "Limestone",
+   "Montgomery"
+  ],
+  "wage": 11.25,
+  "filings26": 198
+ },
+ {
+  "slug": "alaska",
+  "abbr": "AK",
+  "name": "Alaska",
+  "filings": 5,
+  "workers": 46,
+  "employers": 5,
+  "flcShare": 0.0,
+  "smallEmployers": 4,
+  "growerEmployers": 5,
+  "medianCrew": 6,
+  "topMonths": [
+   "April",
+   "May",
+   "February"
+  ],
+  "months": [
+   0.0,
+   0.2,
+   0.0,
+   0.4,
+   0.4,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "crops": [
+   "nursery stock and Christmas trees",
+   "beef cattle",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Anchorage",
+   "Southeast Fairbanks"
+  ],
+  "wage": 14.79,
+  "filings26": 6
+ },
+ {
+  "slug": "arizona",
+  "abbr": "AZ",
+  "name": "Arizona",
+  "filings": 256,
+  "workers": 14682,
+  "employers": 109,
+  "flcShare": 0.477,
+  "smallEmployers": 47,
+  "growerEmployers": 73,
+  "medianCrew": 15,
+  "topMonths": [
+   "November",
+   "January",
+   "September"
+  ],
+  "months": [
+   0.141,
+   0.109,
+   0.062,
+   0.055,
+   0.066,
+   0.043,
+   0.012,
+   0.043,
+   0.113,
+   0.074,
+   0.18,
+   0.102
+  ],
+  "crops": [
+   "vegetables and melons",
+   "nursery stock and Christmas trees",
+   "grain, corn and soybeans",
+   "sheep and goats"
+  ],
+  "counties": [
+   "Yuma",
+   "Maricopa",
+   "Pinal",
+   "Cochise",
+   "Yavapai"
+  ],
+  "wage": 15.32,
+  "filings26": 163
+ },
+ {
+  "slug": "arkansas",
+  "abbr": "AR",
+  "name": "Arkansas",
+  "filings": 1019,
+  "workers": 8012,
+  "employers": 833,
+  "flcShare": 0.029,
+  "smallEmployers": 747,
+  "growerEmployers": 809,
+  "medianCrew": 4,
+  "topMonths": [
+   "February",
+   "March",
+   "December"
+  ],
+  "months": [
+   0.052,
+   0.402,
+   0.274,
+   0.051,
+   0.035,
+   0.024,
+   0.019,
+   0.021,
+   0.027,
+   0.015,
+   0.019,
+   0.062
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "cattle"
+  ],
+  "counties": [
+   "Craighead",
+   "Mississippi",
+   "Phillips",
+   "Desha",
+   "Arkansas"
+  ],
+  "wage": 13.4,
+  "filings26": 952
+ },
+ {
+  "slug": "colorado",
+  "abbr": "CO",
+  "name": "Colorado",
+  "filings": 597,
+  "workers": 5185,
+  "employers": 364,
+  "flcShare": 0.03,
+  "smallEmployers": 298,
+  "growerEmployers": 359,
+  "medianCrew": 4,
+  "topMonths": [
+   "February",
+   "March",
+   "April"
+  ],
+  "months": [
+   0.09,
+   0.216,
+   0.196,
+   0.146,
+   0.089,
+   0.06,
+   0.022,
+   0.02,
+   0.02,
+   0.018,
+   0.059,
+   0.064
+  ],
+  "crops": [
+   "cattle",
+   "sheep and goats",
+   "vegetables and melons",
+   "peaches, cherries and other fruit"
+  ],
+  "counties": [
+   "Mesa",
+   "Weld",
+   "Delta",
+   "Moffat",
+   "Saguache"
+  ],
+  "wage": 16.28,
+  "filings26": 441
+ },
+ {
+  "slug": "connecticut",
+  "abbr": "CT",
+  "name": "Connecticut",
+  "filings": 131,
+  "workers": 1687,
+  "employers": 58,
+  "flcShare": 0.046,
+  "smallEmployers": 39,
+  "growerEmployers": 56,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "April",
+   "June"
+  ],
+  "months": [
+   0.0,
+   0.099,
+   0.244,
+   0.191,
+   0.122,
+   0.13,
+   0.122,
+   0.053,
+   0.015,
+   0.008,
+   0.008,
+   0.008
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "nursery stock and Christmas trees",
+   "tobacco",
+   "vegetables and melons"
+  ],
+  "counties": [
+   "Hartford City",
+   "New London City",
+   "Suffield",
+   "New Haven City",
+   "Middlefield"
+  ],
+  "wage": 16.94,
+  "filings26": 105
+ },
+ {
+  "slug": "delaware",
+  "abbr": "DE",
+  "name": "Delaware",
+  "filings": 37,
+  "workers": 1164,
+  "employers": 28,
+  "flcShare": 0.459,
+  "smallEmployers": 13,
+  "growerEmployers": 15,
+  "medianCrew": 17,
+  "topMonths": [
+   "July",
+   "March",
+   "February"
+  ],
+  "months": [
+   0.027,
+   0.135,
+   0.216,
+   0.081,
+   0.108,
+   0.0,
+   0.351,
+   0.054,
+   0.027,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "nursery stock and Christmas trees",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Sussex",
+   "Kent",
+   "New Castle"
+  ],
+  "wage": 15.0,
+  "filings26": 38
+ },
+ {
+  "slug": "florida",
+  "abbr": "FL",
+  "name": "Florida",
+  "filings": 1119,
+  "workers": 58016,
+  "employers": 405,
+  "flcShare": 0.55,
+  "smallEmployers": 138,
+  "growerEmployers": 229,
+  "medianCrew": 24,
+  "topMonths": [
+   "September",
+   "October",
+   "November"
+  ],
+  "months": [
+   0.094,
+   0.088,
+   0.078,
+   0.075,
+   0.076,
+   0.019,
+   0.018,
+   0.113,
+   0.13,
+   0.121,
+   0.113,
+   0.076
+  ],
+  "crops": [
+   "vegetables and melons",
+   "other livestock",
+   "nursery stock and Christmas trees",
+   "strawberries"
+  ],
+  "counties": [
+   "Hillsborough",
+   "Polk",
+   "Palm Beach",
+   "Hendry",
+   "Manatee"
+  ],
+  "wage": 14.0,
+  "filings26": 745
+ },
+ {
+  "slug": "georgia",
+  "abbr": "GA",
+  "name": "Georgia",
+  "filings": 867,
+  "workers": 44343,
+  "employers": 510,
+  "flcShare": 0.405,
+  "smallEmployers": 219,
+  "growerEmployers": 325,
+  "medianCrew": 24,
+  "topMonths": [
+   "March",
+   "April",
+   "February"
+  ],
+  "months": [
+   0.053,
+   0.127,
+   0.227,
+   0.141,
+   0.087,
+   0.1,
+   0.025,
+   0.022,
+   0.074,
+   0.083,
+   0.044,
+   0.017
+  ],
+  "crops": [
+   "vegetables and melons",
+   "fruit and tree nuts",
+   "mixed and specialty crops",
+   "blueberries and other berries"
+  ],
+  "counties": [
+   "Colquitt",
+   "Coffee",
+   "Tattnall",
+   "Bacon",
+   "Appling"
+  ],
+  "wage": 12.27,
+  "filings26": 752
+ },
+ {
+  "slug": "hawaii",
+  "abbr": "HI",
+  "name": "Hawaii",
+  "filings": 42,
+  "workers": 551,
+  "employers": 19,
+  "flcShare": 0.381,
+  "smallEmployers": 10,
+  "growerEmployers": 15,
+  "medianCrew": 10,
+  "topMonths": [
+   "January",
+   "September",
+   "June"
+  ],
+  "months": [
+   0.214,
+   0.095,
+   0.071,
+   0.024,
+   0.0,
+   0.143,
+   0.0,
+   0.071,
+   0.19,
+   0.095,
+   0.024,
+   0.071
+  ],
+  "crops": [
+   "other livestock",
+   "cattle",
+   "vegetables and melons",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Hawaii",
+   "Kauai",
+   "Maui",
+   "Honolulu"
+  ],
+  "wage": 17.74,
+  "filings26": 25
+ },
+ {
+  "slug": "idaho",
+  "abbr": "ID",
+  "name": "Idaho",
+  "filings": 938,
+  "workers": 7724,
+  "employers": 600,
+  "flcShare": 0.05,
+  "smallEmployers": 508,
+  "growerEmployers": 583,
+  "medianCrew": 4,
+  "topMonths": [
+   "March",
+   "April",
+   "February"
+  ],
+  "months": [
+   0.045,
+   0.108,
+   0.381,
+   0.187,
+   0.036,
+   0.021,
+   0.023,
+   0.051,
+   0.092,
+   0.012,
+   0.028,
+   0.017
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "cattle",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Minidoka",
+   "Bingham",
+   "Canyon",
+   "Twin Falls",
+   "Jefferson"
+  ],
+  "wage": 12.92,
+  "filings26": 758
+ },
+ {
+  "slug": "illinois",
+  "abbr": "IL",
+  "name": "Illinois",
+  "filings": 476,
+  "workers": 5927,
+  "employers": 254,
+  "flcShare": 0.368,
+  "smallEmployers": 172,
+  "growerEmployers": 194,
+  "medianCrew": 5,
+  "topMonths": [
+   "March",
+   "February",
+   "June"
+  ],
+  "months": [
+   0.044,
+   0.17,
+   0.21,
+   0.08,
+   0.046,
+   0.139,
+   0.078,
+   0.076,
+   0.076,
+   0.036,
+   0.025,
+   0.021
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "vegetables and melons",
+   "mixed and specialty crops",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Sangamon",
+   "Mchenry",
+   "Mason",
+   "Whiteside",
+   "Champaign"
+  ],
+  "wage": 15.48,
+  "filings26": 410
+ },
+ {
+  "slug": "indiana",
+  "abbr": "IN",
+  "name": "Indiana",
+  "filings": 263,
+  "workers": 5413,
+  "employers": 158,
+  "flcShare": 0.319,
+  "smallEmployers": 99,
+  "growerEmployers": 118,
+  "medianCrew": 5,
+  "topMonths": [
+   "March",
+   "July",
+   "February"
+  ],
+  "months": [
+   0.015,
+   0.144,
+   0.217,
+   0.137,
+   0.053,
+   0.129,
+   0.16,
+   0.046,
+   0.034,
+   0.023,
+   0.019,
+   0.023
+  ],
+  "crops": [
+   "vegetables and melons",
+   "mixed and specialty crops",
+   "grain, corn and soybeans",
+   "nursery stock and Christmas trees"
+  ],
+  "counties": [
+   "Knox",
+   "La Porte",
+   "Hamilton",
+   "Jasper",
+   "Clinton"
+  ],
+  "wage": 14.93,
+  "filings26": 246
+ },
+ {
+  "slug": "iowa",
+  "abbr": "IA",
+  "name": "Iowa",
+  "filings": 536,
+  "workers": 5442,
+  "employers": 340,
+  "flcShare": 0.382,
+  "smallEmployers": 227,
+  "growerEmployers": 245,
+  "medianCrew": 4,
+  "topMonths": [
+   "March",
+   "February",
+   "September"
+  ],
+  "months": [
+   0.03,
+   0.183,
+   0.291,
+   0.084,
+   0.047,
+   0.063,
+   0.034,
+   0.071,
+   0.123,
+   0.032,
+   0.013,
+   0.03
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "cattle",
+   "beef cattle"
+  ],
+  "counties": [
+   "Kossuth",
+   "Palo Alto",
+   "Sioux",
+   "Jefferson",
+   "Pocahontas"
+  ],
+  "wage": 14.2,
+  "filings26": 490
+ },
+ {
+  "slug": "kansas",
+  "abbr": "KS",
+  "name": "Kansas",
+  "filings": 578,
+  "workers": 2552,
+  "employers": 437,
+  "flcShare": 0.216,
+  "smallEmployers": 333,
+  "growerEmployers": 345,
+  "medianCrew": 3,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.028,
+   0.246,
+   0.26,
+   0.133,
+   0.047,
+   0.021,
+   0.021,
+   0.033,
+   0.031,
+   0.019,
+   0.069,
+   0.093
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "cattle",
+   "mixed and specialty crops",
+   "beef cattle"
+  ],
+  "counties": [
+   "Sheridan",
+   "Stafford",
+   "Finney",
+   "Kearny",
+   "Barton"
+  ],
+  "wage": 12.69,
+  "filings26": 554
+ },
+ {
+  "slug": "kentucky",
+  "abbr": "KY",
+  "name": "Kentucky",
+  "filings": 1189,
+  "workers": 7887,
+  "employers": 753,
+  "flcShare": 0.013,
+  "smallEmployers": 673,
+  "growerEmployers": 746,
+  "medianCrew": 4,
+  "topMonths": [
+   "May",
+   "March",
+   "April"
+  ],
+  "months": [
+   0.038,
+   0.103,
+   0.175,
+   0.149,
+   0.179,
+   0.076,
+   0.138,
+   0.098,
+   0.025,
+   0.006,
+   0.011,
+   0.003
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "tobacco",
+   "grain, corn and soybeans",
+   "horses"
+  ],
+  "counties": [
+   "Christian",
+   "Calloway",
+   "Logan",
+   "Todd",
+   "Graves"
+  ],
+  "wage": 13.94,
+  "filings26": 864
+ },
+ {
+  "slug": "louisiana",
+  "abbr": "LA",
+  "name": "Louisiana",
+  "filings": 1503,
+  "workers": 14804,
+  "employers": 1102,
+  "flcShare": 0.024,
+  "smallEmployers": 949,
+  "growerEmployers": 1088,
+  "medianCrew": 4,
+  "topMonths": [
+   "January",
+   "February",
+   "March"
+  ],
+  "months": [
+   0.21,
+   0.204,
+   0.187,
+   0.025,
+   0.017,
+   0.011,
+   0.063,
+   0.083,
+   0.039,
+   0.017,
+   0.039,
+   0.106
+  ],
+  "crops": [
+   "aquaculture",
+   "sugarcane",
+   "grain, corn and soybeans",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Acadia",
+   "Avoyelles",
+   "Jefferson Davis",
+   "Vermilion",
+   "Evangeline"
+  ],
+  "wage": 9.59,
+  "filings26": 1353
+ },
+ {
+  "slug": "maine",
+  "abbr": "ME",
+  "name": "Maine",
+  "filings": 186,
+  "workers": 1516,
+  "employers": 105,
+  "flcShare": 0.253,
+  "smallEmployers": 79,
+  "growerEmployers": 89,
+  "medianCrew": 3,
+  "topMonths": [
+   "June",
+   "April",
+   "August"
+  ],
+  "months": [
+   0.016,
+   0.022,
+   0.097,
+   0.183,
+   0.091,
+   0.237,
+   0.059,
+   0.124,
+   0.118,
+   0.032,
+   0.011,
+   0.011
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "fruit and tree nuts",
+   "other livestock"
+  ],
+  "counties": [
+   "Northern Unorganized Territory",
+   "York Town",
+   "North Penobscot Unorganized",
+   "Oxford Town",
+   "Franklin Town"
+  ],
+  "wage": 16.0,
+  "filings26": 135
+ },
+ {
+  "slug": "maryland",
+  "abbr": "MD",
+  "name": "Maryland",
+  "filings": 145,
+  "workers": 1561,
+  "employers": 110,
+  "flcShare": 0.041,
+  "smallEmployers": 90,
+  "growerEmployers": 106,
+  "medianCrew": 5,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.076,
+   0.234,
+   0.324,
+   0.131,
+   0.083,
+   0.034,
+   0.076,
+   0.021,
+   0.014,
+   0.0,
+   0.0,
+   0.007
+  ],
+  "crops": [
+   "vegetables and melons",
+   "nursery stock and Christmas trees",
+   "apples",
+   "fruit and tree nuts"
+  ],
+  "counties": [
+   "Frederick",
+   "Washington",
+   "Montgomery",
+   "Cecil",
+   "Baltimore"
+  ],
+  "wage": 17.96,
+  "filings26": 151
+ },
+ {
+  "slug": "massachusetts",
+  "abbr": "MA",
+  "name": "Massachusetts",
+  "filings": 156,
+  "workers": 581,
+  "employers": 79,
+  "flcShare": 0.013,
+  "smallEmployers": 71,
+  "growerEmployers": 77,
+  "medianCrew": 3,
+  "topMonths": [
+   "April",
+   "May",
+   "June"
+  ],
+  "months": [
+   0.013,
+   0.058,
+   0.128,
+   0.231,
+   0.186,
+   0.147,
+   0.09,
+   0.064,
+   0.083,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "tobacco",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Hampden",
+   "Worcester City",
+   "Franklin City",
+   "Groton",
+   "Sterling"
+  ],
+  "wage": 15.29,
+  "filings26": 107
+ },
+ {
+  "slug": "michigan",
+  "abbr": "MI",
+  "name": "Michigan",
+  "filings": 634,
+  "workers": 16686,
+  "employers": 297,
+  "flcShare": 0.312,
+  "smallEmployers": 158,
+  "growerEmployers": 244,
+  "medianCrew": 10,
+  "topMonths": [
+   "March",
+   "April",
+   "August"
+  ],
+  "months": [
+   0.088,
+   0.088,
+   0.196,
+   0.189,
+   0.068,
+   0.101,
+   0.068,
+   0.106,
+   0.068,
+   0.008,
+   0.016,
+   0.005
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "nursery stock and Christmas trees",
+   "apples"
+  ],
+  "counties": [
+   "Ottawa",
+   "Kent",
+   "Berrien",
+   "Oceana",
+   "Van Buren"
+  ],
+  "wage": 13.78,
+  "filings26": 529
+ },
+ {
+  "slug": "minnesota",
+  "abbr": "MN",
+  "name": "Minnesota",
+  "filings": 516,
+  "workers": 4603,
+  "employers": 360,
+  "flcShare": 0.14,
+  "smallEmployers": 267,
+  "growerEmployers": 310,
+  "medianCrew": 4,
+  "topMonths": [
+   "March",
+   "April",
+   "February"
+  ],
+  "months": [
+   0.043,
+   0.153,
+   0.281,
+   0.159,
+   0.05,
+   0.043,
+   0.05,
+   0.081,
+   0.058,
+   0.01,
+   0.021,
+   0.05
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "grain, corn and soybeans",
+   "vegetables and melons",
+   "nursery stock and Christmas trees"
+  ],
+  "counties": [
+   "Polk",
+   "Marshall",
+   "Stevens",
+   "Norman",
+   "Renville"
+  ],
+  "wage": 14.6,
+  "filings26": 449
+ },
+ {
+  "slug": "mississippi",
+  "abbr": "MS",
+  "name": "Mississippi",
+  "filings": 726,
+  "workers": 8001,
+  "employers": 469,
+  "flcShare": 0.04,
+  "smallEmployers": 390,
+  "growerEmployers": 450,
+  "medianCrew": 4,
+  "topMonths": [
+   "February",
+   "March",
+   "January"
+  ],
+  "months": [
+   0.09,
+   0.383,
+   0.201,
+   0.032,
+   0.065,
+   0.007,
+   0.026,
+   0.036,
+   0.044,
+   0.015,
+   0.063,
+   0.039
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "aquaculture"
+  ],
+  "counties": [
+   "Sunflower",
+   "Bolivar",
+   "Washington",
+   "Calhoun",
+   "Tallahatchie"
+  ],
+  "wage": 9.74,
+  "filings26": 574
+ },
+ {
+  "slug": "missouri",
+  "abbr": "MO",
+  "name": "Missouri",
+  "filings": 362,
+  "workers": 2508,
+  "employers": 268,
+  "flcShare": 0.099,
+  "smallEmployers": 230,
+  "growerEmployers": 242,
+  "medianCrew": 3,
+  "topMonths": [
+   "February",
+   "March",
+   "December"
+  ],
+  "months": [
+   0.039,
+   0.296,
+   0.257,
+   0.072,
+   0.055,
+   0.025,
+   0.044,
+   0.03,
+   0.039,
+   0.033,
+   0.033,
+   0.077
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "cattle",
+   "nursery stock and Christmas trees"
+  ],
+  "counties": [
+   "Pemiscot",
+   "Stoddard",
+   "New Madrid",
+   "Dunklin",
+   "Mississippi"
+  ],
+  "wage": 15.0,
+  "filings26": 330
+ },
+ {
+  "slug": "montana",
+  "abbr": "MT",
+  "name": "Montana",
+  "filings": 724,
+  "workers": 2139,
+  "employers": 567,
+  "flcShare": 0.026,
+  "smallEmployers": 547,
+  "growerEmployers": 555,
+  "medianCrew": 2,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.081,
+   0.207,
+   0.267,
+   0.178,
+   0.065,
+   0.029,
+   0.023,
+   0.011,
+   0.018,
+   0.022,
+   0.057,
+   0.041
+  ],
+  "crops": [
+   "cattle",
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "sheep and goats"
+  ],
+  "counties": [
+   "Beaverhead",
+   "Madison",
+   "Ravalli",
+   "Daniels",
+   "Blaine"
+  ],
+  "wage": 13.03,
+  "filings26": 688
+ },
+ {
+  "slug": "nebraska",
+  "abbr": "NE",
+  "name": "Nebraska",
+  "filings": 506,
+  "workers": 4243,
+  "employers": 341,
+  "flcShare": 0.186,
+  "smallEmployers": 266,
+  "growerEmployers": 288,
+  "medianCrew": 3,
+  "topMonths": [
+   "March",
+   "February",
+   "December"
+  ],
+  "months": [
+   0.038,
+   0.174,
+   0.283,
+   0.069,
+   0.043,
+   0.043,
+   0.034,
+   0.061,
+   0.061,
+   0.059,
+   0.057,
+   0.077
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "cattle feedlots",
+   "mixed and specialty crops",
+   "vegetables and melons"
+  ],
+  "counties": [
+   "Box Butte",
+   "Chase",
+   "Lincoln",
+   "Antelope",
+   "Perkins"
+  ],
+  "wage": 15.0,
+  "filings26": 441
+ },
+ {
+  "slug": "nevada",
+  "abbr": "NV",
+  "name": "Nevada",
+  "filings": 205,
+  "workers": 3824,
+  "employers": 69,
+  "flcShare": 0.078,
+  "smallEmployers": 52,
+  "growerEmployers": 63,
+  "medianCrew": 5,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.073,
+   0.176,
+   0.19,
+   0.122,
+   0.083,
+   0.078,
+   0.024,
+   0.088,
+   0.029,
+   0.015,
+   0.059,
+   0.063
+  ],
+  "crops": [
+   "vegetables and melons",
+   "sheep and goats",
+   "cattle",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Lyon",
+   "Humboldt",
+   "Elko",
+   "White Pine",
+   "Douglas"
+  ],
+  "wage": 16.63,
+  "filings26": 151
+ },
+ {
+  "slug": "new-hampshire",
+  "abbr": "NH",
+  "name": "New Hampshire",
+  "filings": 75,
+  "workers": 364,
+  "employers": 35,
+  "flcShare": 0.0,
+  "smallEmployers": 31,
+  "growerEmployers": 35,
+  "medianCrew": 4,
+  "topMonths": [
+   "April",
+   "May",
+   "March"
+  ],
+  "months": [
+   0.08,
+   0.067,
+   0.107,
+   0.32,
+   0.133,
+   0.067,
+   0.027,
+   0.093,
+   0.067,
+   0.0,
+   0.0,
+   0.04
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "vegetables and melons",
+   "greenhouse and nursery",
+   "apples"
+  ],
+  "counties": [
+   "Hillsborough",
+   "Sullivan",
+   "Merrimack",
+   "Grafton",
+   "Hampton Falls"
+  ],
+  "wage": 13.99,
+  "filings26": 62
+ },
+ {
+  "slug": "new-jersey",
+  "abbr": "NJ",
+  "name": "New Jersey",
+  "filings": 173,
+  "workers": 2789,
+  "employers": 99,
+  "flcShare": 0.064,
+  "smallEmployers": 60,
+  "growerEmployers": 95,
+  "medianCrew": 8,
+  "topMonths": [
+   "March",
+   "April",
+   "February"
+  ],
+  "months": [
+   0.058,
+   0.168,
+   0.266,
+   0.197,
+   0.162,
+   0.075,
+   0.04,
+   0.006,
+   0.017,
+   0.0,
+   0.006,
+   0.006
+  ],
+  "crops": [
+   "vegetables and melons",
+   "greenhouse and nursery",
+   "nursery stock and Christmas trees",
+   "other livestock"
+  ],
+  "counties": [
+   "Monmouth",
+   "Gloucester",
+   "Burlington",
+   "Atlantic",
+   "Salem"
+  ],
+  "wage": 16.05,
+  "filings26": 165
+ },
+ {
+  "slug": "new-mexico",
+  "abbr": "NM",
+  "name": "New Mexico",
+  "filings": 177,
+  "workers": 2608,
+  "employers": 118,
+  "flcShare": 0.333,
+  "smallEmployers": 58,
+  "growerEmployers": 74,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.068,
+   0.192,
+   0.198,
+   0.141,
+   0.107,
+   0.051,
+   0.068,
+   0.062,
+   0.04,
+   0.034,
+   0.017,
+   0.023
+  ],
+  "crops": [
+   "vegetables and melons",
+   "grain, corn and soybeans",
+   "cattle",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Chaves",
+   "Luna",
+   "Dona Ana",
+   "Curry",
+   "San Juan"
+  ],
+  "wage": 12.51,
+  "filings26": 187
+ },
+ {
+  "slug": "new-york",
+  "abbr": "NY",
+  "name": "New York",
+  "filings": 892,
+  "workers": 11025,
+  "employers": 446,
+  "flcShare": 0.021,
+  "smallEmployers": 298,
+  "growerEmployers": 438,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "August",
+   "April"
+  ],
+  "months": [
+   0.058,
+   0.109,
+   0.195,
+   0.159,
+   0.077,
+   0.058,
+   0.066,
+   0.165,
+   0.062,
+   0.009,
+   0.022,
+   0.019
+  ],
+  "crops": [
+   "apples",
+   "vegetables and melons",
+   "fruit and tree nuts",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Wayne",
+   "Orleans",
+   "Orange",
+   "Ulster",
+   "Columbia"
+  ],
+  "wage": 18.75,
+  "filings26": 646
+ },
+ {
+  "slug": "north-carolina",
+  "abbr": "NC",
+  "name": "North Carolina",
+  "filings": 718,
+  "workers": 27055,
+  "employers": 293,
+  "flcShare": 0.267,
+  "smallEmployers": 154,
+  "growerEmployers": 217,
+  "medianCrew": 12,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.07,
+   0.189,
+   0.221,
+   0.163,
+   0.149,
+   0.063,
+   0.042,
+   0.043,
+   0.025,
+   0.021,
+   0.008,
+   0.006
+  ],
+  "crops": [
+   "tobacco",
+   "nursery stock and Christmas trees",
+   "blueberries and other berries",
+   "vegetables and melons"
+  ],
+  "counties": [
+   "Moore",
+   "Sampson",
+   "Henderson",
+   "Wilson",
+   "Johnston"
+  ],
+  "wage": 12.78,
+  "filings26": 600
+ },
+ {
+  "slug": "north-dakota",
+  "abbr": "ND",
+  "name": "North Dakota",
+  "filings": 1483,
+  "workers": 4807,
+  "employers": 1274,
+  "flcShare": 0.032,
+  "smallEmployers": 1224,
+  "growerEmployers": 1240,
+  "medianCrew": 2,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.024,
+   0.217,
+   0.357,
+   0.16,
+   0.026,
+   0.016,
+   0.02,
+   0.035,
+   0.024,
+   0.018,
+   0.045,
+   0.059
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "grain, corn and soybeans",
+   "cattle",
+   "other livestock"
+  ],
+  "counties": [
+   "Walsh",
+   "Cavalier",
+   "Pembina",
+   "Mclean",
+   "Williams"
+  ],
+  "wage": 18.98,
+  "filings26": 1468
+ },
+ {
+  "slug": "ohio",
+  "abbr": "OH",
+  "name": "Ohio",
+  "filings": 295,
+  "workers": 5034,
+  "employers": 162,
+  "flcShare": 0.207,
+  "smallEmployers": 120,
+  "growerEmployers": 147,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.061,
+   0.207,
+   0.241,
+   0.149,
+   0.078,
+   0.095,
+   0.075,
+   0.051,
+   0.027,
+   0.01,
+   0.003,
+   0.003
+  ],
+  "crops": [
+   "nursery stock and Christmas trees",
+   "vegetables and melons",
+   "mixed and specialty crops",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Huron",
+   "Lake",
+   "Lorain",
+   "Wood",
+   "Erie"
+  ],
+  "wage": 14.38,
+  "filings26": 267
+ },
+ {
+  "slug": "oklahoma",
+  "abbr": "OK",
+  "name": "Oklahoma",
+  "filings": 278,
+  "workers": 1482,
+  "employers": 200,
+  "flcShare": 0.112,
+  "smallEmployers": 172,
+  "growerEmployers": 181,
+  "medianCrew": 3,
+  "topMonths": [
+   "February",
+   "March",
+   "January"
+  ],
+  "months": [
+   0.108,
+   0.191,
+   0.158,
+   0.097,
+   0.043,
+   0.061,
+   0.036,
+   0.043,
+   0.05,
+   0.076,
+   0.061,
+   0.076
+  ],
+  "crops": [
+   "cattle",
+   "grain, corn and soybeans",
+   "nursery stock and Christmas trees",
+   "beef cattle"
+  ],
+  "counties": [
+   "Jackson",
+   "Grant",
+   "Woods",
+   "Grady",
+   "Beckham"
+  ],
+  "wage": 11.27,
+  "filings26": 244
+ },
+ {
+  "slug": "oregon",
+  "abbr": "OR",
+  "name": "Oregon",
+  "filings": 248,
+  "workers": 4420,
+  "employers": 127,
+  "flcShare": 0.077,
+  "smallEmployers": 80,
+  "growerEmployers": 116,
+  "medianCrew": 6,
+  "topMonths": [
+   "February",
+   "April",
+   "March"
+  ],
+  "months": [
+   0.129,
+   0.185,
+   0.133,
+   0.169,
+   0.097,
+   0.065,
+   0.065,
+   0.048,
+   0.036,
+   0.024,
+   0.028,
+   0.02
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "sheep and goats",
+   "vegetables and melons",
+   "fruit and tree nuts"
+  ],
+  "counties": [
+   "Marion",
+   "Morrow",
+   "Umatilla",
+   "Klamath",
+   "Malheur"
+  ],
+  "wage": 15.25,
+  "filings26": 209
+ },
+ {
+  "slug": "pennsylvania",
+  "abbr": "PA",
+  "name": "Pennsylvania",
+  "filings": 311,
+  "workers": 3210,
+  "employers": 208,
+  "flcShare": 0.1,
+  "smallEmployers": 160,
+  "growerEmployers": 194,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "April",
+   "February"
+  ],
+  "months": [
+   0.068,
+   0.135,
+   0.277,
+   0.148,
+   0.132,
+   0.055,
+   0.055,
+   0.087,
+   0.013,
+   0.016,
+   0.013,
+   0.003
+  ],
+  "crops": [
+   "vegetables and melons",
+   "apples",
+   "nursery stock and Christmas trees",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Adams",
+   "York",
+   "Chester",
+   "Lancaster",
+   "Franklin"
+  ],
+  "wage": 15.25,
+  "filings26": 268
+ },
+ {
+  "slug": "rhode-island",
+  "abbr": "RI",
+  "name": "Rhode Island",
+  "filings": 6,
+  "workers": 12,
+  "employers": 3,
+  "flcShare": 0.0,
+  "smallEmployers": 3,
+  "growerEmployers": 3,
+  "medianCrew": 2,
+  "topMonths": [
+   "April",
+   "March",
+   "May"
+  ],
+  "months": [
+   0.0,
+   0.0,
+   0.167,
+   0.333,
+   0.167,
+   0.0,
+   0.0,
+   0.167,
+   0.167,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "crops": [
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "East Greenwich",
+   "Providence City",
+   "Scituate"
+  ],
+  "wage": 18.83,
+  "filings26": 4
+ },
+ {
+  "slug": "south-carolina",
+  "abbr": "SC",
+  "name": "South Carolina",
+  "filings": 238,
+  "workers": 6869,
+  "employers": 148,
+  "flcShare": 0.13,
+  "smallEmployers": 96,
+  "growerEmployers": 128,
+  "medianCrew": 8,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.113,
+   0.197,
+   0.214,
+   0.147,
+   0.05,
+   0.118,
+   0.004,
+   0.017,
+   0.05,
+   0.038,
+   0.017,
+   0.034
+  ],
+  "crops": [
+   "vegetables and melons",
+   "nursery stock and Christmas trees",
+   "peaches, cherries and other fruit",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Beaufort",
+   "Spartanburg",
+   "York",
+   "Clarendon",
+   "Barnwell"
+  ],
+  "wage": 12.14,
+  "filings26": 214
+ },
+ {
+  "slug": "south-dakota",
+  "abbr": "SD",
+  "name": "South Dakota",
+  "filings": 625,
+  "workers": 3370,
+  "employers": 456,
+  "flcShare": 0.147,
+  "smallEmployers": 397,
+  "growerEmployers": 410,
+  "medianCrew": 3,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.059,
+   0.176,
+   0.291,
+   0.138,
+   0.037,
+   0.034,
+   0.022,
+   0.035,
+   0.048,
+   0.03,
+   0.051,
+   0.078
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "mixed and specialty crops",
+   "cattle",
+   "cattle feedlots"
+  ],
+  "counties": [
+   "Potter",
+   "Edmunds",
+   "Brown",
+   "Sully",
+   "Beadle"
+  ],
+  "wage": 17.48,
+  "filings26": 551
+ },
+ {
+  "slug": "tennessee",
+  "abbr": "TN",
+  "name": "Tennessee",
+  "filings": 587,
+  "workers": 6458,
+  "employers": 382,
+  "flcShare": 0.07,
+  "smallEmployers": 317,
+  "growerEmployers": 364,
+  "medianCrew": 5,
+  "topMonths": [
+   "April",
+   "March",
+   "February"
+  ],
+  "months": [
+   0.056,
+   0.145,
+   0.179,
+   0.182,
+   0.078,
+   0.099,
+   0.111,
+   0.041,
+   0.022,
+   0.031,
+   0.039,
+   0.017
+  ],
+  "crops": [
+   "mixed and specialty crops",
+   "tobacco",
+   "vegetables and melons",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Robertson",
+   "Warren",
+   "Henry",
+   "Macon",
+   "Montgomery"
+  ],
+  "wage": 12.44,
+  "filings26": 461
+ },
+ {
+  "slug": "texas",
+  "abbr": "TX",
+  "name": "Texas",
+  "filings": 1580,
+  "workers": 16426,
+  "employers": 1212,
+  "flcShare": 0.135,
+  "smallEmployers": 1020,
+  "growerEmployers": 1104,
+  "medianCrew": 4,
+  "topMonths": [
+   "February",
+   "March",
+   "January"
+  ],
+  "months": [
+   0.12,
+   0.239,
+   0.194,
+   0.078,
+   0.055,
+   0.029,
+   0.037,
+   0.04,
+   0.064,
+   0.051,
+   0.044,
+   0.049
+  ],
+  "crops": [
+   "grain, corn and soybeans",
+   "cattle",
+   "nursery stock and Christmas trees",
+   "other livestock"
+  ],
+  "counties": [
+   "Dallam",
+   "Frio",
+   "Wharton",
+   "Brazoria",
+   "Matagorda"
+  ],
+  "wage": 11.81,
+  "filings26": 1559
+ },
+ {
+  "slug": "utah",
+  "abbr": "UT",
+  "name": "Utah",
+  "filings": 395,
+  "workers": 2182,
+  "employers": 197,
+  "flcShare": 0.013,
+  "smallEmployers": 170,
+  "growerEmployers": 195,
+  "medianCrew": 3,
+  "topMonths": [
+   "February",
+   "March",
+   "December"
+  ],
+  "months": [
+   0.071,
+   0.253,
+   0.192,
+   0.101,
+   0.058,
+   0.058,
+   0.015,
+   0.008,
+   0.018,
+   0.018,
+   0.073,
+   0.134
+  ],
+  "crops": [
+   "sheep and goats",
+   "cattle",
+   "nursery stock and Christmas trees",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Utah",
+   "Box Elder",
+   "Sanpete",
+   "Iron",
+   "Summit"
+  ],
+  "wage": 12.48,
+  "filings26": 255
+ },
+ {
+  "slug": "vermont",
+  "abbr": "VT",
+  "name": "Vermont",
+  "filings": 116,
+  "workers": 577,
+  "employers": 78,
+  "flcShare": 0.017,
+  "smallEmployers": 70,
+  "growerEmployers": 77,
+  "medianCrew": 3,
+  "topMonths": [
+   "May",
+   "April",
+   "March"
+  ],
+  "months": [
+   0.034,
+   0.052,
+   0.155,
+   0.198,
+   0.207,
+   0.069,
+   0.06,
+   0.069,
+   0.086,
+   0.043,
+   0.009,
+   0.017
+  ],
+  "crops": [
+   "vegetables and melons",
+   "apples",
+   "mixed and specialty crops",
+   "other livestock"
+  ],
+  "counties": [
+   "Addison",
+   "Chittenden",
+   "Windham",
+   "Windsor",
+   "Washington"
+  ],
+  "wage": 15.96,
+  "filings26": 88
+ },
+ {
+  "slug": "virginia",
+  "abbr": "VA",
+  "name": "Virginia",
+  "filings": 225,
+  "workers": 4554,
+  "employers": 138,
+  "flcShare": 0.071,
+  "smallEmployers": 96,
+  "growerEmployers": 127,
+  "medianCrew": 7,
+  "topMonths": [
+   "March",
+   "February",
+   "April"
+  ],
+  "months": [
+   0.044,
+   0.213,
+   0.276,
+   0.142,
+   0.036,
+   0.08,
+   0.071,
+   0.053,
+   0.058,
+   0.018,
+   0.004,
+   0.004
+  ],
+  "crops": [
+   "vegetables and melons",
+   "apples",
+   "nursery stock and Christmas trees",
+   "greenhouse and nursery"
+  ],
+  "counties": [
+   "Northampton",
+   "Halifax",
+   "Westmoreland",
+   "Nelson",
+   "Augusta"
+  ],
+  "wage": 13.9,
+  "filings26": 199
+ },
+ {
+  "slug": "west-virginia",
+  "abbr": "WV",
+  "name": "West Virginia",
+  "filings": 36,
+  "workers": 383,
+  "employers": 25,
+  "flcShare": 0.083,
+  "smallEmployers": 16,
+  "growerEmployers": 23,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "May",
+   "August"
+  ],
+  "months": [
+   0.056,
+   0.083,
+   0.25,
+   0.139,
+   0.222,
+   0.056,
+   0.028,
+   0.167,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "crops": [
+   "apples",
+   "vegetables and melons",
+   "fruit and tree nuts",
+   "mixed and specialty crops"
+  ],
+  "counties": [
+   "Berkeley",
+   "Putnam",
+   "Jefferson",
+   "Hampshire",
+   "Mason"
+  ],
+  "wage": 16.01,
+  "filings26": 30
+ },
+ {
+  "slug": "wisconsin",
+  "abbr": "WI",
+  "name": "Wisconsin",
+  "filings": 237,
+  "workers": 3072,
+  "employers": 127,
+  "flcShare": 0.363,
+  "smallEmployers": 74,
+  "growerEmployers": 94,
+  "medianCrew": 6,
+  "topMonths": [
+   "March",
+   "April",
+   "June"
+  ],
+  "months": [
+   0.025,
+   0.076,
+   0.253,
+   0.203,
+   0.055,
+   0.101,
+   0.093,
+   0.084,
+   0.059,
+   0.034,
+   0.013,
+   0.004
+  ],
+  "crops": [
+   "nursery stock and Christmas trees",
+   "vegetables and melons",
+   "greenhouse and nursery",
+   "grain, corn and soybeans"
+  ],
+  "counties": [
+   "Waushara",
+   "Racine",
+   "Adams",
+   "Dane",
+   "Dodge"
+  ],
+  "wage": 13.64,
+  "filings26": 220
+ },
+ {
+  "slug": "wyoming",
+  "abbr": "WY",
+  "name": "Wyoming",
+  "filings": 202,
+  "workers": 938,
+  "employers": 101,
+  "flcShare": 0.059,
+  "smallEmployers": 88,
+  "growerEmployers": 98,
+  "medianCrew": 3,
+  "topMonths": [
+   "February",
+   "March",
+   "January"
+  ],
+  "months": [
+   0.124,
+   0.252,
+   0.173,
+   0.084,
+   0.035,
+   0.025,
+   0.01,
+   0.015,
+   0.03,
+   0.035,
+   0.119,
+   0.099
+  ],
+  "crops": [
+   "sheep and goats",
+   "cattle",
+   "beef cattle",
+   "hay"
+  ],
+  "counties": [
+   "Carbon",
+   "Uinta",
+   "Big Horn",
+   "Lincoln",
+   "Washakie"
+  ],
+  "wage": 16.83,
+  "filings26": 140
+ }
+]

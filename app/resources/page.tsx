@@ -36,6 +36,7 @@ export default async function Resources() {
             Straightforward answers to the questions farms ask us most: what H-2A costs, when to file, what you owe your
             crew, and what records keep you ready for an audit. Each guide links to the regulation it comes from.
           </p>
+          <p><Link href="/h-2a">See H-2A start months, crops and wages for your state</Link></p>
         </div>
       </section>
 
