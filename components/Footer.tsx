@@ -28,7 +28,6 @@ export default function Footer() {
               <li><Link href="/resources/h-2a-timeline">H-2A timeline</Link></li>
               <li><Link href="/resources/aewr-explained">AEWR explained</Link></li>
               <li><Link href="/resources/h-2a-audit-prep">Free audit checklist</Link></li>
-              <li><Link href="/plan-your-season">Plan your season</Link></li>
               <li><Link href="/h-2a">H-2A by state</Link></li>
             </ul>
           </div>
