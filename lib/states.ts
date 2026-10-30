@@ -56,7 +56,7 @@ export function stateFaqs(s: StateInfo) {
     },
     {
       q: `Who inspects H-2A housing in ${s.name}?`,
-      a: `${s.name}'s state workforce agency (SWA) receives your job order and arranges the housing inspection, which must be done before the Department of Labor can certify your application. Schedule it early so it doesn't hold up your crew's arrival.`,
+      a: `${s.name}'s state workforce agency (SWA) receives your job order. Your housing must also pass inspection before the Department of Labor can certify your application, and the inspecting office schedules directly with you. Reach out early so it doesn't hold up your crew's arrival.`,
     },
     {
       q: `Can Battenkill Ag file H-2A for my ${s.name} farm?`,

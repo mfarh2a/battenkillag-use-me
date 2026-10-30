@@ -30,7 +30,7 @@ const crew = [
   },
   {
     title: "Housing ready on time",
-    body: "We get your housing inspection on the calendar early, so it never holds up arrival.",
+    body: "We help you prepare for your housing inspection and remind you to schedule it early, so it never holds up arrival.",
   },
   {
     title: "The same faces each season",

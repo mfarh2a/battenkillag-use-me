@@ -137,7 +137,7 @@ export default async function StatePage({ params }: Props) {
           <div className="stack prose">
             <h2>Your job order and housing inspection</h2>
             <p>
-              Your job order goes to {s.name}&apos;s state workforce agency (SWA), which posts the job for U.S. workers and arranges your housing inspection. The inspection has to be done before the Department of Labor can certify your application, so schedule it early.
+              Your job order goes to {s.name}&apos;s state workforce agency (SWA), which posts the job for U.S. workers. Your housing also has to pass inspection before the Department of Labor can certify your application. The inspecting office schedules directly with you, so reach out early.
             </p>
             {(() => {
               const c = contacts[s.abbr];
@@ -153,7 +153,7 @@ export default async function StatePage({ params }: Props) {
                       {c.url && <p><a href={c.url} target="_blank" rel="noopener">Official {s.name} H-2A page</a></p>}
                     </>
                   ) : (
-                    <p>Contact the foreign labor certification unit at {s.name}&apos;s state workforce agency to request your pre-occupancy inspection. Battenkill Ag customers don&apos;t have to track this down; we set it up with the state for you.</p>
+                    <p>Contact the foreign labor certification unit at {s.name}&apos;s state workforce agency to request your pre-occupancy inspection. The state coordinates the inspection directly with you, and we help you prepare and keep the process on track.</p>
                   )}
                   <p className="muted">Contacts change. Confirm with the state before you schedule.</p>
                 </div>
