@@ -42,7 +42,8 @@ export default function SeasonPlanner() {
       { date: add(s, -100), title: "Get housing ready", detail: "Finish repairs and line up your housing inspection with your state workforce agency. Inspections can take weeks to schedule.", records: ["Housing addresses, capacity and photos", "Any repair receipts"] },
       { date: add(s, -75), title: "Job order window opens", detail: "The job order can be submitted no more than 75 days before your start date.", rule: "121" },
       { date: add(s, -60), title: "Last day to submit your job order", detail: "The job order must be in no fewer than 60 days before your start date.", records: ["Job order (Form ETA-790/790A) as filed", "Copy of any SWA correspondence"], rule: "121" },
-      { date: add(s, -45), title: "Last day to file your DOL application", detail: "File the H-2A application (Form ETA-9142A) at least 45 days before your start date.", records: ["Filed application and appendices", "Recruitment report and ads you placed", "Contacts with last season's U.S. workers"], rule: "130" },
+      { date: add(s, -45), title: "Last day to file your DOL application", detail: "File the H-2A application (Form ETA-9142A) at least 45 days before your start date.", records: ["Filed application and appendices", "Ads you placed and contacts with last season's U.S. workers"], rule: "130" },
+      { date: add(s, -37), title: "Initial recruitment report", detail: "Once DOL accepts your application, its acceptance notice sets the date your first recruitment report is due. Keep updating the report through the halfway point of your contract.", records: ["Initial recruitment report as submitted"], rule: "156" },
       { date: add(s, -35), title: "Housing inspected and workers' comp in place", detail: "Both must be done before the Department of Labor can certify you.", records: ["Housing inspection report", "Workers' compensation policy covering your crew"] },
       { date: cert, title: "Expected DOL decision", detail: "The Department of Labor is required to decide at least 30 days before your start date if your application is complete.", records: ["Certification letter (start of your 3-year record clock)"], rule: "160" },
       { date: add(s, -28), title: "File the USCIS petition", detail: "The I-129 petition goes in as soon as you're certified, for named or unnamed workers.", records: ["I-129 petition and receipt notice", "Approval notice"] },
@@ -50,9 +51,10 @@ export default function SeasonPlanner() {
     ];
     const during: Item[] = [
       { date: s, title: "Crew arrives: contract period begins", detail: "Give each worker a copy of the job order in a language they understand, no later than the first day of work.", records: ["Signed work contract or job order copy for each worker", "I-9 forms for every worker", "Hours offered and worked, every day"] },
-      { date: add(s, 7), title: "First pay day and earnings statements", detail: "Every pay period, give each worker an earnings statement and keep a copy.", records: ["Earnings statements for every pay period", "Payroll records: hours, rate, deductions"], rule: "122", ongoing: true },
+      { date: add(s, 7), title: "First paycheck: reimburse travel and visa costs", detail: "Most farms reimburse inbound travel, meals on the road and visa costs on the first paycheck. Under federal minimum wage law (FLSA), any of these costs that pull a worker's first-week pay below the federal minimum wage must be paid back in the first workweek. The H-2A rule sets the halfway point as the latest date for the rest.", records: ["Travel, meal and visa reimbursement for each worker", "First-week pay calculation showing minimum wage was met"] },
+      { date: add(s, 7), title: "Earnings statements every pay period", detail: "Every pay period, give each worker an earnings statement and keep a copy.", records: ["Earnings statements for every pay period", "Payroll records: hours, rate, deductions"], rule: "122", ongoing: true },
       { date: s, title: "If a worker leaves or doesn't show up", detail: "After 5 days in a row of missed work without permission, notify DOL and DHS within 2 working days.", records: ["Abandonment or termination notices sent", "Date of last day worked"], rule: "122", ongoing: true },
-      { date: half, title: "Halfway point of your contract", detail: "Reimburse inbound travel and meals for workers still with you, if not already paid. Your duty to hire qualified U.S. workers who apply ends today.", records: ["Inbound travel and meal reimbursement records", "U.S. applicants and hiring decisions up to this date"], rule: "135" },
+      { date: half, title: "Halfway point: recruitment period ends", detail: "Your duty to hire qualified U.S. workers who apply ends today. Finish the final update to your recruitment report and keep it on file; DOL can ask for it in an audit. Any inbound travel and meal costs not already reimbursed are due by today at the latest.", records: ["Final recruitment report: every U.S. applicant and the outcome", "Proof all inbound travel and meals have been reimbursed"], rule: "156" },
     ];
     const after: Item[] = [
       { date: end, title: "Contract ends", detail: "Check the three-fourths guarantee, pay final wages and provide or pay for return travel for workers who complete the contract.", records: ["Three-fourths guarantee calculation", "Final pay records", "Outbound travel records"], rule: "122" },
@@ -127,7 +129,7 @@ export default function SeasonPlanner() {
               <div><dt>File DOL application by</dt><dd>{fmt(add(plan.s, -45))}</dd></div>
               <div><dt>Expected DOL decision</dt><dd>{fmt(plan.cert)}</dd></div>
               <div><dt>Crew arrives</dt><dd>{fmt(plan.s)}</dd></div>
-              <div><dt>Halfway point</dt><dd>{fmt(plan.half)}</dd></div>
+              <div><dt>Halfway point: final recruitment report</dt><dd>{fmt(plan.half)}</dd></div>
               <div><dt>Keep records until</dt><dd>{fmt(plan.keepUntil)}</dd></div>
             </dl>
             <p className="pp-contact">Questions? Battenkill Ag · 512-540-4533 · sales@battenkillag.com · battenkillag.com</p>
