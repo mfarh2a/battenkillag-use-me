@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             areaServed: states.map((st) => ({ "@type": "State", name: st.name })),
             email: site.email,
             telephone: site.phone,
+            sameAs: [site.facebook],
             knowsAbout: ["H-2A visa program", "agricultural labor certification", "AEWR", "farm labor compliance"],
             serviceType: "H-2A visa agent services for agricultural employers",
           }}

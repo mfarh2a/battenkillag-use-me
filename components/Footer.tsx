@@ -36,6 +36,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li>{site.phone}</li>
               <li>{site.email}</li>
+              <li><a href={site.facebook} target="_blank" rel="noopener">Facebook</a></li>
             </ul>
           </div>
         </div>

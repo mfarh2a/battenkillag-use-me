@@ -9,6 +9,7 @@ export const site = {
   legalName: "Battenkill Ag Services, LLC",
   url: siteUrl.replace(/\/$/, ""),
   phone: "512-540-4533",
+  facebook: "https://www.facebook.com/profile.php?id=61596313134017",
   email: "sales@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
   headline: "Reliable H-2A service for farming families",
