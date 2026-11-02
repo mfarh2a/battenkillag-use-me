@@ -29,7 +29,7 @@ const crew = [
     body: "Every document and deadline lives in your digital filing cabinet, so you're ready if the Department of Labor comes calling.",
   },
   {
-    title: "Updates as they happen",
+    title: "Real-time updates",
     body: "Clear communication and a transparent filing process. You get a notification in real time as each step moves forward, so you always know where things stand.",
   },
   {
