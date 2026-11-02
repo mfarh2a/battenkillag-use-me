@@ -1,26 +1,18 @@
 export const homeFaqs = [
   {
-    q: "What does an H-2A agent do?",
-    a: "An H-2A agent prepares and files the paperwork that lets a farm hire seasonal workers from other countries: the job order, the Department of Labor application and the USCIS petition. The farm stays the employer. Battenkill Ag supports you on compliance during the season, and if you choose, we coordinate consulate visits and travel with several partner companies in Mexico. We don't recruit or employ workers.",
-  },
-  {
-    q: "Who will I work with?",
-    a: "One dedicated team member, from planning through the end of your season. They know your farm, your dates and your crew, and they are the person you call or text.",
-  },
-  {
-    q: "How much does it cost?",
-    a: "Battenkill Ag provides reliable, exceptional service for small to mid-sized agricultural employers, with transparent pricing quoted up front. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
+    q: "What services does Battenkill Ag offer?",
+    a: "We prepare and file everything it takes to bring your H-2A crew in: the job order with your state workforce agency, the Department of Labor application and the USCIS petition. A dedicated case manager tracks every deadline, keeps you updated as approvals come through, and supports you on compliance during the season. Every customer gets a digital filing cabinet for documents, deadlines and billing. If you choose, we also coordinate consulate visits and travel with several partner companies in Mexico. You stay the employer.",
   },
   {
     q: "How far ahead do I need to start?",
     a: "About four months before your first day of need. Your job order goes to the state 60 to 75 days before that date, and the Department of Labor application at least 45 days before.",
   },
   {
-    q: "Can I bring back the same workers each year?",
-    a: "Yes. Many farms bring back the same crew season after season. We can name your returning workers on your petition so they are the ones who come back.",
+    q: "How much does it cost?",
+    a: "Battenkill Ag provides reliable, exceptional service for small to mid-sized agricultural employers, with transparent pricing quoted up front. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
   },
   {
-    q: "Do you work with farms that only need a few workers?",
-    a: "Yes. Battenkill Ag was built for small to mid-sized agricultural employers, including farms that bring in a small crew each season.",
+    q: "Can I bring back the same workers each year?",
+    a: "Yes. Many farms bring back the same crew season after season. We can name your returning workers on your petition so they are the ones who come back.",
   },
 ];
