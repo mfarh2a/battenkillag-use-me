@@ -7,7 +7,7 @@ import contactsData from "@/content/state-contacts.json";
 type Contact = { office: string; phone?: string; email?: string; url?: string; note?: string };
 const contacts = contactsData as Record<string, Contact>;
 import JsonLd, { faqSchema } from "@/components/JsonLd";
-import { MONTHS, SOURCE, getState, listJoin, monthsBefore, stateFaqs, states } from "@/lib/states";
+import { MONTHS, SOURCE, aewrFor, getState, listJoin, monthsBefore, stateFaqs, states } from "@/lib/states";
 
 type Props = { params: Promise<{ state: string }> };
 
@@ -38,6 +38,7 @@ export default async function StatePage({ params }: Props) {
   const { state } = await params;
   const s = getState(state);
   if (!s) notFound();
+  const rates = aewrFor(s.name);
   const faqs = stateFaqs(s);
   const peak = s.topMonths[0];
   const maxMonth = Math.max(...s.months);
@@ -123,11 +124,27 @@ export default async function StatePage({ params }: Props) {
           </div>
           <div className="stack prose">
             <h2>Wages and the AEWR</h2>
-            <p>
-              H-2A workers must be paid at least the Adverse Effect Wage Rate (AEWR) the Department of Labor sets for {s.name}, or a higher prevailing, union or minimum wage if one applies.
-              {s.wage ? <> On FY2026 filings for crop workers in {s.name}, the median wage offered was <strong>${s.wage.toFixed(2)} an hour</strong>.</> : null}
-            </p>
-            <p>Rates change each year. Check the current rate on the Department of Labor&apos;s <a href="https://flag.dol.gov/wage-data/adverse-effect-wage-rates" target="_blank" rel="noopener">AEWR page</a>, and read our <Link href="/resources/aewr-explained">AEWR guide</Link>.</p>
+            {rates ? (
+              <>
+                <p>Current rates for field and livestock jobs in {s.name}, effective {rates.effective}. You pay a higher prevailing, union or minimum wage if one applies.</p>
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr><th scope="col">Per hour</th><th scope="col">Skill Level I</th><th scope="col">Skill Level II</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row">H-2A workers with free housing</th><td><strong>${rates.h1.toFixed(2)}</strong></td><td><strong>${rates.h2.toFixed(2)}</strong></td></tr>
+                      <tr><th scope="row">U.S. workers in corresponding employment</th><td>${rates.us1.toFixed(2)}</td><td>${rates.us2.toFixed(2)}</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>The H-2A rates already include {s.name}&apos;s <strong>${rates.adj.toFixed(2)} housing adjustment</strong>. It applies only to H-2A workers provided housing at no cost, and it is not a paycheck deduction. Skill Level I is for entry-level work; Skill Level II is for more experienced roles. Check {s.name}&apos;s minimum wage too, because it may be higher.</p>
+              </>
+            ) : (
+              <p>H-2A workers must be paid at least the Adverse Effect Wage Rate (AEWR) the Department of Labor sets for {s.name}, or a higher prevailing, union or minimum wage if one applies.</p>
+            )}
+            {s.wage ? <p>On FY2026 filings for crop workers in {s.name}, the median wage offered was <strong>${s.wage.toFixed(2)} an hour</strong>.</p> : null}
+            <p><strong>These rates may change.</strong> A federal court ordered DOL to issue a new method by December 30, 2026, and back pay is possible. Check DOL&apos;s <a href="https://flag.dol.gov/wage-data/adverse-effect-wage-rates" target="_blank" rel="noopener">AEWR page</a> before you file, and read our <Link href="/resources/aewr-explained">AEWR guide</Link>.</p>
           </div>
         </div>
       </section>

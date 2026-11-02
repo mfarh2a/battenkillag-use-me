@@ -4,7 +4,7 @@ import { states } from "@/lib/states";
 
 export const metadata: Metadata = {
   title: "H-2A by State",
-  description: "H-2A help for farms in every state Battenkill Ag serves: start months, crops, wages offered and how the filing works in your state.",
+  description: "H-2A help for farms in every state Battenkill Ag serves: start months, crops, 2026-2027 AEWR rates and how the filing works in your state.",
   alternates: { canonical: "/h-2a" },
 };
 
@@ -16,7 +16,7 @@ export default function StatesIndex() {
           <p className="eyebrow">H-2A by state</p>
           <h1>H-2A help in your state</h1>
           <p className="muted" style={{ fontSize: "var(--step-1)" }}>
-            Pick your state to see when crews usually start, what farms grow with H-2A and what wages were offered, from the Department of Labor&apos;s latest filings.
+            Pick your state to see when crews usually start, what farms grow with H-2A and the current AEWR wage rates, using Department of Labor data.
           </p>
         </div>
         <ul className="state-index">

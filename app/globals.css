@@ -310,10 +310,11 @@ textarea { min-height: 8rem; resize: vertical; }
 .article-body li:has(> input[type="checkbox"]) { display: flex; gap: 0.6rem; align-items: baseline; }
 .article-body input[type="checkbox"] { accent-color: var(--field); transform: translateY(1px); }
 .article-body table { min-width: 0; margin-bottom: 1rem; border: 1px solid var(--line); background: var(--card); }
+@media (max-width: 720px) { .article-body table { display: block; overflow-x: auto; } }
 .article-body ol { padding-left: 1.4rem; margin: 0 0 1rem; }
 .article-body strong { color: var(--earth); }
 @media (max-width: 900px) {
-  .article-layout { grid-template-columns: 1fr; }
+  .article-layout { grid-template-columns: minmax(0, 1fr); }
   .article-aside { position: static; }
 }
 
@@ -516,3 +517,5 @@ textarea { min-height: 8rem; resize: vertical; }
   .plan-note { font-size: 8pt; }
   .plan-list > li.late .plan-date strong { text-decoration: none; color: #111; }
 }
+
+.prose, .article-layout > * { min-width: 0; }
