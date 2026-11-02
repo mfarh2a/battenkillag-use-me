@@ -488,9 +488,7 @@ textarea { min-height: 8rem; resize: vertical; }
 .plan-date span { color: var(--muted); font-size: var(--step--1); }
 .plan-body h3 { margin: 0 0 0.3rem; font-size: var(--step-1); }
 .plan-body p { margin: 0; }
-.plan-records { list-style: none; margin: 0.6rem 0 0; padding: 0; display: grid; gap: 0.3rem; }
-.plan-records label { display: flex; flex-direction: row; justify-content: flex-start; gap: 0.5rem; align-items: flex-start; cursor: pointer; font-weight: 400; text-align: left; }
-.plan-records input[type=checkbox] { width: 1rem; height: 1rem; min-width: 1rem; flex: 0 0 auto; padding: 0; margin: 0.3rem 0 0; accent-color: var(--field); }
+.plan-records { list-style: disc; margin: 0.6rem 0 0; padding: 0 0 0 1.25rem; display: grid; gap: 0.3rem; }
 .plan-note { font-size: var(--step--1); }
 .print-only { display: none; }
 @media (max-width: 720px) { .plan-list > li { grid-template-columns: 1fr; gap: 0.4rem; } }
@@ -514,7 +512,7 @@ textarea { min-height: 8rem; resize: vertical; }
   .plan-body h3 { font-size: 10pt; margin: 0 0 1px; font-family: inherit; }
   .plan-body p { font-size: 9pt; color: #333; } .plan-body p a { color: #333; text-decoration: none; font-size: 8pt; }
   .plan-records { grid-template-columns: 1fr 1fr; gap: 1px 12px; margin-top: 3px; }
-  .plan-records label { font-size: 8.5pt; } .plan-records input[type=checkbox] { width: 9px; height: 9px; min-width: 9px; margin-top: 2px; }
+  .plan-records li { font-size: 8.5pt; }
   .plan-note { font-size: 8pt; }
   .plan-list > li.late .plan-date strong { text-decoration: none; color: #111; }
 }
