@@ -23,7 +23,7 @@ export default function OgImage() {
         }}
       >
         <img src={logo} width={382} height={90} alt="" />
-        <div style={{ fontSize: 76, fontWeight: 700, marginTop: 24, lineHeight: 1.1 }}>Reliable H-2A contract services for small to mid-sized employers</div>
+        <div style={{ fontSize: 76, fontWeight: 700, marginTop: 24, lineHeight: 1.1 }}>Reliable H-2A contract services for agricultural employers</div>
         <div style={{ fontSize: 34, marginTop: 28, color: "#5e5446" }}>
           A dedicated team by your side all season.
         </div>

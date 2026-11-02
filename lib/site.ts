@@ -12,7 +12,7 @@ export const site = {
   facebook: "https://www.facebook.com/battenkillag",
   email: "sales@battenkillag.com",
   mailingAddress: "[Mailing address for checks]",
-  headline: "Reliable H-2A contract services for small to mid-sized employers",
+  headline: "Reliable H-2A contract services for agricultural employers",
   subline: "A dedicated team by your side all season helping employers navigate the complexities of H-2A.",
   positioning:
     "Farms run on a crew that comes back season after season. Battenkill Ag helps small to mid-sized agricultural employers file for H-2A contracts, with exceptional customer service and transparent pricing.",
