@@ -26,7 +26,7 @@ const crew = [
   },
   {
     title: "Audit-ready records",
-    body: "Every document and deadline lives in your digital filing cabinet, so you're ready if the Department of Labor comes calling.",
+    body: "Every document and deadline lives in your digital filing cabinet, so you can be confident going into an audit.",
   },
   {
     title: "Real-time updates",
