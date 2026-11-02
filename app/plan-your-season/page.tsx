@@ -20,6 +20,15 @@ export default function PlanYourSeason() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
+      <section className="section section-alt" id="checklist">
+        <div className="wrap stack-lg">
+          <div className="stack prose">
+            <h2>Get the full audit checklist</h2>
+            <p className="muted">Every record DOL can ask for, in one Excel workbook, with links to the rule behind each one.</p>
+          </div>
+          <ChecklistForm />
+        </div>
+      </section>
       <section className="section">
         <div className="wrap stack-lg">
           <div className="stack prose">
@@ -30,15 +39,6 @@ export default function PlanYourSeason() {
             </p>
           </div>
           <SeasonPlanner />
-        </div>
-      </section>
-      <section className="section section-alt" id="checklist">
-        <div className="wrap stack-lg">
-          <div className="stack prose">
-            <h2>Get the full audit checklist</h2>
-            <p className="muted">Every record DOL can ask for, in one Excel workbook, with links to the rule behind each one.</p>
-          </div>
-          <ChecklistForm />
         </div>
       </section>
       <section className="section cta-band">
