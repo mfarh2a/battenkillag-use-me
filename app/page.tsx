@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const outcomes = [
   { title: "Your crew on your date", body: "We start early and watch every step, so workers arrive when your season starts." },
-  { title: "Dedicated case management", body: "The same team member from your first call to the end of your season." },
+  { title: "Case management", body: "The same team member from your first call to the end of your season." },
   { title: "Paperwork simplified", body: "Filings, deadlines and agency questions handled, so you can run the farm." },
 ];
 
