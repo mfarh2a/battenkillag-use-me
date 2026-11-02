@@ -57,7 +57,7 @@ export default function WhyBattenkill() {
             <p className="muted">
               Our team previously helped employers across the U.S. while growing one of the largest H-2A agencies
               in the country, before going into business ourselves. We stay
-              actively involved in agricultural associations and have traveled to Washington, D.C. to advocate for growers
+              actively involved in agricultural associations and regularly travel to Washington, D.C. to advocate for growers
               on farm labor issues.
             </p>
             <p className="muted">
