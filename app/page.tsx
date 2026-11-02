@@ -22,15 +22,15 @@ const outcomes = [
 const crew = [
   {
     title: "Seasonal planning",
-    body: "We confirm your job duties, wage rate and contract requirements before the season starts, so everything runs smoothly from day one.",
+    body: "We confirm your job duties, wage rate, housing and contract requirements before the season starts, so everything runs smoothly from day one.",
   },
   {
-    title: "The contract in hand before they travel",
-    body: "Workers get a copy of their job terms before they leave home, so everyone starts the season on the same page.",
+    title: "Audit-ready records",
+    body: "Every document and deadline lives in your digital filing cabinet, so you're ready if the Department of Labor comes calling.",
   },
   {
-    title: "Housing ready on time",
-    body: "We help you prepare for your housing inspection and remind you to schedule it early, so it never holds up arrival.",
+    title: "Updates as they happen",
+    body: "Clear communication and a transparent filing process. You get a notification in real time as each step moves forward, so you always know where things stand.",
   },
   {
     title: "The same faces each season",
