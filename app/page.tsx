@@ -34,7 +34,7 @@ const crew = [
   },
   {
     title: "The same faces each season",
-    body: "We can name your returning workers on your petition, so the people you trained are the ones who come back.",
+    body: "We are a small team focused on H-2A, so you work with the same people every season. No hand-offs and no explaining your farm twice.",
   },
 ];
 
