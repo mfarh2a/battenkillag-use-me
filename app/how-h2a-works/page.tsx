@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Do I have to provide housing?",
-    a: "Yes. H-2A workers get housing at no cost to them, and it has to pass a state inspection before the season. We help you understand what is required.",
+    a: "Yes. You provide housing for your H-2A workers, and it has to pass inspection before the season. Under current Department of Labor rules, the housing you provide can lower the hourly wage rate (AEWR) you are required to pay, though that rule is being revised. We help you understand what is required for your season.",
   },
   {
     q: "Can you help me find workers?",
