@@ -21,8 +21,8 @@ const outcomes = [
 
 const crew = [
   {
-    title: "Paid right from day one",
-    body: "We confirm your wage rate, pay schedule and pay stub requirements before the season, so your first payday goes smoothly.",
+    title: "Seasonal planning",
+    body: "We confirm your job duties, wage rate and contract requirements before the season starts, so everything runs smoothly from day one.",
   },
   {
     title: "The contract in hand before they travel",
