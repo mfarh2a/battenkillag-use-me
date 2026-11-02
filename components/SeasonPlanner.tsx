@@ -47,7 +47,7 @@ export default function SeasonPlanner() {
       { date: add(s, -35), title: "Housing inspected and workers' comp in place", detail: "Both must be done before the Department of Labor can certify you.", records: ["Housing inspection report", "Workers' compensation policy covering your crew"] },
       { date: cert, title: "Expected DOL decision", detail: "The Department of Labor is required to decide at least 30 days before your start date if your application is complete.", records: ["Certification letter (start of your 3-year record clock)"], rule: "160" },
       { date: add(s, -28), title: "File the USCIS petition", detail: "The I-129 petition goes in as soon as you're certified, for named or unnamed workers.", records: ["I-129 petition and receipt notice", "Approval notice"] },
-      { date: add(s, -21), title: "Consulate appointments and travel (optional)", detail: "Workers attend visa appointments and travel is booked. We can coordinate this through our partner companies.", records: ["Travel and visa fee receipts"] },
+      { date: add(s, -21), title: "Consulate appointments and travel", detail: "Workers attend visa appointments and travel is booked. We can coordinate this through our partner companies.", records: ["Travel and visa fee receipts"] },
     ];
     const during: Item[] = [
       { date: s, title: "Crew arrives: contract period begins", detail: "Give each worker a copy of the job order in a language they understand, no later than the first day of work.", records: ["Signed work contract or job order copy for each worker", "I-9 forms for every worker", "Hours offered and worked, every day"] },
