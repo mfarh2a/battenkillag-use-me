@@ -32,14 +32,18 @@ export default function WhyBattenkill() {
   return (
     <>
       <section className="hero">
-        <div className="wrap stack prose">
-          <p className="eyebrow">Why Battenkill</p>
-          <h1>Why we exist</h1>
-          <p className="lead">
+        <div className="wrap split-head">
+          <div className="split-title">
+            <p className="eyebrow">Why Battenkill</p>
+            <h1>Why we exist</h1>
+          </div>
+          <div className="split-body">
+          <p className="muted">
             Family farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
             possible. Battenkill Ag exists to give farming families reliable, exceptional H-2A service at a fair price, with a
             dedicated team by their side all season.
           </p>
+          </div>
         </div>
       </section>
 
@@ -86,14 +90,18 @@ export default function WhyBattenkill() {
       </section>
 
       <section className="section section-alt">
-        <div className="wrap stack prose">
-          <p className="eyebrow">Who we work with</p>
-          <h2>Small to mid-sized agricultural employers with a seasonal crew</h2>
+        <div className="wrap split-head">
+          <div className="split-title">
+            <p className="eyebrow">Who we work with</p>
+            <h2>Small to mid-sized agricultural employers with a seasonal crew</h2>
+          </div>
+          <div className="split-body">
           <p className="muted">
             We work with small to mid-sized operations growing fruit, vegetables and nursery plants, orchards and vineyards, row crops,
             and livestock operations with seasonal work. Whether you bring in a few workers or a few dozen, you get the same
             team member and the same care.
           </p>
+          </div>
         </div>
       </section>
 

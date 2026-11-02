@@ -25,19 +25,23 @@ export default function Services() {
     <>
       <section className="section">
         <div className="wrap stack-lg">
-          <div className="stack prose">
-            <p className="eyebrow">Services</p>
-            <h1>Everything it takes to bring your crew in</h1>
-            <p className="lead muted" style={{ fontSize: "var(--step-1)" }}>{site.positioning}</p>
+          <div className="split-head">
+            <div className="split-title">
+              <p className="eyebrow">Services</p>
+              <h1>Everything it takes to bring your crew in</h1>
+            </div>
+            <div className="split-body">
+              <p className="muted">{site.positioning}</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section section-alt">
         <div className="wrap stack-lg">
-          <div className="stack prose">
-            <h2>Who does what</h2>
-            <p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies. We can also coordinate your crew's consulate visits and travel with several partner companies in Mexico, if you choose.</p>
+          <div className="split-head">
+            <div className="split-title"><h2>Who does what</h2></div>
+            <div className="split-body"><p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies. We can also coordinate your crew's consulate visits and travel with several partner companies in Mexico, if you choose.</p></div>
           </div>
           <div className="table-wrap">
             <table>
