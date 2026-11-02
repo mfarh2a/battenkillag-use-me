@@ -31,7 +31,7 @@ export default async function Resources() {
       <section className="hero">
         <div className="wrap stack prose">
           <p className="eyebrow">Resources</p>
-          <h1>H-2A guides for family farms</h1>
+          <h1>H-2A guides for agricultural employers</h1>
           <p className="lead">
             Straightforward answers to the questions farms ask us most: what H-2A costs, when to file, what you owe your
             crew, and what records keep you ready for an audit. Each guide links to the regulation it comes from.

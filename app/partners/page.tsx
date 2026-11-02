@@ -64,7 +64,7 @@ export default function Partners() {
               <ul className="check-list">
                 <li>A recurring payment for as long as the grower stays a customer</li>
                 <li>Your growers get reliable service and quick answers all season</li>
-                <li>Transparent, affordable pricing you can feel good recommending</li>
+                <li>Transparent pricing you can feel good recommending</li>
                 <li>No paperwork for you. We handle the grower from first call to final audit</li>
               </ul>
             </div>

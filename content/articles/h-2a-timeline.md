@@ -1,6 +1,6 @@
 ---
 title: "H-2A Timeline: When to File for Your Season"
-description: "The key H-2A deadlines, counted back from your start date, and why family farms should start about four months early."
+description: "The key H-2A deadlines, counted back from your start date, and why smaller employers should start about four months early."
 category: getting-started
 date: "2026-10-13"
 keywords: ["H-2A timeline", "when to file H-2A", "H-2A deadlines", "date of need", "ETA-790", "ETA-9142A"]

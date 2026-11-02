@@ -33,7 +33,7 @@ export const photos = {
   },
   fieldCrew: {
     src: "https://live.staticflickr.com/7414/10546481726_51a88ee668_b.jpg",
-    alt: "A farm crew hand-harvesting sweet potatoes in the field on a family farm",
+    alt: "A farm crew hand-harvesting sweet potatoes in the field on a farm",
     width: 1024,
     height: 664,
     source: "https://www.flickr.com/photos/usdagov/10546481726/ (public domain)",

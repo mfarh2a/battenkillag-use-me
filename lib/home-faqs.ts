@@ -9,7 +9,7 @@ export const homeFaqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Battenkill Ag provides reliable, exceptional service for farming families, with transparent pricing at an affordable rate for family farms. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
+    a: "Battenkill Ag provides reliable, exceptional service for small to mid-sized agricultural employers, with transparent pricing quoted up front. Tell us your start date and how many workers you need, and we will send a quote for your farm.",
   },
   {
     q: "How far ahead do I need to start?",
@@ -21,6 +21,6 @@ export const homeFaqs = [
   },
   {
     q: "Do you work with farms that only need a few workers?",
-    a: "Yes. Battenkill Ag was built for family farms, including farms that bring in a small crew each season.",
+    a: "Yes. Battenkill Ag was built for small to mid-sized agricultural employers, including farms that bring in a small crew each season.",
   },
 ];

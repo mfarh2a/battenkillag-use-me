@@ -71,7 +71,7 @@ export function stateFaqs(s: StateInfo) {
     },
     {
       q: `Can Battenkill Ag file H-2A for my ${s.name} farm?`,
-      a: `Yes. Battenkill Ag prepares and files H-2A paperwork for family farms in ${s.name}: the job order, the Department of Labor application, the USCIS petition and your season compliance records, with transparent, affordable pricing.`,
+      a: `Yes. Battenkill Ag prepares and files H-2A paperwork for small to mid-sized agricultural employers in ${s.name}: the job order, the Department of Labor application, the USCIS petition and your season compliance records, with transparent pricing quoted up front.`,
     },
   ];
   return faqs;

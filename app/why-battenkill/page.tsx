@@ -3,20 +3,20 @@ import Link from "next/link";
 import Photo from "@/components/Photo";
 
 export const metadata: Metadata = {
-  title: "Why Battenkill Ag: H-2A Built Around Farming Families",
+  title: "Why Battenkill Ag: H-2A Built for Small to Mid-Sized Agricultural Employers",
   description:
-    "Battenkill Ag exists so family farms get dependable, exceptional H-2A service and one team member who knows their farm, season after season.",
+    "Battenkill Ag exists so small to mid-sized agricultural employers get dependable, exceptional H-2A service and one team member who knows their farm, season after season.",
   alternates: { canonical: "/why-battenkill" },
 };
 
 const beliefs = [
   {
-    title: "Family farms deserve the same service",
+    title: "Every crew size deserves the same service",
     body: "A farm bringing in a small crew needs its workers on time just as much as a large operation. Every farm we work with gets quick answers and the same attention, whatever the crew size.",
   },
   {
-    title: "Transparent, affordable pricing",
-    body: "You know what you'll pay before the season starts, at a rate that works for family farms. Good service and a fair price go together here.",
+    title: "Transparent pricing",
+    body: "You know what you'll pay before the season starts, with no surprises along the way. Good service and a fair price go together here.",
   },
   {
     title: "You always know who to call",
@@ -36,8 +36,8 @@ export default function WhyBattenkill() {
           <p className="eyebrow">Why Battenkill</p>
           <h1>Why we exist</h1>
           <p className="lead">
-            Family farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
-            possible. Battenkill Ag exists to give farming families reliable, exceptional H-2A service at a fair price, with a
+            Farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
+            possible. Battenkill Ag exists to give small to mid-sized agricultural employers reliable, exceptional H-2A service at a fair price, with a
             dedicated team by their side all season.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function WhyBattenkill() {
               on farm labor issues.
             </p>
             <p className="muted">
-              We started Battenkill Ag to give family farms reliable H-2A service from people who understand the work.
+              We started Battenkill Ag to give small to mid-sized agricultural employers reliable H-2A service from people who understand the work.
             </p>
           </div>
           <Photo name="battenkillRiver" className="photo-card" />
@@ -88,9 +88,9 @@ export default function WhyBattenkill() {
       <section className="section section-alt">
         <div className="wrap stack prose">
           <p className="eyebrow">Who we work with</p>
-          <h2>Farming families with a seasonal crew</h2>
+          <h2>Small to mid-sized agricultural employers with a seasonal crew</h2>
           <p className="muted">
-            We work with family-owned farms growing fruit, vegetables and nursery plants, orchards and vineyards, row crops,
+            We work with small to mid-sized operations growing fruit, vegetables and nursery plants, orchards and vineyards, row crops,
             and livestock operations with seasonal work. Whether you bring in a few workers or a few dozen, you get the same
             team member and the same care.
           </p>

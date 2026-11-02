@@ -8,7 +8,7 @@ import Photo from "@/components/Photo";
 import SeasonTimeline from "@/components/SeasonTimeline";
 
 export const metadata: Metadata = {
-  title: { absolute: `${site.name} | Reliable H-2A Service for Farming Families` },
+  title: { absolute: `${site.name} | Reliable H-2A Service for Small to Mid-Sized Agricultural Employers` },
   description: site.description,
   alternates: { canonical: "/" },
 };
@@ -58,7 +58,7 @@ export default async function Home() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="stack-lg">
-            <p className="eyebrow">H-2A for farming families</p>
+            <p className="eyebrow">H-2A for small to mid-sized agricultural employers</p>
             <h1>
               {site.headline.split("H-2A").map((part, i, arr) => (
                 <span key={i}>{part}{i < arr.length - 1 && <span className="nowrap">H-2A</span>}</span>

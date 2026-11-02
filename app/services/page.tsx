@@ -3,7 +3,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "H-2A Services for Family Farms",
+  title: "H-2A Services for Small to Mid-Sized Agricultural Employers",
   description: "Battenkill Ag handles your H-2A job order, DOL labor certification, USCIS petition and season compliance support, with optional consulate and travel coordination, with one dedicated team member for your farm.",
   alternates: { canonical: "/services" },
 };
@@ -92,7 +92,7 @@ export default function Services() {
         <div className="wrap">
           <div className="card stack prose">
             <h2 style={{ fontSize: "var(--step-2)" }}>Pricing</h2>
-            <p>We provide reliable, exceptional service for the farming families we work with, with transparent pricing at an affordable rate for family farms. Tell us your start date and crew size, and we will send a quote for your farm.</p>
+            <p>We provide reliable, exceptional service for the agricultural employers we work with, with transparent pricing quoted up front. Tell us your start date and crew size, and we will send a quote for your farm.</p>
             <p><Link href="/contact" className="btn btn-primary">Request a quote</Link></p>
           </div>
         </div>

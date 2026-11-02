@@ -76,7 +76,7 @@ export default async function StatePage({ params }: Props) {
             <p className="eyebrow"><Link href="/h-2a">H-2A by state</Link> / {s.name}</p>
             <h1>H-2A help for {s.name} farms</h1>
             <p className="muted" style={{ fontSize: "var(--step-1)" }}>
-              Battenkill Ag files H-2A for family farms across {s.name}. Here is what the program looks like in the state, from the Department of Labor&apos;s latest filings.
+              Battenkill Ag files H-2A for small to mid-sized agricultural employers across {s.name}. Here is what the program looks like in the state, from the Department of Labor&apos;s latest filings.
             </p>
           </div>
           <dl className="state-stats">
@@ -118,7 +118,7 @@ export default async function StatePage({ params }: Props) {
             {s.counties.length > 0 && <p>The most worksites are in {listJoin(s.counties)} {s.counties.length > 1 ? "counties" : "County"}.</p>}
             {s.growerEmployers > 0 && (
               <p>
-                {s.smallEmployers.toLocaleString()} of the {s.growerEmployers.toLocaleString()} farms that filed for themselves asked for fewer than 20 workers. Small, family-run crews are the norm, and that is who we work with.
+                {s.smallEmployers.toLocaleString()} of the {s.growerEmployers.toLocaleString()} farms that filed for themselves asked for fewer than 20 workers. Small and mid-sized crews are the norm, and that is who we work with.
               </p>
             )}
           </div>
@@ -187,7 +187,7 @@ export default async function StatePage({ params }: Props) {
               <li>Department of Labor application and USCIS petition prepared and filed</li>
               <li>A text from us as each approval comes through</li>
               <li>Season compliance packet and a digital filing cabinet for your records</li>
-              <li>Transparent, affordable pricing for family farms</li>
+              <li>Transparent pricing, no surprises</li>
             </ul>
           </div>
         </div>
