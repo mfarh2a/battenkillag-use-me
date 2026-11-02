@@ -11,7 +11,7 @@ export default function Login() {
           <div className="stack">
             <p className="eyebrow">Customer portal</p>
             <h1>Customer login</h1>
-            <p className="muted">Upload documents, see everything you have sent us, and pay invoices.</p>
+            <p className="muted">Upload &amp; access documents, pay invoices, and track your petition.</p>
           </div>
           <LoginForm />
         </div>
