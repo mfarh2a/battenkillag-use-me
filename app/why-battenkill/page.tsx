@@ -97,9 +97,7 @@ export default function WhyBattenkill() {
           </div>
           <div className="split-body">
           <p className="muted">
-            We work with small to mid-sized operations growing fruit, vegetables and nursery plants, orchards and vineyards, row crops,
-            and livestock operations with seasonal work. Whether you bring in a few workers or a few dozen, you get the same
-            team member and the same care.
+            We work with agricultural operations growing fruit, vegetables and nursery plants, orchards and vineyards, row crops, and livestock operations with seasonal work. Whether you bring in a few workers or a few dozen, you can expect the same care from our dedicated team of experts.
           </p>
           </div>
         </div>
