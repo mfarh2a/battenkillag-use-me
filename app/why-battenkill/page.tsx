@@ -36,8 +36,8 @@ export default function WhyBattenkill() {
           <p className="eyebrow">Why Battenkill</p>
           <h1>Why we exist</h1>
           <p className="lead">
-            Farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
-            possible. Battenkill Ag exists to give small to mid-sized agricultural employers reliable, exceptional H-2A service at a fair price, with a
+            Family farms run on people: the crew that comes back each season and knows the work. H-2A makes that crew
+            possible. Battenkill Ag exists to give farming families reliable, exceptional H-2A service at a fair price, with a
             dedicated team by their side all season.
           </p>
         </div>
