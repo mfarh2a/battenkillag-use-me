@@ -33,8 +33,8 @@ export async function POST(req: Request) {
   const f: Record<string, string> = {};
   for (const [key, max] of Object.entries(LIMITS)) f[key] = clean(body[key], max);
 
-  if (!f.name || !f.farm || !f.state || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) {
-    return NextResponse.json({ error: "Please fill in your name, farm, state and a valid email." }, { status: 400 });
+  if (!f.name || !f.farm || !f.phone || !f.state || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) {
+    return NextResponse.json({ error: "Please fill in your name, farm, phone, state and a valid email." }, { status: 400 });
   }
 
   await sendToCrm({

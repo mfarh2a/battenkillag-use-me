@@ -179,7 +179,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
               <h2 className="lead-title">Email my plan and audit checklist</h2>
               <p className="muted">We&apos;ll email your full season plan as a PDF, plus the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready.</p>
             </div>
-            <ChecklistForm plan={{ start, end: endDate, state: stateSlug || undefined }} button="Email my plan and checklist" />
+            <ChecklistForm plan={{ start, end: endDate, state: stateSlug || undefined, stateName: state?.name }} button="Email my plan and checklist" />
           </div>
 
           <p className="muted plan-note">

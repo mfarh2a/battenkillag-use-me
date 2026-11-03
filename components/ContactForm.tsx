@@ -60,7 +60,7 @@ export default function ContactForm() {
       </div>
       <div className="field">
         <label htmlFor="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" autoComplete="tel" maxLength={30} />
+        <input id="phone" name="phone" type="tel" required autoComplete="tel" maxLength={30} />
       </div>
       <div className="field">
         <label htmlFor="state">State</label>

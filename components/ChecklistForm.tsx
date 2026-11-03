@@ -17,7 +17,7 @@ function toBlobUrl(base64: string) {
 
 type Props = {
   /** Season dates from the planner. Without these, the form offers an optional start date. */
-  plan?: { start: string; end: string; state?: string };
+  plan?: { start: string; end: string; state?: string; stateName?: string };
   button?: string;
 };
 
@@ -27,7 +27,11 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus({ kind: "sending" });
-    const data = { ...Object.fromEntries(new FormData(e.currentTarget).entries()), ...(plan ?? {}), adSource: getAdSource() };
+    const data = {
+      ...Object.fromEntries(new FormData(e.currentTarget).entries()),
+      ...(plan ? { start: plan.start, end: plan.end } : {}),
+      adSource: getAdSource(),
+    };
     try {
       const res = await fetch("/api/checklist", {
         method: "POST",
@@ -84,8 +88,16 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
         <input id="cl-email" name="email" type="email" required autoComplete="email" maxLength={150} />
       </div>
       <div className="field">
-        <label htmlFor="cl-farm">Farm name <span className="optional">(optional)</span></label>
-        <input id="cl-farm" name="farm" autoComplete="organization" maxLength={150} />
+        <label htmlFor="cl-farm">Farm name</label>
+        <input id="cl-farm" name="farm" required autoComplete="organization" maxLength={150} />
+      </div>
+      <div className="field">
+        <label htmlFor="cl-phone">Phone</label>
+        <input id="cl-phone" name="phone" type="tel" required autoComplete="tel" maxLength={30} />
+      </div>
+      <div className="field">
+        <label htmlFor="cl-state">State</label>
+        <input id="cl-state" key={plan?.stateName ?? ""} name="state" required defaultValue={plan?.stateName ?? ""} autoComplete="address-level1" maxLength={40} />
       </div>
       {!plan && (
         <div className="field" style={{ gridColumn: "1 / -1" }}>

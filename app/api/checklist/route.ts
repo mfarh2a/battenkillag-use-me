@@ -54,15 +54,18 @@ export async function POST(req: Request) {
   const email = clean(body.email, 150);
   const farm = clean(body.farm, 150);
   const adSource = clean(body.adSource, 200);
-  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Please enter your name and a valid email." }, { status: 400 });
+  const phone = clean(body.phone, 30);
+  const stateRaw = clean(body.state, 40);
+  if (!name || !farm || !phone || !stateRaw || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ error: "Please fill in your name, farm, phone, state and a valid email." }, { status: 400 });
   }
 
   const startRaw = clean(body.start, 10);
   const endRaw = clean(body.end, 10);
   const start = isValidDate(startRaw) ? startRaw : "";
   const end = start && isValidDate(endRaw) && endRaw > start ? endRaw : "";
-  const state = states.find((s) => s.slug === clean(body.state, 40));
+  const stateKey = stateRaw.toLowerCase();
+  const state = states.find((s) => s.slug === stateKey || s.name.toLowerCase() === stateKey || s.abbr.toLowerCase() === stateKey);
   const plan = start && end ? buildPlan(start, end) : null;
 
   await sendToCrm({
@@ -70,7 +73,8 @@ export async function POST(req: Request) {
     name,
     email,
     farm,
-    state: state?.name,
+    phone,
+    state: state?.name || stateRaw,
     startMonth: start ? parseDate(start).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : undefined,
     message: [plan ? "Requested season plan and audit checklist" : "", adSource ? `[Ad source: ${adSource}]` : ""].filter(Boolean).join(" ") || undefined,
     adSource,
@@ -143,7 +147,7 @@ ${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name
         reply_to: email,
         subject: `Checklist download: ${name}${farm ? ` (${farm})` : ""}`,
         html: `<h2>New checklist download</h2>
-<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>State:</strong> ${escapeHtml(state?.name || "-")}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}<br><strong>Ad source:</strong> ${escapeHtml(adSource || "-")}</p>
+<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>Phone:</strong> ${escapeHtml(phone)}<br><strong>State:</strong> ${escapeHtml(state?.name || stateRaw)}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}<br><strong>Ad source:</strong> ${escapeHtml(adSource || "-")}</p>
 <p>Copy of the checklist emailed to them: ${emailed ? "yes" : "no (check the Resend sending domain)"}</p>`,
       });
     }
