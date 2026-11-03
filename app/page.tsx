@@ -131,7 +131,7 @@ export default async function Home() {
               important documents, deadlines and billing, organized by requirement. We remind you before deadlines and help you respond
               quickly and completely if the Department of Labor asks.
             </p>
-            <p><Link href="/resources/h-2a-audit-prep#checklist">Get the free audit checklist</Link></p>
+            <p><Link href="/h-2a-audit-checklist">Get the free audit checklist</Link></p>
           </div>
           <div className="stack">
           <Photo name="cranberryHarvest" className="photo-card" />

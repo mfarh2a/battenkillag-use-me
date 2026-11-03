@@ -14,13 +14,19 @@ function toBlobUrl(base64: string) {
   return URL.createObjectURL(blob);
 }
 
-export default function ChecklistForm() {
+type Props = {
+  /** Season dates from the planner. Without these, the form offers an optional start date. */
+  plan?: { start: string; end: string; state?: string };
+  button?: string;
+};
+
+export default function ChecklistForm({ plan, button = "Email me the checklist" }: Props) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus({ kind: "sending" });
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const data = { ...Object.fromEntries(new FormData(e.currentTarget).entries()), ...(plan ?? {}) };
     try {
       const res = await fetch("/api/checklist", {
         method: "POST",
@@ -53,7 +59,7 @@ export default function ChecklistForm() {
       <div className="form-status ok stack" role="status">
         <p>
           {status.emailed
-            ? "Your checklist is downloading, and a copy is on its way to your inbox."
+            ? `Your checklist is downloading, and ${plan ? "your plan and a copy of the checklist are" : "a copy is"} on its way to your inbox.`
             : "Your checklist is downloading now."}
         </p>
         {status.url && (
@@ -79,12 +85,18 @@ export default function ChecklistForm() {
         <label htmlFor="cl-farm">Farm name <span className="optional">(optional)</span></label>
         <input id="cl-farm" name="farm" autoComplete="organization" maxLength={150} />
       </div>
+      {!plan && (
+        <div className="field" style={{ gridColumn: "1 / -1" }}>
+          <label htmlFor="cl-start">Crew start date <span className="optional">(optional: we&apos;ll fill your dates into the workbook)</span></label>
+          <input id="cl-start" name="start" type="date" />
+        </div>
+      )}
       <div className="hp" aria-hidden="true">
         <label htmlFor="cl-website">Leave this empty</label>
         <input id="cl-website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <button type="submit" className="btn btn-primary" disabled={status.kind === "sending"}>
-        {status.kind === "sending" ? "Sending..." : "Email me the checklist"}
+        {status.kind === "sending" ? "Sending..." : button}
       </button>
       {status.kind === "err" && <p className="form-status err" role="alert">{status.message}</p>}
       <p className="lead-fine">We&apos;ll email you the checklist and an occasional H-2A tip. No spam, and you can unsubscribe anytime.</p>

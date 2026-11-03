@@ -96,6 +96,7 @@ export default async function StatePage({ params }: Props) {
               The busiest start months are <strong>{listJoin(s.topMonths)}</strong>. For a {peak} start, begin planning in {monthsBefore(peak, 4)},
               file your job order about 75 days ahead, and expect the Department of Labor&apos;s decision about 30 days before your crew arrives.
             </p>
+            <p><Link href={`/plan-your-season?state=${s.slug}`} className="btn btn-primary">Plan your {s.name} season</Link></p>
             <p className="muted">Share of FY2025 applications by start month.</p>
           </div>
           <div className="month-bars" role="img" aria-label={`Start months in ${s.name}: busiest are ${listJoin(s.topMonths)}`}>
@@ -216,6 +217,7 @@ export default async function StatePage({ params }: Props) {
           </div>
           <div className="btn-row">
             <Link href="/contact" className="btn btn-primary">Request a quote</Link>
+            <Link href={`/plan-your-season?state=${s.slug}`} className="btn btn-ghost">Plan your season</Link>
             <Link href="/h-2a" className="btn btn-ghost">Other states</Link>
           </div>
         </div>
