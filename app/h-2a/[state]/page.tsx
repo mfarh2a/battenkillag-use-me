@@ -117,11 +117,6 @@ export default async function StatePage({ params }: Props) {
             <h2>What {s.name} farms grow with H-2A</h2>
             {s.crops.length > 0 && <p>Farms filing their own H-2A in {s.name} most often grow <strong>{listJoin(s.crops)}</strong>.</p>}
             {s.counties.length > 0 && <p>The most worksites are in {listJoin(s.counties)} {s.counties.length > 1 ? "counties" : "County"}.</p>}
-            {s.growerEmployers > 0 && (
-              <p>
-                {s.smallEmployers.toLocaleString()} of the {s.growerEmployers.toLocaleString()} farms that filed for themselves asked for fewer than 20 workers. Small and mid-sized crews are the norm, and that is who we work with.
-              </p>
-            )}
           </div>
           <div className="stack prose">
             <h2>Wages and the AEWR</h2>
