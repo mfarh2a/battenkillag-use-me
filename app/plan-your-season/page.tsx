@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SeasonPlanner from "@/components/SeasonPlanner";
-import ChecklistForm from "@/components/ChecklistForm";
+import SeasonPlanner, { type PlannerState } from "@/components/SeasonPlanner";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
+import { aewrFor, states } from "@/lib/states";
+import contactsData from "@/content/state-contacts.json";
 
 export const metadata: Metadata = {
-  title: "Plan Your H-2A Season",
-  description: "Enter your crew's start date and get every H-2A deadline, from planning and the job order to the DOL application, arrival and record keeping, with an audit checklist built around your dates.",
+  title: "Plan Your H-2A Season: Free Deadline Calculator",
+  description: "Free, no signup. Enter your crew's start date and state to see every H-2A deadline, from the job order and DOL application to arrival and record keeping.",
   alternates: { canonical: "/plan-your-season" },
 };
 
@@ -16,29 +17,36 @@ const faqs = [
   { q: "How long do I need to keep H-2A records?", a: "At least 3 years from the date your application was certified." },
 ];
 
+type Contact = { office: string; phone?: string; email?: string; url?: string; note?: string };
+const contacts = contactsData as Record<string, Contact>;
+
+const plannerStates: PlannerState[] = states
+  .map((s) => {
+    const rates = aewrFor(s.name);
+    return {
+      slug: s.slug,
+      name: s.name,
+      topMonths: s.topMonths,
+      contact: contacts[s.abbr] ?? null,
+      aewr: rates ? { h1: rates.h1, h2: rates.h2, effective: rates.effective } : null,
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 export default function PlanYourSeason() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
-      <section className="section section-alt" id="checklist">
-        <div className="wrap stack-lg">
-          <div className="stack prose">
-            <h2>Get the full audit checklist</h2>
-            <p className="muted">Every record DOL can ask for, in one Excel workbook, with links to the rule behind each one.</p>
-          </div>
-          <ChecklistForm />
-        </div>
-      </section>
       <section className="section">
         <div className="wrap stack-lg">
           <div className="stack prose">
             <p className="eyebrow">Free tool</p>
             <h1>Plan your season</h1>
             <p className="muted" style={{ fontSize: "var(--step-1)" }}>
-              Enter your crew&apos;s start date to see every H-2A deadline for your season, with the records to keep at each step, so you are audit-ready from day one.
+              Enter your state and your crew&apos;s start date to see every H-2A deadline and the records to keep at each step. Free, no signup.
             </p>
           </div>
-          <SeasonPlanner />
+          <SeasonPlanner states={plannerStates} />
         </div>
       </section>
       <section className="section cta-band">

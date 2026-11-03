@@ -3,12 +3,17 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { site } from "@/lib/site";
 import { sendToCrm } from "@/lib/crm";
+import { fillChecklist, isValidDate } from "@/lib/checklist-workbook";
+import { buildPlan, fmt, parseDate } from "@/lib/season-plan";
+import { planToPdf } from "@/lib/plan-pdf";
+import { states } from "@/lib/states";
 
 // Free audit checklist download.
 // 1. Checks the visitor's name and email.
 // 2. Emails the visitor the Excel checklist (needs a verified sending domain in Resend).
 // 3. Emails Max the new lead (CONTACT_TO_EMAIL).
-// 4. Sends the file back so the download starts right away, even if email isn't set up yet.
+// 4. If the visitor gave season dates, fills them into the workbook and adds their plan as a PDF to the email.
+// 5. Sends the file back so the download starts right away, even if email isn't set up yet.
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
 const FILE_NAME = "Battenkill-Ag-H2A-Audit-Checklist.xlsx";
@@ -52,10 +57,56 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please enter your name and a valid email." }, { status: 400 });
   }
 
-  await sendToCrm({ source: "newsletter", name, email, farm });
+  const startRaw = clean(body.start, 10);
+  const endRaw = clean(body.end, 10);
+  const start = isValidDate(startRaw) ? startRaw : "";
+  const end = start && isValidDate(endRaw) && endRaw > start ? endRaw : "";
+  const state = states.find((s) => s.slug === clean(body.state, 40));
+  const plan = start && end ? buildPlan(start, end) : null;
 
-  const file = await readFile(path.join(process.cwd(), "content", "downloads", FILE_NAME));
+  await sendToCrm({
+    source: "newsletter",
+    name,
+    email,
+    farm,
+    state: state?.name,
+    startMonth: start ? parseDate(start).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : undefined,
+    message: plan ? "Requested season plan and audit checklist" : undefined,
+  });
+
+  const template = await readFile(path.join(process.cwd(), "content", "downloads", FILE_NAME));
+  let file: Buffer = template;
+  if (start) {
+    try {
+      file = await fillChecklist(template, { start, end: end || undefined, farm: farm || undefined, stateName: state?.name });
+    } catch (err) {
+      // Never lose the lead over this: fall back to the blank workbook.
+      console.error("Could not fill checklist dates", err);
+    }
+  }
   const base64 = file.toString("base64");
+  let planPdf = "";
+  if (plan) {
+    try {
+      planPdf = (await planToPdf(plan, state?.name)).toString("base64");
+    } catch (err) {
+      // Never lose the lead over this: the email still has the key dates.
+      console.error("Could not build plan PDF", err);
+    }
+  }
+  const planRows = plan
+    ? [
+        ["Submit job order", `${fmt(plan.jobOrderOpens)} to ${fmt(plan.jobOrderLast)}`],
+        ["File DOL application by", fmt(plan.dolLast)],
+        ["Expected DOL decision", fmt(plan.cert)],
+        ["Crew arrives", fmt(plan.s)],
+        ["Halfway point", fmt(plan.half)],
+        ["Contract ends", fmt(plan.end)],
+        ["Keep records until at least", fmt(plan.keepUntil)],
+      ]
+        .map(([k, v]) => `<tr><td style="padding:4px 16px 4px 0;color:#555">${k}</td><td style="padding:4px 0"><strong>${v}</strong></td></tr>`)
+        .join("")
+    : "";
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
@@ -68,13 +119,19 @@ export async function POST(req: Request) {
       from,
       to: [email],
       reply_to: to || undefined,
-      subject: "Your H-2A audit-ready checklist from Battenkill Ag",
+      subject: plan ? "Your H-2A season plan and audit checklist from Battenkill Ag" : "Your H-2A audit-ready checklist from Battenkill Ag",
       html: `<p>Hi ${first},</p>
-<p>Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
+${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. ${planPdf ? "Your full plan is attached as a PDF you can print." : ""}</p>
+<table style="border-collapse:collapse">${planRows}</table>
+<p>See the full plan any time at <a href="${site.url}/plan-your-season?start=${start}&end=${end}${state ? `&state=${state.slug}` : ""}">your season plan</a>.</p>` : ""}
+<p>${start ? "Your dates are already filled in on the Season Info tab. " : ""}Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
 <p>Every Battenkill Ag customer gets a digital filing cabinet to keep track of important documents, deadlines and billing, with these records organized by requirement. The workbook links each record to a plain-English guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like to talk about next season, just reply to this email.</p>
 <p>The Battenkill Ag team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
 <p style="color:#777;font-size:12px">General information, not legal advice.</p>`,
-      attachments: [{ filename: FILE_NAME, content: base64 }],
+      attachments: [
+        { filename: FILE_NAME, content: base64 },
+        ...(planPdf ? [{ filename: "H2A-Season-Plan.pdf", content: planPdf }] : []),
+      ],
     });
 
     if (to) {
@@ -84,7 +141,7 @@ export async function POST(req: Request) {
         reply_to: email,
         subject: `Checklist download: ${name}${farm ? ` (${farm})` : ""}`,
         html: `<h2>New checklist download</h2>
-<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}</p>
+<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>State:</strong> ${escapeHtml(state?.name || "-")}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}</p>
 <p>Copy of the checklist emailed to them: ${emailed ? "yes" : "no (check the Resend sending domain)"}</p>`,
       });
     }

@@ -34,7 +34,7 @@ Most farms never get audited, but those that do usually find something wrong. Th
 
 DOL can ask for a long list of records, and most farms do not know what is on it until an audit letter arrives. Our free Excel checklist lays it all out so you can get organized before anyone asks. Inside:
 
-- **25 records DOL can request**, grouped by application and recruitment, housing and insurance, contracts and travel, hours and pay, and departures
+- **32 records to keep ready for DOL**, grouped by application and recruitment, housing and insurance, contracts and travel, hours and pay, departures, and audit letters
 - **The regulation behind each record**, so you know why it matters
 - **A progress tracker** that shows how ready you are at a glance
 - **A worker departures log** that works out the 2-working-day notice deadline for you
