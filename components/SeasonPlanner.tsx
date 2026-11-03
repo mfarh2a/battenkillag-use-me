@@ -158,7 +158,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
               </div>
               <div>
                 <h3>Wages and timing</h3>
-                {state.aewr && <p>AEWR for field and livestock jobs with free housing: <strong>${state.aewr.h1.toFixed(2)}</strong> an hour at Skill Level I, <strong>${state.aewr.h2.toFixed(2)}</strong> at Skill Level II, effective {state.aewr.effective}. Rates may change, so check before you file.</p>}
+                {state.aewr && <p>AEWR for field and livestock jobs with free housing: <strong>${state.aewr.h1.toFixed(2)}</strong> an hour at Skill Level I, <strong>${state.aewr.h2.toFixed(2)}</strong> at Skill Level II, effective {state.aewr.effective}. Your required wage may be higher if a prevailing wage or minimum wage applies. Rates may change, so check before you file.</p>}
                 {state.topMonths.length > 0 && <p>Busiest start months: {state.topMonths.join(", ")}.</p>}
                 <p><Link href={`/h-2a/${state.slug}`}>More on H-2A in {state.name}</Link></p>
               </div>

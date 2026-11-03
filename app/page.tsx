@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const outcomes = [
   { title: "Your crew on your date", body: "We start early and watch every step, so workers arrive when your season starts." },
-  { title: "Case management", body: "The same team member from your first call to the end of your season." },
+  { title: "Case management", body: "A dedicated team member from your first call to the end of your season." },
   { title: "Paperwork simplified", body: "Filings, deadlines and agency questions handled, so you can run the farm." },
 ];
 
@@ -138,8 +138,7 @@ export default async function Home() {
           <ul className="check-list records-list">
             <li>Job order, applications and approvals in one place</li>
             <li>Housing, vehicle and workers&apos; comp records tracked</li>
-            <li>Pay and hours records checked against what H-2A requires</li>
-            <li>Notices sent on time if a worker leaves</li>
+            <li>Wage and total hours offered checked to meet the three-fourths guarantee</li>
             <li>A complete season file kept for at least 3 years</li>
           </ul>
           </div>

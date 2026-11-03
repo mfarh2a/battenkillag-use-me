@@ -43,7 +43,7 @@ export default function Services() {
             <h2>Who does what</h2>
             <p className="muted">You stay the employer. We handle the filings, the deadlines and the agencies. We can also coordinate your crew's consulate visits and travel with several partner companies in Mexico, if you choose.</p>
           </div>
-          <div className="table-wrap">
+          <div className="table-wrap who-table">
             <table>
               <thead>
                 <tr><th style={{ width: "42%" }}>Step</th><th style={{ width: "18%" }}>Who does it</th><th>Notes</th></tr>

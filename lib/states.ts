@@ -57,8 +57,7 @@ export function stateFaqs(s: StateInfo) {
         const base = r
           ? `For field and livestock jobs in ${s.name}, the current AEWR for H-2A workers provided free housing is $${r.h1.toFixed(2)} an hour at Skill Level I and $${r.h2.toFixed(2)} at Skill Level II, after a $${r.adj.toFixed(2)} housing adjustment. U.S. workers in corresponding employment get $${r.us1.toFixed(2)} and $${r.us2.toFixed(2)}. You pay a higher prevailing, union or minimum wage if one applies.`
           : `H-2A workers must be paid at least the Adverse Effect Wage Rate (AEWR) that the Department of Labor sets for ${s.name}, or a higher prevailing, union or minimum wage if one applies.`;
-        const offered = s.wage ? ` On fiscal year 2026 filings for crop workers in ${s.name}, the median wage offered was $${s.wage.toFixed(2)} an hour.` : "";
-        return `${base}${offered} A court ordered the Department of Labor to issue a new method by December 30, 2026, so check its FLAG site before you file.`;
+        return `${base} Check DOL's Agricultural Online Wage Library for any prevailing wage for your crop and area. A court ordered the Department of Labor to issue a new method by December 30, 2026, so check its FLAG site before you file.`;
       })(),
     },
     {

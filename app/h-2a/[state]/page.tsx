@@ -90,9 +90,10 @@ export default async function StatePage({ params }: Props) {
               The busiest start months are <strong>{listJoin(s.topMonths)}</strong>. For a {peak} start, begin planning in {monthsBefore(peak, 4)},
               file your job order about 75 days ahead, and expect the Department of Labor&apos;s decision about 30 days before your crew arrives.
             </p>
+            {s.crops.length > 0 && <p>Farms filing their own H-2A in {s.name} most often grow <strong>{listJoin(s.crops)}</strong>.</p>}
             <p><Link href={`/plan-your-season?state=${s.slug}`} className="btn btn-primary">Plan your {s.name} season</Link></p>
-            <p className="muted">Share of FY2025 applications by start month.</p>
           </div>
+          <figure className="chart-figure">
           <div className="month-bars" role="img" aria-label={`Start months in ${s.name}: busiest are ${listJoin(s.topMonths)}`}>
             {s.months.map((m, i) => (
               <div key={MONTHS[i]} className="month-bar">
@@ -102,15 +103,13 @@ export default async function StatePage({ params }: Props) {
               </div>
             ))}
           </div>
+            <figcaption className="muted">Share of FY2025 applications by start month.</figcaption>
+          </figure>
         </div>
       </section>
 
       <section className="section">
-        <div className="wrap grid-2">
-          <div className="stack prose">
-            <h2>What {s.name} farms grow with H-2A</h2>
-            {s.crops.length > 0 && <p>Farms filing their own H-2A in {s.name} most often grow <strong>{listJoin(s.crops)}</strong>.</p>}
-          </div>
+        <div className="wrap stack-lg wages-block">
           <div className="stack prose">
             <h2>Wages and the AEWR</h2>
             {rates ? (
@@ -132,7 +131,7 @@ export default async function StatePage({ params }: Props) {
             ) : (
               <p>H-2A workers must be paid at least the Adverse Effect Wage Rate (AEWR) the Department of Labor sets for {s.name}, or a higher prevailing, union or minimum wage if one applies.</p>
             )}
-            {s.wage ? <p>On FY2026 filings for crop workers in {s.name}, the median wage offered was <strong>${s.wage.toFixed(2)} an hour</strong>.</p> : null}
+            <p><strong>Check for a prevailing wage.</strong> Your required wage is the highest of the AEWR, any prevailing wage or piece rate for your crop and area, an agreed union rate, and the federal or state minimum wage. Look up prevailing rates in DOL&apos;s <a href="https://www.dol.gov/agencies/eta/foreign-labor/wages/agriculture" target="_blank" rel="noopener">Agricultural Online Wage Library</a>.</p>
             <p><strong>These rates may change.</strong> A federal court ordered DOL to issue a new method by December 30, 2026, and back pay is possible. Check DOL&apos;s <a href="https://flag.dol.gov/wage-data/adverse-effect-wage-rates" target="_blank" rel="noopener">AEWR page</a> before you file, and read our <Link href="/resources/aewr-explained">AEWR guide</Link>.</p>
           </div>
         </div>
@@ -206,7 +205,6 @@ export default async function StatePage({ params }: Props) {
           <div className="btn-row">
             <Link href="/contact" className="btn btn-primary">Request a quote</Link>
             <Link href={`/plan-your-season?state=${s.slug}`} className="btn btn-ghost">Plan your season</Link>
-            <Link href="/h-2a" className="btn btn-ghost">Other states</Link>
           </div>
         </div>
       </section>

@@ -109,7 +109,6 @@ const stages: Stage[] = [
     points: [
       "A clear compliance packet, sent digitally and always accessible",
       "Organized records and deadline reminders",
-      "2-day notice tracking if a worker leaves",
     ],
     icon: icons.apple,
   },

@@ -5,7 +5,7 @@ import Photo from "@/components/Photo";
 export const metadata: Metadata = {
   title: "Why Battenkill Ag: H-2A Built for Small to Mid-Sized Agricultural Employers",
   description:
-    "Battenkill Ag exists so small to mid-sized agricultural employers get dependable, exceptional H-2A service and one team member who knows their farm, season after season.",
+    "Battenkill Ag exists so small to mid-sized agricultural employers get dependable, exceptional H-2A service and a dedicated team member who knows their farm.",
   alternates: { canonical: "/why-battenkill" },
 };
 
@@ -20,7 +20,7 @@ const beliefs = [
   },
   {
     title: "You always know who to call",
-    body: "One team member handles your farm from planning to the end of the season. They know your farm, your crew and your history, so you never have to explain things twice.",
+    body: "A dedicated team member handles your farm from planning to the end of the season. They know your farm, your crew and your history, so you never have to explain things twice.",
   },
   {
     title: "No surprises",
@@ -55,17 +55,7 @@ export default function WhyBattenkill() {
             <p className="eyebrow">About us</p>
             <h2>Who we are</h2>
             <p className="muted">
-              Our team is made up of people who already work in agriculture. We come from families that have farmed in
-              upstate New York for generations along the Battenkill River.
-            </p>
-            <p className="muted">
-              Our team previously helped employers across the U.S. while growing one of the largest H-2A agencies
-              in the country, before going into business ourselves. We stay
-              actively involved in agricultural associations and regularly travel to Washington, D.C. to advocate for growers
-              on farm labor issues.
-            </p>
-            <p className="muted">
-              We started Battenkill Ag to give small to mid-sized agricultural employers reliable H-2A service from people who understand the work.
+              Our team comes from families that have farmed in upstate New York for generations along the Battenkill River, and we have worked with employers across the U.S. to grow one of the largest H-2A agencies in the country.
             </p>
           </div>
           <Photo name="battenkillRiver" className="photo-card" />

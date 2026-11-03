@@ -22,7 +22,7 @@ export default function AuditChecklist() {
     <>
       <JsonLd data={faqSchema(faqs)} />
       <section className="section">
-        <div className="wrap stack-lg">
+        <div className="wrap tool-head">
           <div className="stack prose">
             <p className="eyebrow">Free tool</p>
             <h1>H-2A audit checklist</h1>
