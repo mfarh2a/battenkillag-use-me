@@ -47,10 +47,6 @@ export function stateFaqs(s: StateInfo) {
   const peak = s.topMonths[0];
   const faqs = [
     {
-      q: `How many farms use the H-2A program in ${s.name}?`,
-      a: `In fiscal year 2025, ${s.employers.toLocaleString()} employers filed ${s.filings.toLocaleString()} H-2A applications for work in ${s.name}, requesting ${s.workers.toLocaleString()} workers. The typical application asked for ${s.medianCrew} worker${s.medianCrew === 1 ? "" : "s"}.`,
-    },
-    {
       q: `When do H-2A workers usually start in ${s.name}?`,
       a: `The busiest start months in ${s.name} are ${listJoin(s.topMonths)}. For a ${peak} start, begin planning in ${monthsBefore(peak, 4)} and have your job order filed about 75 days before your start date.`,
     },

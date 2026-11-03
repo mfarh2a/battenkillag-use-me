@@ -76,15 +76,9 @@ export default async function StatePage({ params }: Props) {
             <p className="eyebrow"><Link href="/h-2a">H-2A by state</Link> / {s.name}</p>
             <h1>H-2A help for {s.name} farms</h1>
             <p className="muted" style={{ fontSize: "var(--step-1)" }}>
-              Battenkill Ag files H-2A for small to mid-sized agricultural employers across {s.name}. Here is what the program looks like in the state, from the Department of Labor&apos;s latest filings.
+              Battenkill Ag files H-2A for small to mid-sized agricultural employers across {s.name}. Here is when crews start, what the wage rates are and who to contact.
             </p>
           </div>
-          <dl className="state-stats">
-            <div><dt>H-2A applications, FY2025</dt><dd>{s.filings.toLocaleString()}</dd></div>
-            <div><dt>Workers requested</dt><dd>{s.workers.toLocaleString()}</dd></div>
-            <div><dt>Employers filing</dt><dd>{s.employers.toLocaleString()}</dd></div>
-            <div><dt>Typical crew size</dt><dd>{s.medianCrew}</dd></div>
-          </dl>
         </div>
       </section>
 
@@ -116,7 +110,6 @@ export default async function StatePage({ params }: Props) {
           <div className="stack prose">
             <h2>What {s.name} farms grow with H-2A</h2>
             {s.crops.length > 0 && <p>Farms filing their own H-2A in {s.name} most often grow <strong>{listJoin(s.crops)}</strong>.</p>}
-            {s.counties.length > 0 && <p>The most worksites are in {listJoin(s.counties)} {s.counties.length > 1 ? "counties" : "County"}.</p>}
           </div>
           <div className="stack prose">
             <h2>Wages and the AEWR</h2>
