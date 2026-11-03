@@ -149,6 +149,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
                     {state.contact.phone && <p><a href={`tel:${state.contact.phone.replace(/[^0-9]/g, "")}`}>{state.contact.phone}</a></p>}
                     {state.contact.email && <p><a href={`mailto:${state.contact.email}`}>{state.contact.email}</a></p>}
                     {state.contact.note && <p>{state.contact.note}</p>}
+                    {state.contact.url && <p><a href={state.contact.url} target="_blank" rel="noopener">Official {state.name} page</a></p>}
                   </>
                 ) : (
                   <p>Contact the foreign labor certification unit at {state.name}&apos;s state workforce agency. Find it on DOL&apos;s <a href="https://www.dol.gov/agencies/eta/foreign-labor/contact" target="_blank" rel="noopener">state contacts page</a>.</p>
