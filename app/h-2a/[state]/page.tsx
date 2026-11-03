@@ -168,7 +168,7 @@ export default async function StatePage({ params }: Props) {
                       {c.phone && <p>Phone: <a href={`tel:${c.phone.replace(/[^0-9]/g, "")}`}>{c.phone}</a></p>}
                       {c.email && <p>Email: <a href={`mailto:${c.email}`}>{c.email}</a></p>}
                       {c.note && <p>{c.note}</p>}
-                      {c.url && <p><a href={c.url} target="_blank" rel="noopener">Official {s.name} H-2A page</a></p>}
+                      {c.url && <p><a href={c.url} target="_blank" rel="noopener">Official {s.name} page</a></p>}
                     </>
                   ) : (
                     <>
