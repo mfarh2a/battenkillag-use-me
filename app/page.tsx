@@ -33,8 +33,8 @@ const crew = [
     body: "Clear communication and a transparent filing process. You get a notification in real time as each step moves forward, so you always know where things stand.",
   },
   {
-    title: "The same faces each season",
-    body: "We are a small team focused on H-2A, so you work with the same people every season. No hand-offs and no explaining your farm twice.",
+    title: "Expert guidance when it counts",
+    body: "H-2A rules are detailed and they change. We explain what each one means for your farm and help you make the right call before a small issue becomes a big one.",
   },
 ];
 
