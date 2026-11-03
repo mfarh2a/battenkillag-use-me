@@ -77,38 +77,3 @@ export function buildPlan(start: string, endDate: string): Plan | null {
   ];
   return { before, during, after, s, end, half, cert, keepUntil, jobOrderOpens: add(s, -75), jobOrderLast: add(s, -60), dolLast: add(s, -45) };
 }
-
-/** A calendar file (.ics) with every dated step and a reminder a week ahead. Opens in Google, Apple and Outlook calendars. */
-export function planToIcs(plan: Plan): string {
-  const esc = (t: string) => t.replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
-  const fold = (line: string) => {
-    const parts: string[] = [];
-    let rest = line;
-    while (rest.length > 70) { parts.push(rest.slice(0, 70)); rest = rest.slice(70); }
-    parts.push(rest);
-    return parts.join("\r\n ");
-  };
-  const ymd = (d: Date) => iso(d).replace(/-/g, "");
-  const stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
-  const items = [...plan.before, ...plan.during, ...plan.after].filter((i) => !i.ongoing);
-  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Battenkill Ag Services//H-2A Season Plan//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:H-2A season plan"];
-  items.forEach((it, n) => {
-    lines.push(
-      "BEGIN:VEVENT",
-      `UID:${ymd(plan.s)}-${n}@battenkillag.com`,
-      `DTSTAMP:${stamp}`,
-      `DTSTART;VALUE=DATE:${ymd(it.date)}`,
-      `DTEND;VALUE=DATE:${ymd(add(it.date, 1))}`,
-      `SUMMARY:${esc(`H-2A: ${it.title}`)}`,
-      `DESCRIPTION:${esc(`${it.detail}\n\nPlanning guide from Battenkill Ag, not legal advice. battenkillag.com/plan-your-season`)}`,
-      "BEGIN:VALARM",
-      "ACTION:DISPLAY",
-      `DESCRIPTION:${esc(`H-2A: ${it.title}`)}`,
-      "TRIGGER:-P7D",
-      "END:VALARM",
-      "END:VEVENT",
-    );
-  });
-  lines.push("END:VCALENDAR");
-  return lines.map(fold).join("\r\n") + "\r\n";
-}

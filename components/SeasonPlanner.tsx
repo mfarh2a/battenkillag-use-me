@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import ChecklistForm from "@/components/ChecklistForm";
 import { site } from "@/lib/site";
-import { DAY, add, buildPlan, ecfr, fmt, fmtShort, iso, parseDate, planToIcs, plusMonths, type PlanItem } from "@/lib/season-plan";
+import { DAY, add, buildPlan, ecfr, fmt, fmtShort, iso, parseDate, plusMonths, type PlanItem } from "@/lib/season-plan";
 
 export type PlannerState = {
   slug: string;
@@ -86,18 +86,6 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
   const missed = today && plan ? plan.before.filter((i) => i.hard && i.date < today) : [];
   const earliest = today ? add(today, 60) : null;
 
-  function downloadCalendar() {
-    if (!plan) return;
-    const url = URL.createObjectURL(new Blob([planToIcs(plan)], { type: "text/calendar;charset=utf-8" }));
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "H2A-Season-Plan.ics";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
-
   return (
     <div className="planner">
       <form className="planner-top planner-inputs card" onSubmit={(e) => e.preventDefault()}>
@@ -148,8 +136,6 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
 
           <div className="plan-actions">
             <a href="#checklist" className="btn btn-primary">Email my plan and checklist</a>
-            <button type="button" className="btn btn-ghost" onClick={downloadCalendar}>Add to my calendar</button>
-            <button type="button" className="btn btn-ghost" onClick={() => window.print()}>Print this plan</button>
           </div>
 
           {state && (
@@ -178,20 +164,6 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
             </section>
           )}
 
-          <div className="print-only plan-print-head">
-            <p className="pp-brand">Battenkill Ag Services · H-2A season plan{state ? ` · ${state.name}` : ""}</p>
-            <h2>Season: {fmt(plan.s)} to {fmt(plan.end)}</h2>
-            <dl className="pp-keys">
-              <div><dt>Submit job order</dt><dd>{fmt(plan.jobOrderOpens)} to {fmt(plan.jobOrderLast)}</dd></div>
-              <div><dt>File DOL application by</dt><dd>{fmt(plan.dolLast)}</dd></div>
-              <div><dt>Expected DOL decision</dt><dd>{fmt(plan.cert)}</dd></div>
-              <div><dt>Crew arrives</dt><dd>{fmt(plan.s)}</dd></div>
-              <div><dt>Halfway point: final recruitment report</dt><dd>{fmt(plan.half)}</dd></div>
-              <div><dt>Keep records until</dt><dd>{fmt(plan.keepUntil)}</dd></div>
-            </dl>
-            <p className="pp-contact">Questions? Battenkill Ag · {site.phone} · {site.email} · battenkillag.com</p>
-          </div>
-
           <Section title="Before your crew arrives" items={plan.before} today={today} />
           <Section title="During the season" items={plan.during} today={today} />
           <Section title="After the season" items={plan.after} today={today} />
@@ -199,7 +171,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
           <div className="lead-box prose" id="checklist">
             <div className="stack">
               <h2 className="lead-title">Email my plan and audit checklist</h2>
-              <p className="muted">We&apos;ll send your key dates and a calendar file, plus the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready.</p>
+              <p className="muted">We&apos;ll email your full season plan as a PDF, plus the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready.</p>
             </div>
             <ChecklistForm plan={{ start, end: endDate, state: stateSlug || undefined }} button="Email my plan and checklist" />
           </div>

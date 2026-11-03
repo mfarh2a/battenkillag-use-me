@@ -4,14 +4,15 @@ import path from "node:path";
 import { site } from "@/lib/site";
 import { sendToCrm } from "@/lib/crm";
 import { fillChecklist, isValidDate } from "@/lib/checklist-workbook";
-import { buildPlan, fmt, parseDate, planToIcs } from "@/lib/season-plan";
+import { buildPlan, fmt, parseDate } from "@/lib/season-plan";
+import { planToPdf } from "@/lib/plan-pdf";
 import { states } from "@/lib/states";
 
 // Free audit checklist download.
 // 1. Checks the visitor's name and email.
 // 2. Emails the visitor the Excel checklist (needs a verified sending domain in Resend).
 // 3. Emails Max the new lead (CONTACT_TO_EMAIL).
-// 4. If the visitor gave season dates, fills them into the workbook and adds their plan and a calendar file to the email.
+// 4. If the visitor gave season dates, fills them into the workbook and adds their plan as a PDF to the email.
 // 5. Sends the file back so the download starts right away, even if email isn't set up yet.
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
@@ -84,6 +85,15 @@ export async function POST(req: Request) {
     }
   }
   const base64 = file.toString("base64");
+  let planPdf = "";
+  if (plan) {
+    try {
+      planPdf = (await planToPdf(plan, state?.name)).toString("base64");
+    } catch (err) {
+      // Never lose the lead over this: the email still has the key dates.
+      console.error("Could not build plan PDF", err);
+    }
+  }
   const planRows = plan
     ? [
         ["Submit job order", `${fmt(plan.jobOrderOpens)} to ${fmt(plan.jobOrderLast)}`],
@@ -111,7 +121,7 @@ export async function POST(req: Request) {
       reply_to: to || undefined,
       subject: plan ? "Your H-2A season plan and audit checklist from Battenkill Ag" : "Your H-2A audit-ready checklist from Battenkill Ag",
       html: `<p>Hi ${first},</p>
-${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. The attached calendar file adds every step to your calendar with a reminder a week ahead.</p>
+${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. ${planPdf ? "Your full plan is attached as a PDF you can print." : ""}</p>
 <table style="border-collapse:collapse">${planRows}</table>
 <p>See the full plan any time at <a href="${site.url}/plan-your-season?start=${start}&end=${end}${state ? `&state=${state.slug}` : ""}">your season plan</a>.</p>` : ""}
 <p>${start ? "Your dates are already filled in on the Season Info tab. " : ""}Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
@@ -120,7 +130,7 @@ ${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name
 <p style="color:#777;font-size:12px">General information, not legal advice.</p>`,
       attachments: [
         { filename: FILE_NAME, content: base64 },
-        ...(plan ? [{ filename: "H2A-Season-Plan.ics", content: Buffer.from(planToIcs(plan)).toString("base64") }] : []),
+        ...(planPdf ? [{ filename: "H2A-Season-Plan.pdf", content: planPdf }] : []),
       ],
     });
 
