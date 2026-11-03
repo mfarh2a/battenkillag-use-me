@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAdSource, trackEvent } from "@/lib/ad-tracking";
 
 type Status =
   | { kind: "idle" }
@@ -26,7 +27,7 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus({ kind: "sending" });
-    const data = { ...Object.fromEntries(new FormData(e.currentTarget).entries()), ...(plan ?? {}) };
+    const data = { ...Object.fromEntries(new FormData(e.currentTarget).entries()), ...(plan ?? {}), adSource: getAdSource() };
     try {
       const res = await fetch("/api/checklist", {
         method: "POST",
@@ -38,6 +39,7 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
         setStatus({ kind: "err", message: body.error || "Something went wrong. Please try again." });
         return;
       }
+      trackEvent("Lead");
       let url: string | undefined;
       if (body.file) {
         url = toBlobUrl(body.file);

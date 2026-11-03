@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAdSource, trackEvent } from "@/lib/ad-tracking";
 
 type Status = { kind: "idle" } | { kind: "sending" } | { kind: "ok" } | { kind: "err"; message: string };
 
@@ -15,7 +16,7 @@ export default function ContactForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus({ kind: "sending" });
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    const data = { ...Object.fromEntries(new FormData(e.currentTarget).entries()), adSource: getAdSource() };
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -24,6 +25,7 @@ export default function ContactForm() {
       });
       const body = await res.json().catch(() => ({}));
       if (res.ok) {
+        trackEvent("Contact");
         setStatus({ kind: "ok" });
         (e.target as HTMLFormElement).reset();
       } else {

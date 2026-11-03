@@ -13,6 +13,7 @@ export type CrmSignup = {
   startMonth?: string;
   current?: string;
   message?: string;
+  adSource?: string;
 };
 
 export async function sendToCrm(signup: CrmSignup): Promise<void> {

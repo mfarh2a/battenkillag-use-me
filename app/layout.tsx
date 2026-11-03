@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { states } from "@/lib/states";
 import PromoBanner from "@/components/PromoBanner";
+import MetaPixel from "@/components/MetaPixel";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <MetaPixel />
         <JsonLd
           data={{
             "@context": "https://schema.org",

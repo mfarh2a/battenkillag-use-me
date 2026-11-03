@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { trackCustomEvent } from "@/lib/ad-tracking";
 import Link from "next/link";
 import ChecklistForm from "@/components/ChecklistForm";
 import { site } from "@/lib/site";
@@ -76,7 +77,11 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
     setToday(parseDate(iso(new Date())));
   }, [states]);
 
-  const onStart = (v: string) => { setStart(v); if (!endTouched || endDate <= v) setEndDate(plusMonths(v, 6)); };
+  // Counts once per visit, the first time someone actually uses the planner.
+  const used = useRef(false);
+  const markUsed = () => { if (!used.current) { used.current = true; trackCustomEvent("PlannerUsed"); } };
+
+  const onStart = (v: string) => { markUsed(); setStart(v); if (!endTouched || endDate <= v) setEndDate(plusMonths(v, 6)); };
   const plan = useMemo(() => buildPlan(start, endDate), [start, endDate]);
   const state = states.find((s) => s.slug === stateSlug);
 
@@ -91,7 +96,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
       <form className="planner-top planner-inputs card" onSubmit={(e) => e.preventDefault()}>
         <div className="field">
           <label htmlFor="plan-state">Your state</label>
-          <select id="plan-state" value={stateSlug} onChange={(e) => setStateSlug(e.target.value)}>
+          <select id="plan-state" value={stateSlug} onChange={(e) => { markUsed(); setStateSlug(e.target.value); }}>
             <option value="">Select a state</option>
             {states.map((s) => <option key={s.slug} value={s.slug}>{s.name}</option>)}
           </select>
@@ -102,7 +107,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
         </div>
         <div className="field">
           <label htmlFor="plan-end">When does your season end?</label>
-          <input id="plan-end" type="date" value={endDate} min={start} onChange={(e) => { setEndDate(e.target.value); setEndTouched(true); }} />
+          <input id="plan-end" type="date" value={endDate} min={start} onChange={(e) => { markUsed(); setEndDate(e.target.value); setEndTouched(true); }} />
         </div>
       </form>
 

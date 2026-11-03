@@ -13,7 +13,7 @@ Battenkill Ag Services, LLC ("Battenkill Ag," "we," "us" or "our") helps farms w
 - **Customers:** account login details, business information such as farm location, crops, job details, wages, housing and payroll records, and documents you upload to the portal. These documents may include personal information about workers, such as names, dates of birth, passport details and employment records.
 - **Payments:** we accept online payments and checks. Online payments are handled by our third-party payment processor. We do not see or store your full card or bank account numbers.
 
-**Information collected automatically:** IP address, browser and device type, pages visited and similar usage data, collected through cookies and analytics tools.
+**Information collected automatically:** IP address, browser and device type, pages visited and similar usage data, collected through cookies and analytics tools. We also use advertising tools, including the Meta Pixel, which use cookies and similar technology to share pages visited and actions taken on our website with Meta so we can measure our ads and show them to people who may be interested. We do not use these tools on customer login pages.
 
 ## 2. How we use information
 
@@ -57,7 +57,7 @@ We keep customer documents for at least 3 years after the end of each certificat
 - **Text:** reply STOP.
 - **Access and correction:** contact us to review or update your information.
 - **Deletion:** ask us to delete your information. We will, unless the law requires us to keep it.
-- **Cookies:** you can block or delete cookies in your browser settings, though some features may not work properly.
+- **Cookies:** you can block or delete cookies in your browser settings, though some features may not work properly. You can also manage how ads are shown to you in your Facebook ad settings.
 
 ## 9. Children
 

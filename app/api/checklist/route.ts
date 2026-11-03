@@ -53,6 +53,7 @@ export async function POST(req: Request) {
   const name = clean(body.name, 100);
   const email = clean(body.email, 150);
   const farm = clean(body.farm, 150);
+  const adSource = clean(body.adSource, 200);
   if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: "Please enter your name and a valid email." }, { status: 400 });
   }
@@ -71,7 +72,8 @@ export async function POST(req: Request) {
     farm,
     state: state?.name,
     startMonth: start ? parseDate(start).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : undefined,
-    message: plan ? "Requested season plan and audit checklist" : undefined,
+    message: [plan ? "Requested season plan and audit checklist" : "", adSource ? `[Ad source: ${adSource}]` : ""].filter(Boolean).join(" ") || undefined,
+    adSource,
   });
 
   const template = await readFile(path.join(process.cwd(), "content", "downloads", FILE_NAME));
@@ -141,7 +143,7 @@ ${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name
         reply_to: email,
         subject: `Checklist download: ${name}${farm ? ` (${farm})` : ""}`,
         html: `<h2>New checklist download</h2>
-<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>State:</strong> ${escapeHtml(state?.name || "-")}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}</p>
+<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>State:</strong> ${escapeHtml(state?.name || "-")}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}<br><strong>Ad source:</strong> ${escapeHtml(adSource || "-")}</p>
 <p>Copy of the checklist emailed to them: ${emailed ? "yes" : "no (check the Resend sending domain)"}</p>`,
       });
     }

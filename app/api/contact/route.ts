@@ -8,7 +8,7 @@ import { sendToCrm } from "@/lib/crm";
 
 const LIMITS: Record<string, number> = {
   name: 100, farm: 150, email: 150, phone: 30, state: 40,
-  workers: 10, startMonth: 20, current: 60, message: 3000,
+  workers: 10, startMonth: 20, current: 60, message: 3000, adSource: 200,
 };
 
 function clean(value: unknown, max: number): string {
@@ -39,7 +39,8 @@ export async function POST(req: Request) {
 
   await sendToCrm({
     source: "contact", name: f.name, email: f.email, farm: f.farm, phone: f.phone, state: f.state,
-    workers: f.workers, startMonth: f.startMonth, current: f.current, message: f.message,
+    workers: f.workers, startMonth: f.startMonth, current: f.current,
+    message: f.adSource ? `${f.message}\n[Ad source: ${f.adSource}]`.trim() : f.message, adSource: f.adSource,
   });
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -55,7 +56,7 @@ export async function POST(req: Request) {
   const rows = [
     ["Name", f.name], ["Farm", f.farm], ["Email", f.email], ["Phone", f.phone],
     ["State", f.state], ["Workers needed", f.workers], ["Start month", f.startMonth],
-    ["Uses H-2A today", f.current], ["Message", f.message],
+    ["Uses H-2A today", f.current], ["Message", f.message], ["Ad source", f.adSource],
   ];
   const html = `<h2>New quote request</h2><table>${rows
     .map(([k, v]) => `<tr><td><strong>${k}</strong></td><td>${escapeHtml(v || "-").replace(/\n/g, "<br>")}</td></tr>`)

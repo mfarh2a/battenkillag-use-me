@@ -16,7 +16,7 @@ This Privacy Policy explains how Battenkill Ag Services, LLC ("Battenkill Ag," "
 - payment information, processed by our payment processor (we do not store full card or bank account numbers)
 - messages you send us, quote requests and checklist download requests
 
-**Information collected automatically:** IP address, browser and device type, pages visited, and similar usage data, collected through cookies and analytics tools.
+**Information collected automatically:** IP address, browser and device type, pages visited, and similar usage data, collected through cookies and analytics tools. We also use advertising tools, including the Meta Pixel, which use cookies and similar technology to share pages visited and actions taken on our website with Meta so we can measure our ads and show them to people who may be interested. We do not use these tools on customer login pages.
 
 ## 3. How we use information
 We use information to:
@@ -56,7 +56,7 @@ We use reasonable administrative, technical and physical safeguards, including e
 - **Text:** reply STOP.
 - **Access and correction:** contact us to review or update your information.
 - **Deletion:** you may ask us to delete your information. We will do so unless we must keep it for legal or record-keeping reasons.
-- **Cookies:** you can block or delete cookies in your browser settings, though some features may not work properly.
+- **Cookies:** you can block or delete cookies in your browser settings, though some features may not work properly. You can also manage how ads are shown to you in your Facebook ad settings.
 
 ## 10. Children
 The Services are not directed to children under 13, and we do not knowingly collect their personal information.
