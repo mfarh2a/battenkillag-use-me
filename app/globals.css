@@ -585,3 +585,8 @@ textarea { min-height: 8rem; resize: vertical; }
   .who-table td { padding: 0.1rem 0; border: 0; }
   .who-table td:first-child { font-weight: 600; }
 }
+
+/* Rule citations embedded as links in existing text */
+.rule-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--muted, #8a8172); text-underline-offset: 3px; }
+.rule-link:hover { color: var(--field, inherit); text-decoration-style: solid; }
+@media print { .rule-link { text-decoration: none; color: inherit; } .rule-link::after { content: " (" attr(data-cite) ")"; font-size: 8pt; color: #555; } }

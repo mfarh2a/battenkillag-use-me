@@ -17,7 +17,7 @@ Pay statements and payroll records are the first thing an investigator looks at.
 
 ## What every pay statement must show
 
-On or before each payday, every worker gets a statement with ([20 CFR 655.122(k)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)):
+On or before each payday, every worker gets [a statement](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122) with:
 
 - [ ] total earnings for the pay period
 - [ ] hourly rate and piece rate, if any
@@ -30,7 +30,7 @@ On or before each payday, every worker gets a statement with ([20 CFR 655.122(k)
 
 ## Daily records you must keep
 
-For each worker ([20 CFR 655.122(j)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)):
+[For each worker](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122):
 
 - [ ] field tally records and payroll summaries
 - [ ] the type and amount of work done
@@ -52,7 +52,7 @@ Only deductions required by law or disclosed in your job order are allowed, and 
 
 ## How long to keep it
 
-- At least **3 years** from the certification date ([20 CFR 655.167](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.167)).
+- At least **3 years** [from the certification date](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.167).
 - If records are kept at a central office, you must produce them within **72 hours** of a request.
 
 Most payroll systems can email reports automatically after each pay run. Sending them to one organized place means you are ready the day a request arrives. See [preparing for an H-2A audit](/resources/h-2a-audit-prep).

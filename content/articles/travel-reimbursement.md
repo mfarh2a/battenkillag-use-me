@@ -13,7 +13,7 @@ faqs:
     a: "Yes, if the worker completes the contract or is let go without cause, unless they go straight to another H-2A employer."
 ---
 
-Travel costs are a common source of H-2A back pay, usually because the timing or the amount was off. Here is how it works ([20 CFR 655.122(h)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)).
+Travel costs are a common source of H-2A back pay, usually because the timing or the amount was off. Here is [how it works](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122).
 
 ## Inbound travel: the 50% point
 

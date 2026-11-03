@@ -17,7 +17,7 @@ Most farms never get audited, but those that do usually find something wrong. Th
 
 ## Two kinds of audits
 
-**1. DOL certification audit.** The Office of Foreign Labor Certification picks certified applications to review. You get a letter listing the documents to send, with a due date **no more than 30 days** after the letter ([20 CFR 655.180](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.180)). Failing to fully comply can mean losing your certification or being barred from the program. Findings can be referred to other agencies.
+**1. DOL certification audit.** The Office of Foreign Labor Certification picks certified applications to review. You get a letter listing the documents to send, with a due date **no more than 30 days** [after the letter](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.180). Failing to fully comply can mean losing your certification or being barred from the program. Findings can be referred to other agencies.
 
 **2. Wage and Hour investigation.** DOL's Wage and Hour Division checks how the season actually ran. Investigators review records, interview workers and visit housing and worksites. Payroll records kept at a central office must be produced within **72 hours** of a request ([655.122(j)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)).
 
@@ -38,7 +38,7 @@ DOL can ask for a long list of records, and most farms do not know what is on it
 - **The regulation behind each record**, so you know why it matters
 - **A progress tracker** that shows how ready you are at a glance
 - **A worker departures log** that works out the 2-working-day notice deadline for you
-- **A record-keeping date calculator** showing how long to keep everything (at least 3 years from your certification date, under [20 CFR 655.167](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.167))
+- **A record-keeping date calculator** showing how long to keep everything ([at least 3 years from your certification date](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.167))
 
 [[checklist-form]]
 

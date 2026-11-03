@@ -17,7 +17,7 @@ Workers leave for many reasons. How you document it decides what you still owe.
 
 ## The 2-working-day rule
 
-If a worker **abandons the job** or is **fired for cause**, notify DOL and, for H-2A workers, DHS within **2 working days** ([20 CFR 655.122(n)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)). If you do, you no longer owe that worker:
+If a worker **abandons the job** or is **fired for cause**, notify DOL and, for H-2A workers, DHS [within 2 working days](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122). If you do, you no longer owe that worker:
 
 - return travel and daily subsistence
 - the three-fourths hours guarantee

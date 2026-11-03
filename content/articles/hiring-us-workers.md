@@ -17,7 +17,7 @@ H-2A is designed so U.S. workers get the first chance at the job. Recruitment re
 
 ## Recruiting U.S. workers first
 
-Once your job order is posted, you must ([20 CFR 655.135](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.135)):
+Once your job order is posted, [you must](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.135):
 
 - accept U.S. workers referred by the state workforce agency
 - contact U.S. workers you employed in the previous season, unless they were let go for cause or quit

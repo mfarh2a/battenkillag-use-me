@@ -17,7 +17,7 @@ The three-fourths guarantee is one of the most common sources of H-2A back pay. 
 
 ## The rule
 
-You must offer each worker enough work to equal at least **75% of the workdays in the contract period**, counted in hours ([20 CFR 655.122(i)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)). The period starts on the first workday after the worker arrives, or your date of need if that is later, and runs to the contract end date. If you fall short, you pay the worker what they would have earned for the missing hours.
+You must offer each worker enough work to equal at least **75% of the workdays in the contract period**, [counted in hours](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122). The period starts on the first workday after the worker arrives, or your date of need if that is later, and runs to the contract end date. If you fall short, you pay the worker what they would have earned for the missing hours.
 
 ## A worked example
 

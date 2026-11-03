@@ -17,6 +17,13 @@ const faqs = [
   { q: "What is in the Excel workbook?", a: "Every record on this page with a link to its rule, a tracker that shows how ready you are, a worker departures log that works out the 2-working-day notice deadline, and a date calculator for how long to keep your records." },
 ];
 
+function cfrUrl(rule: string) {
+  const m = rule.match(/(\d+) CFR (\d+)\.(\d+)(\(([a-z])\))?/);
+  if (!m) return "https://www.ecfr.gov";
+  const sec = `${m[2]}.${m[3]}`;
+  return `https://www.ecfr.gov/current/title-${m[1]}/section-${sec}` + (m[5] ? `#p-${sec}(${m[5]})` : "");
+}
+
 export default function AuditChecklist() {
   return (
     <>
@@ -51,7 +58,7 @@ export default function AuditChecklist() {
                 <h3>{g.name}</h3>
                 <ul>
                   {g.records.map((r) => (
-                    <li key={r.text}>{r.text}<small>{r.rule}</small></li>
+                    <li key={r.text}><a className="rule-link" href={cfrUrl(r.rule)} target="_blank" rel="noopener" title={r.rule} data-cite={r.rule}>{r.text}</a></li>
                   ))}
                 </ul>
               </div>

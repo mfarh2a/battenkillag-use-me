@@ -23,7 +23,7 @@ The **Adverse Effect Wage Rate (AEWR)** is the minimum hourly wage DOL sets for 
 
 ## Which wage you actually pay
 
-You must pay the **highest** of these rates ([20 CFR 655.120](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.120), [655.122(l)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)):
+You must pay [the **highest** of these rates](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.120):
 
 - the AEWR for your state, job and skill level
 - the prevailing wage, if DOL has published one

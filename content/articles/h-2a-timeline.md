@@ -33,9 +33,9 @@ Every H-2A deadline is counted back from one date: your **date of need**, the fi
 
 **1. Plan (about 4 months out).** Decide your start and end dates, how many workers you need, what they will do, and where they will live. If you used H-2A last season, start from that file.
 
-**2. Job order to your state (60 to 75 days out).** The job order (Form ETA-790 and its addendum) lays out the work, pay, hours, housing and other terms. It goes to your state workforce agency no more than 75 and no fewer than 60 days before your date of need ([20 CFR 655.121](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.121)). The state posts the job so U.S. workers can apply first.
+**2. Job order to your state (60 to 75 days out).** The job order (Form ETA-790 and its addendum) lays out the work, pay, hours, housing and other terms. It goes to your state workforce agency no more than 75 and no fewer than 60 days [before your date of need](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.121). The state posts the job so U.S. workers can apply first.
 
-**3. Application to DOL (at least 45 days out).** The Application for Temporary Employment Certification (Form ETA-9142A) is filed in DOL's online system, FLAG, at least 45 days before your date of need ([20 CFR 655.130](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.130)). If DOL finds a problem, it sends a notice of deficiency, and you have **5 business days** to fix it ([20 CFR 655.141](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.141)).
+**3. Application to DOL (at least 45 days out).** The Application for Temporary Employment Certification (Form ETA-9142A) is filed in DOL's online system, FLAG, [at least 45 days before your date of need](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.130). If DOL finds a problem, it sends a notice of deficiency, and you have [5 business days to fix it](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.141).
 
 **4. DOL decision (about 30 days out).** When everything is in order, DOL aims to decide no later than 30 days before your date of need.
 

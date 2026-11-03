@@ -13,7 +13,7 @@ faqs:
     a: "Yes. Rental or public housing must meet local standards, you pay the owner directly, and you give DOL a signed statement that it complies, with the number of beds and rooms."
 ---
 
-Housing is one of the most visible parts of H-2A, and one of the most inspected. Here is what the rules require ([20 CFR 655.122(d)](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122)).
+Housing is one of the most visible parts of H-2A, and one of the most inspected. Here is what [the rules](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.122) require.
 
 ## Who gets free housing
 

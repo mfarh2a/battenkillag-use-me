@@ -39,7 +39,7 @@ function Section({ title, items, today }: { title: string; items: PlanItem[]; to
               </div>
               <div className="plan-body">
                 <h3>{it.title}</h3>
-                <p>{it.detail}{it.rule && <> <a href={ecfr(it.rule)} target="_blank" rel="noopener">20 CFR 655.{it.rule}</a></>}</p>
+                <p>{it.rule ? <a className="rule-link" href={ecfr(it.rule)} target="_blank" rel="noopener" title={`20 CFR 655.${it.rule}`} data-cite={`20 CFR 655.${it.rule}`}>{it.detail}</a> : it.detail}</p>
                 {it.records && (
                   <ul className="plan-records">
                     {it.records.map((r) => (
