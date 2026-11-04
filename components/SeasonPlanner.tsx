@@ -2,18 +2,14 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { trackCustomEvent } from "@/lib/ad-tracking";
-import Link from "next/link";
 import ChecklistForm from "@/components/ChecklistForm";
 import { site } from "@/lib/site";
-import { DAY, add, buildPlan, ecfr, fmt, fmtShort, iso, parseDate, plusMonths, type PlanItem } from "@/lib/season-plan";
+import { DAY, add, buildPlan, fmtShort, iso, parseDate, plusMonths } from "@/lib/season-plan";
 
-export type PlannerState = {
-  slug: string;
-  name: string;
-  topMonths: string[];
-  contact: { office: string; phone?: string; email?: string; url?: string; note?: string } | null;
-  aewr: { h1: number; h2: number; effective: string } | null;
-};
+// The plan itself is never shown on the page. The visitor picks a state and dates, gives an email,
+// and the plan, calendar file and checklist are sent to that inbox.
+
+export type PlannerState = { slug: string; name: string };
 
 function nextSpring() {
   const now = new Date();
@@ -23,76 +19,13 @@ function nextSpring() {
 
 const dayCount = (n: number) => `${n} day${n === 1 ? "" : "s"}`;
 
-const UNLOCK_KEY = "bk-plan-unlocked";
-
-function LockIcon() {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="7" width="10" height="7" rx="1.5" />
-      <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" />
-    </svg>
-  );
-}
-
-// What visitors see before they give an email: the step names only. Dates, details and records are not on the page at all.
-function LockedSection({ title, items }: { title: string; items: PlanItem[] }) {
-  return (
-    <section className="plan-group plan-locked">
-      <h2>{title}</h2>
-      <ol className="plan-list">
-        {items.map((it) => (
-          <li key={it.title}>
-            <div className="plan-date"><span className="lock-chip"><LockIcon /> Date in your full plan</span></div>
-            <div className="plan-body"><h3>{it.title}</h3></div>
-          </li>
-        ))}
-      </ol>
-    </section>
-  );
-}
-
-function Section({ title, items, today }: { title: string; items: PlanItem[]; today: Date | null }) {
-  return (
-    <section className="plan-group">
-      <h2>{title}</h2>
-      <ol className="plan-list">
-        {items.map((it) => {
-          const ago = today && !it.ongoing ? Math.round((today.getTime() - it.date.getTime()) / DAY) : 0;
-          const late = ago > 0;
-          return (
-            <li key={it.title} className={late ? "late" : ""}>
-              <div className="plan-date">
-                <strong>{it.ongoing ? `From ${it.date.toLocaleDateString("en-US", { month: "short", day: "numeric" })}` : fmt(it.date)}</strong>
-                {late && <span className="plan-passed">{it.opens ? `Opened ${dayCount(ago)} ago` : `Passed ${dayCount(ago)} ago`}</span>}
-              </div>
-              <div className="plan-body">
-                <h3>{it.title}</h3>
-                <p>{it.rule ? <a className="rule-link" href={ecfr(it.rule)} target="_blank" rel="noopener" title={`20 CFR 655.${it.rule}`} data-cite={`20 CFR 655.${it.rule}`}>{it.detail}</a> : it.detail}</p>
-                {it.records && (
-                  <ul className="plan-records">
-                    {it.records.map((r) => (
-                      <li key={r}>{r}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </li>
-          );
-        })}
-      </ol>
-    </section>
-  );
-}
-
 export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
   const [start, setStart] = useState(nextSpring());
   const [endDate, setEndDate] = useState(plusMonths(nextSpring(), 6));
   const [endTouched, setEndTouched] = useState(false);
   const [stateSlug, setStateSlug] = useState("");
-  // Set after the page loads, so "days left" is always counted from the visitor's own today.
+  // Set after the page loads, so "days ago" is always counted from the visitor's own today.
   const [today, setToday] = useState<Date | null>(null);
-  // The full plan unlocks once the visitor has given their email, and stays unlocked on this device.
-  const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
@@ -105,13 +38,7 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
       if (qe && qe > qs) { setEndDate(qe); setEndTouched(true); } else setEndDate(plusMonths(qs, 6));
     }
     setToday(parseDate(iso(new Date())));
-    try { if (localStorage.getItem(UNLOCK_KEY) === "1") setUnlocked(true); } catch { /* private window: stays locked */ }
   }, [states]);
-
-  const unlock = () => {
-    setUnlocked(true);
-    try { localStorage.setItem(UNLOCK_KEY, "1"); } catch { /* ignore */ }
-  };
 
   // Counts once per visit, the first time someone actually uses the planner.
   const used = useRef(false);
@@ -121,16 +48,20 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
   const plan = useMemo(() => buildPlan(start, endDate), [start, endDate]);
   const state = states.find((s) => s.slug === stateSlug);
 
-  const allDated = plan ? [...plan.before, ...plan.during, ...plan.after].filter((i) => !i.ongoing) : [];
-  const next = today ? allDated.filter((i) => i.date >= today).sort((a, b) => a.date.getTime() - b.date.getTime())[0] : undefined;
-  const daysToNext = next && today ? Math.round((next.date.getTime() - today.getTime()) / DAY) : 0;
+  const dated = plan ? [...plan.before, ...plan.during, ...plan.after].filter((i) => !i.ongoing) : [];
+  const filings = plan ? plan.before.filter((i) => i.hard).length : 0;
   const missed = today && plan ? plan.before.filter((i) => i.hard && i.date < today) : [];
   const earliest = today ? add(today, 60) : null;
 
   return (
-    <div className="planner">
-      <form className="planner-top planner-inputs card" onSubmit={(e) => e.preventDefault()}>
-        <div className="field">
+    <div className="gate-card card" id="get-plan">
+      <div className="stack">
+        <h2 className="lead-title">Get your season plan</h2>
+        <p className="muted">Free. Tell us about your season and we&apos;ll email your plan to you.</p>
+      </div>
+
+      <form className="gate-inputs" onSubmit={(e) => e.preventDefault()}>
+        <div className="field" style={{ gridColumn: "1 / -1" }}>
           <label htmlFor="plan-state">Your state</label>
           <select id="plan-state" value={stateSlug} onChange={(e) => { markUsed(); setStateSlug(e.target.value); }}>
             <option value="">Select a state</option>
@@ -147,103 +78,29 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
         </div>
       </form>
 
-      {plan ? (
-        <>
-          {missed.length > 0 && earliest && (
-            <div className="plan-alert" role="status">
-              <h2>{missed.length > 1 ? "Two filing deadlines have passed for this start date" : "A filing deadline has passed for this start date"}</h2>
-              <ul>
-                {missed.map((m) => {
-                  const ago = today ? Math.round((today.getTime() - m.date.getTime()) / DAY) : 0;
-                  return <li key={m.title}><strong>{m.title}:</strong> {fmtShort(m.date)}, {dayCount(ago)} ago</li>;
-                })}
-              </ul>
-              <p>A start date of {fmtShort(earliest)} or later would still meet the job order deadline. If your crew can&apos;t start that late, call us at <a href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>{site.phone}</a> and we will tell you what is still possible.</p>
-            </div>
-          )}
-
-          <dl className="plan-summary" aria-live="polite">
-            <div className="ps-next">
-              <dt>Your next date</dt>
-              <dd>
-                {next ? next.title : "See your plan below"}
-                {next && <span className="ps-sub">{fmtShort(next.date)} · {daysToNext === 0 ? "today" : `${dayCount(daysToNext)} left`}</span>}
-              </dd>
-            </div>
-            <div><dt>Job order window</dt><dd>{fmtShort(plan.jobOrderOpens)}<span className="ps-sub">to {fmtShort(plan.jobOrderLast)}</span></dd></div>
-            <div><dt>File DOL application by</dt><dd>{fmtShort(plan.dolLast)}</dd></div>
-            <div><dt>Keep records until at least</dt><dd>{fmtShort(plan.keepUntil)}<span className="ps-sub">Based on your expected certification</span></dd></div>
-          </dl>
-
-          {unlocked ? (
-            <div className="plan-actions">
-              <a href="#checklist" className="btn btn-primary">Email my plan and checklist</a>
-            </div>
-          ) : (
-            <div className="plan-gate card">
-              <h2>Your full plan is ready</h2>
-              <p>Add your email to unlock every date, the records to save at each step, your state&apos;s housing inspection contact and current wage rates, and a calendar file that reminds you before each deadline.</p>
-              <div><a href="#checklist" className="btn btn-primary">Unlock my full plan</a></div>
-            </div>
-          )}
-
-          {state && !unlocked && (
-            <section className="plan-state card" style={{ padding: "1.5rem" }}>
-              <h2>H-2A in {state.name}</h2>
-              <p className="lock-chip" style={{ gridColumn: "1 / -1" }}><LockIcon /> Your {state.name} housing inspection contact and current wage rates come with your full plan.</p>
-            </section>
-          )}
-
-          {state && unlocked && (
-            <section className="plan-state card" style={{ padding: "1.5rem" }}>
-              <h2>H-2A in {state.name}</h2>
-              <div>
-                <h3>Housing inspection</h3>
-                {state.contact ? (
-                  <>
-                    <p>{state.contact.office}</p>
-                    {state.contact.phone && <p><a href={`tel:${state.contact.phone.replace(/[^0-9]/g, "")}`}>{state.contact.phone}</a></p>}
-                    {state.contact.email && <p><a href={`mailto:${state.contact.email}`}>{state.contact.email}</a></p>}
-                    {state.contact.note && <p>{state.contact.note}</p>}
-                    {state.contact.url && <p><a href={state.contact.url} target="_blank" rel="noopener">Official {state.name} page</a></p>}
-                  </>
-                ) : (
-                  <p>Contact the foreign labor certification unit at {state.name}&apos;s state workforce agency. Find it on DOL&apos;s <a href="https://www.dol.gov/agencies/eta/foreign-labor/contact" target="_blank" rel="noopener">state contacts page</a>.</p>
-                )}
-                <p className="muted">Contacts change. Confirm with the state before you schedule.</p>
-              </div>
-              <div>
-                <h3>Wages and timing</h3>
-                {state.aewr && <p>AEWR for field and livestock jobs with free housing: <strong>${state.aewr.h1.toFixed(2)}</strong> an hour at Skill Level I, <strong>${state.aewr.h2.toFixed(2)}</strong> at Skill Level II, effective {state.aewr.effective}. Your required wage may be higher if a prevailing wage or minimum wage applies. Rates may change, so check before you file.</p>}
-                {state.topMonths.length > 0 && <p>Busiest start months: {state.topMonths.join(", ")}.</p>}
-                <p><Link href={`/h-2a/${state.slug}`}>More on H-2A in {state.name}</Link></p>
-              </div>
-            </section>
-          )}
-
-          {unlocked ? <Section title="Before your crew arrives" items={plan.before} today={today} /> : <LockedSection title="Before your crew arrives" items={plan.before} />}
-          {unlocked ? <Section title="During the season" items={plan.during} today={today} /> : <LockedSection title="During the season" items={plan.during} />}
-          {unlocked ? <Section title="After the season" items={plan.after} today={today} /> : <LockedSection title="After the season" items={plan.after} />}
-
-          <div className="lead-box prose" id="checklist">
-            <div className="stack">
-              <h2 className="lead-title">{unlocked ? "Email my plan and audit checklist" : "Unlock my full plan"}</h2>
-              <p className="muted">
-                {unlocked
-                  ? "We'll email your full season plan as a PDF, a calendar file with reminders before each deadline, and the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready."
-                  : "Your full plan unlocks on this page, and we'll email it to you as a PDF with a calendar file that reminds you before each deadline, plus the Excel audit checklist with your dates filled in."}
-              </p>
-            </div>
-            <ChecklistForm onUnlock={unlock} plan={{ start, end: endDate, state: stateSlug || undefined, stateName: state?.name }} button={unlocked ? "Email my plan and checklist" : "Unlock my full plan"} />
-          </div>
-
-          <p className="muted plan-note">
-            A planning guide based on the H-2A rules at 20 CFR Part 655, not legal advice. <Link href="/h-2a-audit-checklist">See all the records on the audit checklist.</Link>
-          </p>
-        </>
-      ) : (
-        <p className="muted">Pick a start date to see your plan.</p>
+      {plan && missed.length > 0 && earliest && (
+        <div className="plan-alert" role="status">
+          <h3>{missed.length > 1 ? "Two filing deadlines have passed for this start date" : "A filing deadline has passed for this start date"}</h3>
+          <ul>
+            {missed.map((m) => {
+              const ago = today ? Math.round((today.getTime() - m.date.getTime()) / DAY) : 0;
+              return <li key={m.title}><strong>{m.title}:</strong> {fmtShort(m.date)}, {dayCount(ago)} ago</li>;
+            })}
+          </ul>
+          <p>A start date of {fmtShort(earliest)} or later would still meet the job order deadline. If your crew can&apos;t start that late, call us at <a href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>{site.phone}</a> and we will tell you what is still possible.</p>
+        </div>
       )}
+
+      {plan && (
+        <p className="gate-tease" aria-live="polite">
+          Your plan has <strong>{dated.length} dated steps</strong>, {filings} of them legal filing deadlines. Add your email and it&apos;s on its way.
+        </p>
+      )}
+
+      <ChecklistForm
+        plan={{ start, end: endDate, state: stateSlug || undefined, stateName: state?.name }}
+        button="Email me my plan"
+      />
     </div>
   );
 }

@@ -2,40 +2,34 @@
 
 import { useState } from "react";
 import { getAdSource, trackEvent } from "@/lib/ad-tracking";
+import { site } from "@/lib/site";
 
 type Status =
   | { kind: "idle" }
   | { kind: "sending" }
-  | { kind: "ok"; emailed: boolean; url?: string; fileName?: string; icsUrl?: string; icsName?: string }
+  | { kind: "ok"; emailed: boolean; email: string }
   | { kind: "err"; message: string };
 
-function toBlobUrl(base64: string) {
-  const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
-  const blob = new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
-  return URL.createObjectURL(blob);
-}
-
-function toIcsUrl(base64: string) {
-  const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
-  return URL.createObjectURL(new Blob([bytes], { type: "text/calendar" }));
-}
-
 type Props = {
-  /** Called once the plan and checklist have gone out, so the planner can unlock the full plan on screen. */
-  onUnlock?: () => void;
   /** Season dates from the planner. Without these, the form offers an optional start date. */
   plan?: { start: string; end: string; state?: string; stateName?: string };
   button?: string;
 };
 
-export default function ChecklistForm({ plan, button = "Email me the checklist", onUnlock }: Props) {
+// Nothing downloads from the page. Everything is sent to the inbox, so a working email address is required.
+export default function ChecklistForm({ plan, button = "Email me the checklist" }: Props) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (plan && !plan.stateName) {
+      setStatus({ kind: "err", message: "Please choose your state first." });
+      return;
+    }
+    const form = e.currentTarget;
     setStatus({ kind: "sending" });
     const data = {
-      ...Object.fromEntries(new FormData(e.currentTarget).entries()),
+      ...Object.fromEntries(new FormData(form).entries()),
       ...(plan ? { start: plan.start, end: plan.end } : {}),
       adSource: getAdSource(),
     };
@@ -51,19 +45,7 @@ export default function ChecklistForm({ plan, button = "Email me the checklist",
         return;
       }
       trackEvent("Lead");
-      let url: string | undefined;
-      if (body.file) {
-        url = toBlobUrl(body.file);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = body.fileName;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-      }
-      const icsUrl = body.ics ? toIcsUrl(body.ics) : undefined;
-      setStatus({ kind: "ok", emailed: Boolean(body.emailed), url, fileName: body.fileName, icsUrl, icsName: body.icsName });
-      onUnlock?.();
+      setStatus({ kind: "ok", emailed: Boolean(body.emailed), email: String(new FormData(form).get("email") ?? "") });
     } catch {
       setStatus({ kind: "err", message: "We couldn't send that. Please try again." });
     }
@@ -72,22 +54,14 @@ export default function ChecklistForm({ plan, button = "Email me the checklist",
   if (status.kind === "ok") {
     return (
       <div className="form-status ok stack" role="status">
-        <p>
-          {status.emailed
-            ? `Your checklist is downloading, and ${plan ? "your plan and a copy of the checklist are" : "a copy is"} on its way to your inbox.`
-            : "Your checklist is downloading now."}
-        </p>
-        {status.url && (
-          <p>
-            Download didn&apos;t start? <a href={status.url} download={status.fileName}>Click here to download it.</a>
-          </p>
+        {status.emailed ? (
+          <>
+            <p>Check your inbox{status.email ? `, ${status.email}` : ""}. {plan ? "Your season plan, a calendar file with reminders and the audit checklist are" : "Your audit checklist is"} on their way.</p>
+            <p>Don&apos;t see it in a few minutes? Look in your spam or promotions folder.</p>
+          </>
+        ) : (
+          <p>Thanks. We couldn&apos;t send the email just now, but we have your details and will send everything over shortly. Need it sooner? Call {site.phone}.</p>
         )}
-        {status.icsUrl && (
-          <p>
-            <a href={status.icsUrl} download={status.icsName}>Add every deadline to your calendar</a> (opens in Outlook, Google Calendar or Apple Calendar, with reminders before each date).
-          </p>
-        )}
-        {onUnlock && <p>Your full plan is now unlocked above.</p>}
       </div>
     );
   }
@@ -106,14 +80,18 @@ export default function ChecklistForm({ plan, button = "Email me the checklist",
         <label htmlFor="cl-farm">Farm name</label>
         <input id="cl-farm" name="farm" required autoComplete="organization" maxLength={150} />
       </div>
-      <div className="field">
+      <div className="field" style={plan ? { gridColumn: "1 / -1" } : undefined}>
         <label htmlFor="cl-phone">Phone</label>
         <input id="cl-phone" name="phone" type="tel" required autoComplete="tel" maxLength={30} />
       </div>
-      <div className="field">
-        <label htmlFor="cl-state">State</label>
-        <input id="cl-state" key={plan?.stateName ?? ""} name="state" required defaultValue={plan?.stateName ?? ""} autoComplete="address-level1" maxLength={40} />
-      </div>
+      {plan ? (
+        <input type="hidden" name="state" value={plan.stateName ?? ""} />
+      ) : (
+        <div className="field">
+          <label htmlFor="cl-state">State</label>
+          <input id="cl-state" name="state" required autoComplete="address-level1" maxLength={40} />
+        </div>
+      )}
       {!plan && (
         <div className="field" style={{ gridColumn: "1 / -1" }}>
           <label htmlFor="cl-start">Crew start date <span className="optional">(optional: we&apos;ll fill your dates into the workbook)</span></label>
@@ -128,7 +106,7 @@ export default function ChecklistForm({ plan, button = "Email me the checklist",
         {status.kind === "sending" ? "Sending..." : button}
       </button>
       {status.kind === "err" && <p className="form-status err" role="alert">{status.message}</p>}
-      <p className="lead-fine">We&apos;ll email you the checklist and an occasional H-2A tip. No spam, and you can unsubscribe anytime.</p>
+      <p className="lead-fine">We&apos;ll email you what you asked for and an occasional H-2A tip. No spam, and you can unsubscribe anytime.</p>
     </form>
   );
 }

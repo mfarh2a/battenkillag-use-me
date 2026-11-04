@@ -15,7 +15,7 @@ import contactsData from "@/content/state-contacts.json";
 // 2. Emails the visitor the Excel checklist (needs a verified sending domain in Resend).
 // 3. Emails Max the new lead (CONTACT_TO_EMAIL).
 // 4. If the visitor gave season dates, fills them into the workbook and adds their plan as a PDF to the email.
-// 5. Sends the file back so the download starts right away, even if email isn't set up yet.
+// 5. Nothing is sent back to the browser: the files only arrive by email, so a working address is required.
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
 const FILE_NAME = "Battenkill-Ag-H2A-Audit-Checklist.xlsx";
@@ -171,5 +171,5 @@ ${ics ? "<p>The attached calendar file (.ics) adds every deadline to Outlook, Go
     }
   }
 
-  return NextResponse.json({ ok: true, emailed, fileName: FILE_NAME, file: base64, ...(ics ? { ics, icsName: ICS_NAME } : {}) });
+  return NextResponse.json({ ok: true, emailed });
 }
