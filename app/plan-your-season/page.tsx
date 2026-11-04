@@ -22,9 +22,9 @@ const plannerStates: PlannerState[] = states
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const stats = [
-  { n: "84%", t: "of Wage and Hour investigations of H-2A employers found at least one violation", s: "Fiscal years 2018 to 2023" },
-  { n: "45%", t: "of the employers with violations had more than five", s: "Same investigations" },
-  { n: "$21,649", t: "maximum penalty for improperly rejecting a U.S. worker who applies", s: "Per applicant, 29 CFR 501.19" },
+  { n: "84%", t: "of Wage and Hour investigations of H-2A employers found at least one violation", s: "GAO, fiscal years 2018 to 2023" },
+  { n: "45%", t: "of the employers with violations had more than five", s: "GAO, same investigations" },
+  { n: "$21,649", t: "maximum penalty for improperly rejecting a U.S. worker who applies", s: "DOL penalty table, 29 CFR 501.19" },
   { n: "30 days", t: "the most time DOL gives you to answer an audit letter", s: "20 CFR 655.180" },
 ];
 
@@ -71,9 +71,9 @@ export default function PlanYourSeason() {
             ))}
           </dl>
           <p className="muted stat-sources">
-            Sources: <a href="https://gao.gov/assets/gao-25-106389.pdf" target="_blank" rel="noopener">GAO-25-106389, H-2A Visa Program: Agencies Should Take Additional Steps to Improve Oversight and Enforcement (November 2024)</a>;{" "}
-            <a href="https://www.dol.gov/agencies/whd/resources/penalties" target="_blank" rel="noopener">DOL Wage and Hour Division civil money penalty table</a>;{" "}
-            <a href={ecfr("180")} target="_blank" rel="noopener">20 CFR 655.180</a>. Most Wage and Hour investigations are chosen by the agency, not at random, so these figures describe the investigations that happened, not the odds for any one farm.
+            Sources: <a href="https://gao.gov/assets/gao-25-106389.pdf" target="_blank" rel="noopener">GAO, November 2024</a>;{" "}
+            <a href="https://www.dol.gov/agencies/whd/resources/penalties" target="_blank" rel="noopener">DOL penalty table</a>;{" "}
+            <a href={ecfr("180")} target="_blank" rel="noopener">20 CFR 655.180</a>.
           </p>
           <div className="btn-row">
             <a href="#get-plan" className="btn btn-primary">Get my season plan</a>
