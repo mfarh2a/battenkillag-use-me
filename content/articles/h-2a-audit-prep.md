@@ -37,12 +37,13 @@ DOL can ask for a long list of records, and most farms do not know what is on it
 - **32 records to keep ready for DOL**, grouped by application and recruitment, housing and insurance, contracts and travel, hours and pay, departures, and audit letters
 - **The regulation behind each record**, so you know why it matters
 - **A progress tracker** that shows how ready you are at a glance
-- **A worker departures log** that works out the 2-working-day notice deadline for you
+- **A recruitment tracker** for logging U.S. applicants and keeping your recruitment report current
+- **A worker departures log** for abandonments and terminations
 - **A record-keeping date calculator** showing how long to keep everything ([at least 3 years from your certification date](https://www.ecfr.gov/current/title-20/chapter-V/part-655/subpart-B/section-655.167))
 
 [[checklist-form]]
 
-**Already a Battenkill Ag customer?** Every customer gets a digital filing cabinet to keep track of important documents, deadlines and billing, with these records organized by requirement, so an audit response starts from a complete folder.
+**Already a Battenkill Ag customer?** When we work with customers, we help them stay on top of documents, deadlines, billing and more, so an audit response starts from a complete folder.
 
 ## If a letter arrives
 
@@ -51,4 +52,4 @@ DOL can ask for a long list of records, and most farms do not know what is on it
 3. Talk to your agent or an immigration attorney before responding.
 4. Never ignore a request. Not responding is one of the fastest ways to be barred from the program.
 
-Want the records kept for you? Every Battenkill Ag customer gets a digital filing cabinet to keep track of important documents, deadlines and billing. [Get in touch](/contact).
+Want the records kept for you? When we work with customers, we help them stay on top of documents, deadlines, billing and more. [Get in touch](/contact).

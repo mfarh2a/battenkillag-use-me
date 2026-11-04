@@ -26,7 +26,7 @@ const crew = [
   },
   {
     title: "Audit-ready records",
-    body: "Every document and deadline lives in your digital filing cabinet, so you can be confident going into an audit.",
+    body: "We keep your documents and deadlines in order, so you can be confident going into an audit.",
   },
   {
     title: "Real-time updates",
@@ -127,8 +127,8 @@ export default async function Home() {
             <p className="eyebrow">Less paperwork, less worry</p>
             <h2>Records that are ready before anyone asks</h2>
             <p className="muted">
-              H-2A comes with a lot of rules and a lot of records. Every customer gets a digital filing cabinet to keep track of
-              important documents, deadlines and billing, organized by requirement. We remind you before deadlines and help you respond
+              H-2A comes with a lot of rules and a lot of records. When we work with you, we help you stay on top of
+              documents, deadlines, billing and more. We remind you before deadlines and help you respond
               quickly and completely if the Department of Labor asks.
             </p>
             <p><Link href="/h-2a-audit-checklist">Get the free audit checklist</Link></p>

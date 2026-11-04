@@ -174,7 +174,7 @@ export default async function StatePage({ params }: Props) {
               <li>Job order drafted from your last season, filed with the SWA and tracked</li>
               <li>Department of Labor application and USCIS petition prepared and filed</li>
               <li>A text from us as each approval comes through</li>
-              <li>Season compliance packet and a digital filing cabinet for your records</li>
+              <li>Season compliance packet and help staying on top of your records</li>
               <li>Transparent pricing, no surprises</li>
             </ul>
           </div>

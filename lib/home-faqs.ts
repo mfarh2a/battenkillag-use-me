@@ -1,7 +1,7 @@
 export const homeFaqs = [
   {
     q: "What services does Battenkill Ag offer?",
-    a: "We prepare and file everything it takes to bring your H-2A crew in: the job order with your state workforce agency, the Department of Labor application and the USCIS petition. A dedicated case manager tracks every deadline, keeps you updated as approvals come through, and supports you on compliance during the season. Every customer gets a digital filing cabinet for documents, deadlines and billing. If you choose, we also coordinate consulate visits and travel with several partner companies in Mexico. You stay the employer.",
+    a: "We prepare and file everything it takes to bring your H-2A crew in: the job order with your state workforce agency, the Department of Labor application and the USCIS petition. A dedicated case manager tracks every deadline, keeps you updated as approvals come through, and supports you on compliance during the season. We also help you stay on top of documents, deadlines and billing. If you choose, we also coordinate consulate visits and travel with several partner companies in Mexico. You stay the employer.",
   },
   {
     q: "How far ahead do I need to start?",

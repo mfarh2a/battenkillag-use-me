@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "How long do I have to respond to an H-2A audit letter?", a: "The audit letter sets a due date no more than 30 calendar days after it is issued. Failing to fully respond can lead to revocation of your certification or being barred from the program." },
   { q: "How long do I have to keep H-2A records?", a: "At least 3 years from the date your application was certified." },
-  { q: "What is in the Excel workbook?", a: "Every record on this page with a link to its rule, a tracker that shows how ready you are, a worker departures log that works out the 2-working-day notice deadline, and a date calculator for how long to keep your records." },
+  { q: "What is in the Excel workbook?", a: "Every record on this page with a link to its rule, a tracker that shows how ready you are, a recruitment tracker for your U.S. applicants and recruitment report, a worker departures log, and a date calculator for how long to keep your records." },
 ];
 
 function cfrUrl(rule: string) {
@@ -85,7 +85,7 @@ export default function AuditChecklist() {
         <div className="wrap stack-lg">
           <div className="stack prose">
             <h2>Want these records kept for you?</h2>
-            <p>Every customer gets a digital filing cabinet to keep track of important documents, deadlines and billing.</p>
+            <p>When we work with customers, we help them stay on top of documents, deadlines, billing and more.</p>
           </div>
           <div className="btn-row">
             <Link href="/contact" className="btn btn-primary">Request a quote</Link>
