@@ -17,6 +17,8 @@ import { states } from "@/lib/states";
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
 const FILE_NAME = "Battenkill-Ag-H2A-Audit-Checklist.xlsx";
+// Replies to the customer email go to the sales inbox.
+const REPLY_TO = "sales@battenkillag.com";
 
 function clean(value: unknown, max: number): string {
   return typeof value === "string" ? value.trim().slice(0, max) : "";
@@ -124,14 +126,14 @@ export async function POST(req: Request) {
     emailed = await sendEmail(apiKey, {
       from,
       to: [email],
-      reply_to: to || undefined,
+      reply_to: REPLY_TO,
       subject: plan ? "Your H-2A season plan and audit checklist from Battenkill Ag" : "Your H-2A audit-ready checklist from Battenkill Ag",
       html: `<p>Hi ${first},</p>
-${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. ${planPdf ? "Your full plan is attached as a PDF you can print." : ""}</p>
+${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. ${planPdf ? "Your full plan, with every deadline and the records to save along the way, is attached as a PDF you can print." : ""}</p>
 <table style="border-collapse:collapse">${planRows}</table>
-<p>See the full plan any time at <a href="${site.url}/plan-your-season?start=${start}&end=${end}${state ? `&state=${state.slug}` : ""}">your season plan</a>.</p>` : ""}
-<p>${start ? "Your dates are already filled in on the Season Info tab. " : ""}Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and works out the 2-working-day notice deadline if a worker leaves.</p>
-<p>Every Battenkill Ag customer gets a digital filing cabinet to keep track of important documents, deadlines and billing, with these records organized by requirement. The workbook links each record to a plain-English guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like to talk about next season, just reply to this email.</p>
+${planPdf ? "" : `<p>See your full plan any time at <a href="${site.url}/plan-your-season?start=${start}&end=${end}${state ? `&state=${state.slug}` : ""}">your season plan</a>.</p>`}` : ""}
+<p>${start ? "Your dates are already filled in on the Season Info tab. " : ""}Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and includes a recruitment tracker for logging every U.S. applicant and keeping your recruitment report current.</p>
+<p>When we work with customers, we help them stay on top of documents, deadlines, billing and more. The workbook links each record to an easy-to-follow guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like to talk about next season, just reply to this email.</p>
 <p>The Battenkill Ag team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
 <p style="color:#777;font-size:12px">General information, not legal advice.</p>`,
       attachments: [
