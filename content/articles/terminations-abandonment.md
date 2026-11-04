@@ -48,9 +48,7 @@ If fire, weather or another act of God ends the work early and DOL agrees, you p
 
 ## Records to keep
 
-- [ ] the date and reason for every departure
-- [ ] copies of notices to DOL and DHS, with the date sent
-- [ ] warnings and discipline records
-- [ ] transfer paperwork for workers coming or going
-
-Battenkill Ag starts a 2-working-day countdown the moment you tell us a worker left, and sends the notices on time. [Talk to us](/contact).
+- The date and reason for every departure
+- Copies of notices to DOL and DHS, with the date sent
+- Warnings and discipline records
+- Transfer paperwork for workers coming or going
