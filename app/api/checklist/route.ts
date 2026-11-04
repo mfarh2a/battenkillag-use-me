@@ -63,8 +63,8 @@ export async function POST(req: Request) {
   const adSource = clean(body.adSource, 200);
   const phone = clean(body.phone, 30);
   const stateRaw = clean(body.state, 40);
-  if (!name || !farm || !phone || !stateRaw || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Please fill in your name, farm, phone, state and a valid email." }, { status: 400 });
+  if (!name || !stateRaw || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ error: "Please fill in your name, state and a valid email." }, { status: 400 });
   }
 
   const startRaw = clean(body.start, 10);
@@ -165,7 +165,7 @@ ${ics ? "<p>The attached calendar file (.ics) adds every deadline to Outlook, Go
         reply_to: email,
         subject: `Checklist download: ${name}${farm ? ` (${farm})` : ""}`,
         html: `<h2>New checklist download</h2>
-<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>Phone:</strong> ${escapeHtml(phone)}<br><strong>State:</strong> ${escapeHtml(state?.name || stateRaw)}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}<br><strong>Ad source:</strong> ${escapeHtml(adSource || "-")}</p>
+<p><strong>Name:</strong> ${escapeHtml(name)}<br><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Farm:</strong> ${escapeHtml(farm || "-")}<br><strong>Phone:</strong> ${escapeHtml(phone || "-")}<br><strong>State:</strong> ${escapeHtml(state?.name || stateRaw)}<br><strong>Start date:</strong> ${escapeHtml(start || "-")}<br><strong>Ad source:</strong> ${escapeHtml(adSource || "-")}</p>
 <p>Copy of the checklist emailed to them: ${emailed ? "yes" : "no (check the Resend sending domain)"}</p>`,
       });
     }
