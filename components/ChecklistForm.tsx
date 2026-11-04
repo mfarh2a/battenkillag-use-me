@@ -6,7 +6,7 @@ import { getAdSource, trackEvent } from "@/lib/ad-tracking";
 type Status =
   | { kind: "idle" }
   | { kind: "sending" }
-  | { kind: "ok"; emailed: boolean; url?: string; fileName?: string }
+  | { kind: "ok"; emailed: boolean; url?: string; fileName?: string; icsUrl?: string; icsName?: string }
   | { kind: "err"; message: string };
 
 function toBlobUrl(base64: string) {
@@ -15,13 +15,20 @@ function toBlobUrl(base64: string) {
   return URL.createObjectURL(blob);
 }
 
+function toIcsUrl(base64: string) {
+  const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+  return URL.createObjectURL(new Blob([bytes], { type: "text/calendar" }));
+}
+
 type Props = {
+  /** Called once the plan and checklist have gone out, so the planner can unlock the full plan on screen. */
+  onUnlock?: () => void;
   /** Season dates from the planner. Without these, the form offers an optional start date. */
   plan?: { start: string; end: string; state?: string; stateName?: string };
   button?: string;
 };
 
-export default function ChecklistForm({ plan, button = "Email me the checklist" }: Props) {
+export default function ChecklistForm({ plan, button = "Email me the checklist", onUnlock }: Props) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -54,7 +61,9 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
         a.click();
         a.remove();
       }
-      setStatus({ kind: "ok", emailed: Boolean(body.emailed), url, fileName: body.fileName });
+      const icsUrl = body.ics ? toIcsUrl(body.ics) : undefined;
+      setStatus({ kind: "ok", emailed: Boolean(body.emailed), url, fileName: body.fileName, icsUrl, icsName: body.icsName });
+      onUnlock?.();
     } catch {
       setStatus({ kind: "err", message: "We couldn't send that. Please try again." });
     }
@@ -73,6 +82,12 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
             Download didn&apos;t start? <a href={status.url} download={status.fileName}>Click here to download it.</a>
           </p>
         )}
+        {status.icsUrl && (
+          <p>
+            <a href={status.icsUrl} download={status.icsName}>Add every deadline to your calendar</a> (opens in Outlook, Google Calendar or Apple Calendar, with reminders before each date).
+          </p>
+        )}
+        {onUnlock && <p>Your full plan is now unlocked above.</p>}
       </div>
     );
   }

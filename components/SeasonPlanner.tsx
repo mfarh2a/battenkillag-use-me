@@ -23,6 +23,34 @@ function nextSpring() {
 
 const dayCount = (n: number) => `${n} day${n === 1 ? "" : "s"}`;
 
+const UNLOCK_KEY = "bk-plan-unlocked";
+
+function LockIcon() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="7" width="10" height="7" rx="1.5" />
+      <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" />
+    </svg>
+  );
+}
+
+// What visitors see before they give an email: the step names only. Dates, details and records are not on the page at all.
+function LockedSection({ title, items }: { title: string; items: PlanItem[] }) {
+  return (
+    <section className="plan-group plan-locked">
+      <h2>{title}</h2>
+      <ol className="plan-list">
+        {items.map((it) => (
+          <li key={it.title}>
+            <div className="plan-date"><span className="lock-chip"><LockIcon /> Date in your full plan</span></div>
+            <div className="plan-body"><h3>{it.title}</h3></div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 function Section({ title, items, today }: { title: string; items: PlanItem[]; today: Date | null }) {
   return (
     <section className="plan-group">
@@ -63,6 +91,8 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
   const [stateSlug, setStateSlug] = useState("");
   // Set after the page loads, so "days left" is always counted from the visitor's own today.
   const [today, setToday] = useState<Date | null>(null);
+  // The full plan unlocks once the visitor has given their email, and stays unlocked on this device.
+  const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
@@ -75,7 +105,13 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
       if (qe && qe > qs) { setEndDate(qe); setEndTouched(true); } else setEndDate(plusMonths(qs, 6));
     }
     setToday(parseDate(iso(new Date())));
+    try { if (localStorage.getItem(UNLOCK_KEY) === "1") setUnlocked(true); } catch { /* private window: stays locked */ }
   }, [states]);
+
+  const unlock = () => {
+    setUnlocked(true);
+    try { localStorage.setItem(UNLOCK_KEY, "1"); } catch { /* ignore */ }
+  };
 
   // Counts once per visit, the first time someone actually uses the planner.
   const used = useRef(false);
@@ -139,11 +175,26 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
             <div><dt>Keep records until at least</dt><dd>{fmtShort(plan.keepUntil)}<span className="ps-sub">Based on your expected certification</span></dd></div>
           </dl>
 
-          <div className="plan-actions">
-            <a href="#checklist" className="btn btn-primary">Email my plan and checklist</a>
-          </div>
+          {unlocked ? (
+            <div className="plan-actions">
+              <a href="#checklist" className="btn btn-primary">Email my plan and checklist</a>
+            </div>
+          ) : (
+            <div className="plan-gate card">
+              <h2>Your full plan is ready</h2>
+              <p>Add your email to unlock every date, the records to save at each step, your state&apos;s housing inspection contact and current wage rates, and a calendar file that reminds you before each deadline.</p>
+              <div><a href="#checklist" className="btn btn-primary">Unlock my full plan</a></div>
+            </div>
+          )}
 
-          {state && (
+          {state && !unlocked && (
+            <section className="plan-state card" style={{ padding: "1.5rem" }}>
+              <h2>H-2A in {state.name}</h2>
+              <p className="lock-chip" style={{ gridColumn: "1 / -1" }}><LockIcon /> Your {state.name} housing inspection contact and current wage rates come with your full plan.</p>
+            </section>
+          )}
+
+          {state && unlocked && (
             <section className="plan-state card" style={{ padding: "1.5rem" }}>
               <h2>H-2A in {state.name}</h2>
               <div>
@@ -170,16 +221,20 @@ export default function SeasonPlanner({ states }: { states: PlannerState[] }) {
             </section>
           )}
 
-          <Section title="Before your crew arrives" items={plan.before} today={today} />
-          <Section title="During the season" items={plan.during} today={today} />
-          <Section title="After the season" items={plan.after} today={today} />
+          {unlocked ? <Section title="Before your crew arrives" items={plan.before} today={today} /> : <LockedSection title="Before your crew arrives" items={plan.before} />}
+          {unlocked ? <Section title="During the season" items={plan.during} today={today} /> : <LockedSection title="During the season" items={plan.during} />}
+          {unlocked ? <Section title="After the season" items={plan.after} today={today} /> : <LockedSection title="After the season" items={plan.after} />}
 
           <div className="lead-box prose" id="checklist">
             <div className="stack">
-              <h2 className="lead-title">Email my plan and audit checklist</h2>
-              <p className="muted">We&apos;ll email your full season plan as a PDF, plus the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready.</p>
+              <h2 className="lead-title">{unlocked ? "Email my plan and audit checklist" : "Unlock my full plan"}</h2>
+              <p className="muted">
+                {unlocked
+                  ? "We'll email your full season plan as a PDF, a calendar file with reminders before each deadline, and the Excel audit checklist with your dates filled in. An audit letter gives you no more than 30 days to respond, so it pays to keep these records ready."
+                  : "Your full plan unlocks on this page, and we'll email it to you as a PDF with a calendar file that reminds you before each deadline, plus the Excel audit checklist with your dates filled in."}
+              </p>
             </div>
-            <ChecklistForm plan={{ start, end: endDate, state: stateSlug || undefined, stateName: state?.name }} button="Email my plan and checklist" />
+            <ChecklistForm onUnlock={unlock} plan={{ start, end: endDate, state: stateSlug || undefined, stateName: state?.name }} button={unlocked ? "Email my plan and checklist" : "Unlock my full plan"} />
           </div>
 
           <p className="muted plan-note">

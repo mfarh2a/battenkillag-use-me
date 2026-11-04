@@ -6,7 +6,9 @@ import { sendToCrm } from "@/lib/crm";
 import { fillChecklist, isValidDate } from "@/lib/checklist-workbook";
 import { buildPlan, fmt, parseDate } from "@/lib/season-plan";
 import { planToPdf } from "@/lib/plan-pdf";
-import { states } from "@/lib/states";
+import { planToIcs } from "@/lib/plan-ics";
+import { aewrFor, states } from "@/lib/states";
+import contactsData from "@/content/state-contacts.json";
 
 // Free audit checklist download.
 // 1. Checks the visitor's name and email.
@@ -17,6 +19,9 @@ import { states } from "@/lib/states";
 // Uses the same RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL as the contact form.
 
 const FILE_NAME = "Battenkill-Ag-H2A-Audit-Checklist.xlsx";
+const ICS_NAME = "H2A-Season-Deadlines.ics";
+type Contact = { office: string; phone?: string; email?: string; url?: string; note?: string };
+const contacts = contactsData as Record<string, Contact>;
 // Replies to the customer email go to the sales inbox.
 const REPLY_TO = "sales@battenkillag.com";
 
@@ -96,10 +101,20 @@ export async function POST(req: Request) {
   let planPdf = "";
   if (plan) {
     try {
-      planPdf = (await planToPdf(plan, state?.name)).toString("base64");
+      const aewr = state ? aewrFor(state.name) : null;
+      planPdf = (await planToPdf(plan, state?.name, state ? { contact: contacts[state.abbr] ?? null, aewr: aewr ? { h1: aewr.h1, h2: aewr.h2, effective: aewr.effective } : null } : undefined)).toString("base64");
     } catch (err) {
       // Never lose the lead over this: the email still has the key dates.
       console.error("Could not build plan PDF", err);
+    }
+  }
+  let ics = "";
+  if (plan) {
+    try {
+      ics = Buffer.from(planToIcs(plan, state?.name)).toString("base64");
+    } catch (err) {
+      // Never lose the lead over this: the plan PDF and checklist still go out.
+      console.error("Could not build calendar file", err);
     }
   }
   const planRows = plan
@@ -131,7 +146,7 @@ export async function POST(req: Request) {
       html: `<p>Hi ${first},</p>
 ${plan ? `<p>Here are your key H-2A dates${state ? ` for ${escapeHtml(state.name)}` : ""}. ${planPdf ? "Your full plan, with every deadline and the records to save along the way, is attached as a PDF you can print." : ""}</p>
 <table style="border-collapse:collapse">${planRows}</table>
-${planPdf ? "" : `<p>See your full plan any time at <a href="${site.url}/plan-your-season?start=${start}&end=${end}${state ? `&state=${state.slug}` : ""}">your season plan</a>.</p>`}` : ""}
+${ics ? "<p>The attached calendar file (.ics) adds every deadline to Outlook, Google Calendar or Apple Calendar, with a reminder 2 weeks and 2 days before each one.</p>" : ""}` : ""}
 <p>${start ? "Your dates are already filled in on the Season Info tab. " : ""}Your H-2A audit-ready checklist is attached. It lists the records DOL can ask for, tracks what you have, and includes a recruitment tracker for logging every U.S. applicant and keeping your recruitment report current.</p>
 <p>When we work with customers, we help them stay on top of documents, deadlines, billing and more. The workbook links each record to an easy-to-follow guide and the official rule, and the Resources tab points you to more help on housing, wages and travel. If you would like to talk about next season, just reply to this email.</p>
 <p>The Battenkill Ag team<br>${escapeHtml(site.phone)} | ${escapeHtml(site.email)}</p>
@@ -139,6 +154,7 @@ ${planPdf ? "" : `<p>See your full plan any time at <a href="${site.url}/plan-yo
       attachments: [
         { filename: FILE_NAME, content: base64 },
         ...(planPdf ? [{ filename: "H2A-Season-Plan.pdf", content: planPdf }] : []),
+        ...(ics ? [{ filename: ICS_NAME, content: ics }] : []),
       ],
     });
 
@@ -155,5 +171,5 @@ ${planPdf ? "" : `<p>See your full plan any time at <a href="${site.url}/plan-yo
     }
   }
 
-  return NextResponse.json({ ok: true, emailed, fileName: FILE_NAME, file: base64 });
+  return NextResponse.json({ ok: true, emailed, fileName: FILE_NAME, file: base64, ...(ics ? { ics, icsName: ICS_NAME } : {}) });
 }

@@ -7,7 +7,12 @@ const NAVY = rgb(0.106, 0.188, 0.255);
 const GRAY = rgb(0.33, 0.33, 0.33);
 const LINE = rgb(0.8, 0.8, 0.8);
 
-export async function planToPdf(plan: Plan, stateName?: string): Promise<Buffer> {
+export type PlanStateInfo = {
+  contact?: { office: string; phone?: string; email?: string; url?: string; note?: string } | null;
+  aewr?: { h1: number; h2: number; effective: string } | null;
+};
+
+export async function planToPdf(plan: Plan, stateName?: string, stateInfo?: PlanStateInfo): Promise<Buffer> {
   const doc = await PDFDocument.create();
   doc.setTitle("H-2A Season Plan");
   doc.setAuthor(site.legalName);
@@ -47,6 +52,28 @@ export async function planToPdf(plan: Plan, stateName?: string): Promise<Buffer>
   ];
   for (const [k, v] of keys) { draw(k, M, 9.5, reg, GRAY); draw(v, M + 150, 9.5, bold); y -= 14; }
   y -= 6;
+
+  if (stateName && stateInfo && (stateInfo.contact || stateInfo.aewr)) {
+    ensure(70);
+    draw(`H-2A in ${stateName}`, M, 12, bold, NAVY);
+    y -= 6;
+    page.drawLine({ start: { x: M, y }, end: { x: W - M, y }, thickness: 1.5, color: NAVY });
+    y -= 14;
+    const c = stateInfo.contact;
+    if (c) {
+      para(`Housing inspection: ${c.office}`, M, 9.5, bold);
+      const how = [c.phone, c.email, c.url].filter(Boolean).join("  |  ");
+      if (how) para(how, M, 9, reg, GRAY);
+      if (c.note) para(c.note, M, 9, reg, GRAY);
+      y -= 4;
+    }
+    const a = stateInfo.aewr;
+    if (a) {
+      para(`Current wage rate (AEWR, field and livestock jobs with free housing): $${a.h1.toFixed(2)} an hour at Skill Level I, $${a.h2.toFixed(2)} at Skill Level II, effective ${a.effective}. Your required wage may be higher if a prevailing wage or minimum wage applies.`, M, 9, reg);
+    }
+    para("Contacts and rates change. Confirm with the state and DOL before you rely on them.", M, 8, reg, GRAY);
+    y -= 8;
+  }
 
   const section = (title: string, items: PlanItem[]) => {
     ensure(50);

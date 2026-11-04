@@ -7,7 +7,7 @@ import contactsData from "@/content/state-contacts.json";
 
 export const metadata: Metadata = {
   title: "Plan Your H-2A Season: Free Deadline Calculator",
-  description: "Free, no signup. Enter your crew's start date and state to see every H-2A deadline, from the job order and DOL application to arrival and record keeping.",
+  description: "Enter your crew's start date and state to see your key H-2A deadlines. Add your email to unlock the full plan, with every date, the records to save, and calendar reminders.",
   alternates: { canonical: "/plan-your-season" },
 };
 
@@ -43,7 +43,7 @@ export default function PlanYourSeason() {
             <p className="eyebrow">Free tool</p>
             <h1>Plan your season</h1>
             <p className="muted" style={{ fontSize: "var(--step-1)" }}>
-              Enter your state and your crew&apos;s start date to see every H-2A deadline and the records to keep at each step. Free, no signup.
+              Enter your state and your crew&apos;s start date to see your key H-2A deadlines right away. Add your email to unlock the full plan: every date, the records to keep at each step, and calendar reminders before each deadline.
             </p>
           </div>
           <SeasonPlanner states={plannerStates} />
