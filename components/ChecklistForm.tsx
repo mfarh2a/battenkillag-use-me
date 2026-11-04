@@ -76,7 +76,11 @@ export default function ChecklistForm({ plan, button = "Email me the checklist" 
         <label htmlFor="cl-email">Email</label>
         <input id="cl-email" name="email" type="email" required autoComplete="email" maxLength={150} />
       </div>
-      <div className="field" style={plan ? { gridColumn: "1 / -1" } : undefined}>
+      <div className="field">
+        <label htmlFor="cl-farm">Farm name <span className="optional">(optional)</span></label>
+        <input id="cl-farm" name="farm" autoComplete="organization" maxLength={150} />
+      </div>
+      <div className="field">
         <label htmlFor="cl-phone">Phone <span className="optional">(optional)</span></label>
         <input id="cl-phone" name="phone" type="tel" autoComplete="tel" maxLength={30} />
       </div>
